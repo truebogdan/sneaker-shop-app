@@ -1,3 +1,4 @@
+using DBRepo;
 using ESRepo;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +16,8 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddDbContext<DbShopContext>(options =>
+    options.UseSqlServer(connectionString));
 
 
 builder.Services.Configure<IdentityOptions>(options =>
@@ -29,6 +32,8 @@ builder.Services.Configure<IdentityOptions>(options =>
 
 });
 builder.Services.AddSingleton < ISearchClient, ESClient> ();
+
+builder.Services.AddTransient<ICart, ShoppingCart>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
