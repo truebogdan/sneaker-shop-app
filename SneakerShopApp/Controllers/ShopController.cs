@@ -12,7 +12,7 @@ namespace SneakerShopApp.Controllers
         private readonly ISearchClient _esclient;
         private readonly ICart _cart;
 
-        public ShopController(ISearchClient esclient, ICart cart)
+        public ShopController(ISearchClient esclient, ICart cart) 
         {
             _esclient = esclient;
             _cart = cart;
@@ -44,20 +44,22 @@ namespace SneakerShopApp.Controllers
             if (User.Identity.IsAuthenticated)
             {
                 var products = _cart.GetCartProducts(User.Identity.Name);
-                return View(new CartModel() { CartProducts = products ,Total=TotalCost(products)});
+                return View(new CartModel() { CartProducts = products ,Total = ShoppingCart.TotalCost(products)});
             }
             else
                 return Redirect("~/Identity/Account/Login");
         }
 
-        public double TotalCost(IEnumerable<CartProductModel> products)
-        {   double total = 0;
-            foreach(var product in products)
+        [HttpPost]
+        public IActionResult CheckoutCart(String customer)
+        {
+            if (User.Identity.IsAuthenticated)
             {
-
-              total+= Double.Parse(product.Price);
+                _cart.Checkout(customer);
+                return RedirectToAction("Index");
             }
-            return total;
+            else
+                return Redirect("~/Identity/Account/Login");
         }
     }
 }

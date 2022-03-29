@@ -10,5 +10,8 @@ namespace DBRepo
     {
         public void AddProduct(CartProductModel cartProduct);
         public IEnumerable<CartProductModel> GetCartProducts(String customer);     
+
+        public void Checkout(String customer);
+
     }
 }

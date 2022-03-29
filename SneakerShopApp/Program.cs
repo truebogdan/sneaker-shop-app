@@ -31,9 +31,11 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.SignIn.RequireConfirmedAccount = false;
 
 });
-builder.Services.AddSingleton < ISearchClient, ESClient> ();
 
+builder.Services.AddSingleton < ISearchClient, ESClient> ();
 builder.Services.AddTransient<ICart, ShoppingCart>();
+builder.Services.AddTransient<IOrdersManager, OrdersManager>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
