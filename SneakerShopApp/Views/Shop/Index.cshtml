@@ -6,7 +6,28 @@
 <div class="text-center">
     <h1 class="display-4">Shop</h1>
     <div class="row">
-        @foreach (var product in Model.Products)
+        <form method="post" asp-controller="Shop" asp-action="Search">
+        <input type="text" value="@Model.SearchInput" name="searchInput">
+        <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+        <form method="post" asp-controller="Shop" asp-action="Filter"> 
+        @foreach(var brand in Model.Brands)
+        {
+
+          @Html.CheckBox("",Model.Checked.Contains(brand.Key), new {@value=brand.Key , @name="brands", @id="flexCheckDefault"})
+          <label class="" for="flexCheckDefault">
+            @brand.Key (@brand.Value)
+          </label>
+
+        }
+         <input type="text" name="searchInput" value="@Model.SearchInput" hidden>
+        <button class="btn btn-info" type="submit">Filter</button>
+
+        </form>
+
+    </div>
+    <div class="row">
+             @foreach (var product in Model.Products)
             {
                 						<!-- Single Product -->
 					  <div class="card mx-auto my-auto" style="width: 18rem;">
@@ -19,13 +40,16 @@
                                     <input type="text" name="description" value="@product.Description" hidden>
                                     <input type="text" name="price" value="@product.Price" hidden>
                                     <input type="text" name="imgurl" value="@product.ImgUrl" hidden>
-                                    <button class="btn btn-danger" type ="submit">Add To Cart</button>
+                                    <input type="text" name="searchInput" value="@Model.SearchInput" hidden>
+                                    @foreach(var brand in Model.Checked)
+                                      {
+                                         <input type="text" name="brands" value="@brand" hidden>
+                                      }
+                        <button class="btn btn-danger" type ="submit">Add To Cart</button>
                                 </form>
                       </div>
                     </div>
             }
-
-
     </div>
     
 

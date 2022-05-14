@@ -21,17 +21,17 @@ namespace SneakerShopApp.Controllers
         public IActionResult Index()
         {
 
-            var productsList = _esclient.GetProducts();
-            var model = new ShopModel() { Products=productsList};
+            var searchResult = _esclient.GetProducts();
+            var model = new ShopModel() { Products = searchResult.Products, Brands = searchResult.Brands, Checked = Array.Empty<string>() , SearchInput="" };
             return View(model);
         }
         [HttpPost]
-        public IActionResult AddProductToCart(ProductModel product)
+        public IActionResult AddProductToCart(ProductModel product , string searchInput, string[] brands)
         {
             if (User.Identity.IsAuthenticated)
             {
                 _cart.AddProduct(new CartProductModel { Customer = User.Identity.Name, Brand = product.Brand, Price = product.Price, Description = product.Description, ImgUrl = product.ImgUrl });
-                return RedirectToAction("Index");
+                return Filter(brands,searchInput);
             }
             else
                 return Redirect("~/Identity/Account/Login");
@@ -60,6 +60,23 @@ namespace SneakerShopApp.Controllers
             }
             else
                 return Redirect("~/Identity/Account/Login");
+        }
+        [HttpPost]
+        public IActionResult Filter(string[] brands, string searchInput)
+        {
+            brands = brands.Where(brand => brand != "false").ToArray();
+            var searchResult = _esclient.Filter(searchInput,brands);
+            var model = new ShopModel() { Products = searchResult.Products, Brands = searchResult.Brands , Checked=brands , SearchInput=searchInput};
+            return View("Index",model);
+        }
+
+        [HttpPost]
+
+        public IActionResult Search(string searchInput)
+        {
+            var searchResult = _esclient.Search(searchInput);
+            var model = new ShopModel() { Products = searchResult.Products, Brands = searchResult.Brands, Checked = Array.Empty<string>() , SearchInput=searchInput};
+            return View("Index",model);
         }
     }
 }
