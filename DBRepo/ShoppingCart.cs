@@ -13,7 +13,7 @@
 
         public void AddProduct(CartProductModel cartProduct)
         {
-            _context.Add(cartProduct);
+            _context.CartProducts.Add(cartProduct);
             _context.SaveChanges();
         }
 
