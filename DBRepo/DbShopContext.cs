@@ -1,9 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DBRepo
 {
@@ -11,11 +6,11 @@ namespace DBRepo
     {
         public DbShopContext(DbContextOptions<DbShopContext> options) : base(options)
         {
-            
+
         }
-            public DbSet<CartProductModel> CartProducts { get; set; }
-            public DbSet<Order> Orders { get; set; }
-            public DbSet<OrderProduct>? OrderProducts { get; set; }
+        public DbSet<CartProductModel> CartProducts { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderProduct>? OrderProducts { get; set; }
 
     }
 }

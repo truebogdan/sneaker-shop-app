@@ -32,7 +32,7 @@ builder.Services.Configure<IdentityOptions>(options =>
 
 });
 
-builder.Services.AddSingleton < ISearchClient, ESClient> ();
+builder.Services.AddSingleton<ISearchClient, ESClient>();
 builder.Services.AddTransient<ICart, ShoppingCart>();
 builder.Services.AddTransient<IOrdersManager, OrdersManager>();
 

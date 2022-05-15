@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DBRepo
+﻿namespace DBRepo
 {
     public class ShoppingCart : ICart
     {
         private readonly DbShopContext _context;
         private readonly IOrdersManager _ordersManager;
 
-        public ShoppingCart(DbShopContext context , IOrdersManager ordersManager)
+        public ShoppingCart(DbShopContext context, IOrdersManager ordersManager)
         {
             _context = context;
             _ordersManager = ordersManager;
@@ -20,7 +14,7 @@ namespace DBRepo
         public void AddProduct(CartProductModel cartProduct)
         {
             _context.Add(cartProduct);
-            _context.SaveChanges(); 
+            _context.SaveChanges();
         }
 
         public IEnumerable<CartProductModel> GetCartProducts(string customer)
@@ -36,9 +30,9 @@ namespace DBRepo
 
             _context.SaveChanges();
 
-            _ordersManager.AddOrder(customer,TotalCost(productsFromCart),productsFromCart);
+            _ordersManager.AddOrder(customer, TotalCost(productsFromCart), productsFromCart);
 
-         }
+        }
         public static double TotalCost(IEnumerable<CartProductModel> products)
         {
             double total = 0;
@@ -48,6 +42,14 @@ namespace DBRepo
                 total += Double.Parse(product.Price);
             }
             return total;
+        }
+
+        public void RemoveProduct(int productId)
+        {
+            var productToRemove = _context.CartProducts.SingleOrDefault(p => p.CartProductModelId == productId);
+
+            _context.CartProducts.Remove(productToRemove);
+            _context.SaveChanges();
         }
     }
 }

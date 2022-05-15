@@ -1,9 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Elastic.Clients.Elasticsearch;
-using Elastic.Transport;
+﻿using DBRepo;
 using ESRepo;
+using Microsoft.AspNetCore.Mvc;
 using SneakerShopApp.Models;
-using DBRepo;
 
 namespace SneakerShopApp.Controllers
 {
@@ -12,7 +10,7 @@ namespace SneakerShopApp.Controllers
         private readonly ISearchClient _esclient;
         private readonly ICart _cart;
 
-        public ShopController(ISearchClient esclient, ICart cart) 
+        public ShopController(ISearchClient esclient, ICart cart)
         {
             _esclient = esclient;
             _cart = cart;
@@ -22,20 +20,20 @@ namespace SneakerShopApp.Controllers
         {
 
             var searchResult = _esclient.GetProducts();
-            var model = new ShopModel() { Products = searchResult.Products, Brands = searchResult.Brands, Checked = Array.Empty<string>() , SearchInput="" };
+            var model = new ShopModel() { Products = searchResult.Products, Brands = searchResult.Brands, Checked = Array.Empty<string>(), SearchInput = "" };
             return View(model);
         }
         [HttpPost]
-        public IActionResult AddProductToCart(ProductModel product , string searchInput, string[] brands)
+        public IActionResult AddProductToCart(ProductModel product, string searchInput, string[] brands)
         {
             if (User.Identity.IsAuthenticated)
             {
                 _cart.AddProduct(new CartProductModel { Customer = User.Identity.Name, Brand = product.Brand, Price = product.Price, Description = product.Description, ImgUrl = product.ImgUrl });
-                return Filter(brands,searchInput);
+                return Filter(brands, searchInput);
             }
             else
                 return Redirect("~/Identity/Account/Login");
-           
+
 
         }
 
@@ -44,7 +42,7 @@ namespace SneakerShopApp.Controllers
             if (User.Identity.IsAuthenticated)
             {
                 var products = _cart.GetCartProducts(User.Identity.Name);
-                return View(new CartModel() { CartProducts = products ,Total = ShoppingCart.TotalCost(products)});
+                return View("Cart", new CartModel() { CartProducts = products, Total = ShoppingCart.TotalCost(products) });
             }
             else
                 return Redirect("~/Identity/Account/Login");
@@ -65,9 +63,9 @@ namespace SneakerShopApp.Controllers
         public IActionResult Filter(string[] brands, string searchInput)
         {
             brands = brands.Where(brand => brand != "false").ToArray();
-            var searchResult = _esclient.Filter(searchInput,brands);
-            var model = new ShopModel() { Products = searchResult.Products, Brands = searchResult.Brands , Checked=brands , SearchInput=searchInput};
-            return View("Index",model);
+            var searchResult = _esclient.Filter(searchInput, brands);
+            var model = new ShopModel() { Products = searchResult.Products, Brands = searchResult.Brands, Checked = brands, SearchInput = searchInput };
+            return View("Index", model);
         }
 
         [HttpPost]
@@ -75,8 +73,20 @@ namespace SneakerShopApp.Controllers
         public IActionResult Search(string searchInput)
         {
             var searchResult = _esclient.Search(searchInput);
-            var model = new ShopModel() { Products = searchResult.Products, Brands = searchResult.Brands, Checked = Array.Empty<string>() , SearchInput=searchInput};
-            return View("Index",model);
+            var model = new ShopModel() { Products = searchResult.Products, Brands = searchResult.Brands, Checked = Array.Empty<string>(), SearchInput = searchInput };
+            return View("Index", model);
+        }
+        [HttpPost]
+        public IActionResult DeleteFromCart(int productId)
+        {
+
+            if (User.Identity.IsAuthenticated)
+            {
+                _cart.RemoveProduct(productId);
+                return Cart();
+            }
+            else
+                return Redirect("~/Identity/Account/Login");
         }
     }
 }

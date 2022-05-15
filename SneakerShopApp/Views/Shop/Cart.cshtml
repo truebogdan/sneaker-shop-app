@@ -27,6 +27,11 @@
                     </div>  
                     <div class="col-md-2">
                           <p class="card-text">$@product.Price</p>
+                          <form method="post" asp-controller="Shop" asp-action="DeleteFromCart">
+                            <input  name="productId" type="number" value="@product.CartProductModelId" hidden/>
+                            <button class="btn btn-danger" type="submit"><i class="fa fa-trash"></i></button>
+                          </form>
+                          
                     </div>
 
                 </div>

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DBRepo
+﻿namespace DBRepo
 {
     public class OrdersManager : IOrdersManager
     {
@@ -17,11 +11,11 @@ namespace DBRepo
             _context = context;
         }
 
-        public void AddOrder( string customer,double totalCost, IEnumerable<CartProductModel> cartProducts)
+        public void AddOrder(string customer, double totalCost, IEnumerable<CartProductModel> cartProducts)
         {
             Order order = new Order() { Customer = customer, Total = totalCost };
             List<OrderProduct> orderProducts = new List<OrderProduct>();
-            foreach(var product in cartProducts)
+            foreach (var product in cartProducts)
             {
                 orderProducts.Add(new OrderProduct() { Description = product.Description, Price = product.Price, Brand = product.Brand, ImgUrl = product.ImgUrl, Order = order });
             }
