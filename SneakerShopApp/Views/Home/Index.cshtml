@@ -2,7 +2,80 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+   
+
+   
+        <header class="hero">
+            <div class="container spacing">
+                <h1 class="primary-title">Amazing shoes at an amazing price</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam perspiciatis facilis beatae laudantium
+                    quidem enim sit sequi!
+                </p>
+                <a class="btn" asp-controller="Shop" asp-action="Index">See what we have</a>
+            </div>
+        </header>
+
+        <main>
+
+            <section class="featured">
+                <div class="container">
+                    <h2 class="section-title">Featured products</h2>
+                    <div class="split">
+                        <a asp-controller="Shop" asp-action="Index" class="featured__item">
+                            <img src="~/img/shoe-4.png" alt="" class="featured__img">
+                            <p class="featured__details"><span class="price">$99</span>shoe name</p>
+                        </a>
+                        <a asp-controller="Shop" asp-action="Index" class="featured__item">
+                            <img src="~/img/shoe-5.png" alt="" class="featured__img">
+                            <p class="featured__details"><span class="price">$99</span>shoe name</p>
+                        </a>
+                        <a asp-controller="Shop" asp-action="Index" class="featured__item">
+                            <img src="~/img/shoe-6.png" alt="" class="featured__img">
+                            <p class="featured__details"><span class="price">$99</span>shoe name</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="our-products">
+                <div class="container">
+                    <h2 class="section-title">Our products</h2>
+
+                    <article  class="product shoe-red spacing">
+                        <img src="~/img/shoe-1.png" alt="" class="product__image">
+                        <h3 class="product__title">A really nice shoe</h3>
+                        <p class="product__description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam
+                            perspiciatis facilis beatae laudantium quidem enim sit sequi!
+                        </p>
+                        <a asp-controller="Shop" asp-action="Index" class="btn">Buy now</a>
+                    </article>
+
+                    <article class="product shoe-white shoe-left spacing">
+                        <img src="~/img/shoe-2.png" alt="" class="product__image">
+                        <h3 class="product__title">A really nice shoe</h3>
+                        <p class="product__description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam
+                            perspiciatis facilis beatae laudantium quidem enim sit sequi!
+                        </p>
+                        <a asp-controller="Shop" asp-action="Index"class="btn">Buy now</a>
+                    </article>
+
+                    <article class="product shoe-blue spacing">
+                        <img src="~/img/shoe-3.png" alt="" class="product__image">
+                        <h3 class="product__title">A really nice shoe</h3>
+                        <p class="product__description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam
+                            perspiciatis facilis beatae laudantium quidem enim sit sequi!
+                        </p>
+                        <a asp-controller="Shop" asp-action="Index"class="btn">Buy now</a>
+                    </article>
+
+                </div>
+            </section>
+
+        </main>
+
+
