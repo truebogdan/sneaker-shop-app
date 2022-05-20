@@ -122,6 +122,8 @@ namespace SneakerShopApp.Areas.Identity.Pages.Account
                 else
                 {
                     ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    var username = Input.Email;
+                    _logger.LogError("Invalid login attemp from {username} on {date}", username, DateTime.Now);
                     return Page();
                 }
             }

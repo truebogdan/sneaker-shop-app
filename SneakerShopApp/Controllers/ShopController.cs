@@ -9,11 +9,13 @@ namespace SneakerShopApp.Controllers
     {
         private readonly ISearchClient _esclient;
         private readonly ICart _cart;
+        private readonly ILogger<ShopController> _logger;
 
-        public ShopController(ISearchClient esclient, ICart cart)
+        public ShopController(ISearchClient esclient, ICart cart, ILogger<ShopController> logger)
         {
             _esclient = esclient;
             _cart = cart;
+            _logger = logger;   
         }
 
         public IActionResult Index()
@@ -29,6 +31,8 @@ namespace SneakerShopApp.Controllers
             if (User.Identity.IsAuthenticated)
             {
                 _cart.AddProduct(new CartProductModel { Customer = User.Identity.Name, Brand = product.Brand, Price = product.Price, Description = product.Description, ImgUrl = product.ImgUrl });
+                var username = User.Identity.Name;
+                _logger.LogWarning("User {username} just added the {brand} at {date} to his cart", username,product.Brand, DateTime.Now);
                 return Filter(brands, searchInput);
             }
             else
