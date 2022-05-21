@@ -9,16 +9,21 @@ namespace SneakerShopApp.Controllers
     {
         private readonly ISearchClient _esclient;
         private readonly ICart _cart;
+        private readonly ILogger<ShopController> _logger;
 
-        public ShopController(ISearchClient esclient, ICart cart)
+        public ShopController(ISearchClient esclient, ICart cart, ILogger<ShopController> logger)
         {
             _esclient = esclient;
             _cart = cart;
+            _logger = logger;   
         }
 
         public IActionResult Index()
         {
-
+            _logger.LogInformation("Log message generated with INFORMATION severity level.");
+            _logger.LogWarning("Log message generated with WARNING severity level.");
+            _logger.LogError("Log message generated with ERROR severity level.");
+            _logger.LogCritical("Log message log generated with CRITICAL severity level.");
             var searchResult = _esclient.GetProducts();
             var model = new ShopModel() { Products = searchResult.Products, Brands = searchResult.Brands, Checked = Array.Empty<string>(), SearchInput = "" };
             return View(model);
@@ -29,6 +34,8 @@ namespace SneakerShopApp.Controllers
             if (User.Identity.IsAuthenticated)
             {
                 _cart.AddProduct(new CartProductModel { Customer = User.Identity.Name, Brand = product.Brand, Price = product.Price, Description = product.Description, ImgUrl = product.ImgUrl });
+                var username = User.Identity.Name;
+                _logger.LogWarning("User {username} just added the {brand} at {date} to his cart", username,product.Brand, DateTime.Now);
                 return Filter(brands, searchInput);
             }
             else

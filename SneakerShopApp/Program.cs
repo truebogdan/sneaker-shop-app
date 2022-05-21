@@ -2,10 +2,18 @@ using DBRepo;
 using ESRepo;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
+using Serilog.Events;
 using SneakerShopApp.Data;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Host.UseSerilog((context, config) =>
+{
+    config.MinimumLevel.Warning();
+    config.MinimumLevel.Override("Microsoft", LogEventLevel.Information).MinimumLevel.Override("Microsoft.AspNetCore", LogEventLevel.Warning);
+    config.WriteTo.File("Data/logs.txt");
+}
+);
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
