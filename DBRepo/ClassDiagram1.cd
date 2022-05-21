@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DBRepo.Migrations.InitialCreate" Collapsed="true">
+    <Position X="10.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20220328124458_InitialCreate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DBRepo.Migrations.OrdersAdded">
+    <Position X="13" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20220329080020_OrdersAdded.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DBRepo.Migrations.DbShopContextModelSnapshot">
+    <Position X="7" Y="2" Width="1.5" />
+    <InheritanceLine Type="Microsoft.EntityFrameworkCore.Infrastructure.ModelSnapshot" FixedFromPoint="true">
+      <Path>
+        <Point X="7.25" Y="0.5" />
+        <Point X="7.25" Y="0.125" />
+        <Point X="6.625" Y="0.125" />
+        <Point X="6.625" Y="2.616" />
+        <Point X="7" Y="2.616" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Migrations\DbShopContextModelSnapshot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DBRepo.CartProductModel">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAQAgBAAAAAAAAAAAAAgAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>CartProductModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DBRepo.DbShopContext">
+    <Position X="9" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAABAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DbShopContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DBRepo.Order">
+    <Position X="5.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAEAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Order.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DBRepo.OrderProduct">
+    <Position X="4.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAECAAAAAQAgAAAAAAAAAAAAAAgAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>OrderProduct.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DBRepo.OrdersManager" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OrdersManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DBRepo.ShoppingCart" BaseTypeListCollapsed="true">
+    <Position X="7.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgBAABAAAIQAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>ShoppingCart.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="2.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Microsoft.EntityFrameworkCore.Migrations.Migration" Collapsed="true">
+    <Position X="11.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Microsoft.EntityFrameworkCore.Infrastructure.ModelSnapshot" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Microsoft.EntityFrameworkCore.DbContext" Collapsed="true">
+    <Position X="9.5" Y="1" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="DBRepo.ICart">
+    <Position X="1" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAIQAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>ICart.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DBRepo.IOrdersManager">
+    <Position X="3.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IOdersManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

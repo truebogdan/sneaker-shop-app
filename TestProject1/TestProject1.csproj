@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -17,6 +17,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DBRepo\DBRepo.csproj" />
+    <ProjectReference Include="..\ESRepo\ESRepo.csproj" />
+    <ProjectReference Include="..\SneakerShopApp\SneakerShopApp.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,8 +1,10 @@
 using DBRepo;
+using Microsoft.Extensions.Logging;
+using SneakerShopApp.Controllers;
 namespace TestProject1
 {
     [TestClass]
-    public class UnitTest1
+    public class DBRepoTest
     {
         [TestMethod]
         public void TotalCost()
@@ -30,5 +32,16 @@ namespace TestProject1
         }
 
         
+    }
+
+    public class ESRepoTest
+    {
+
+    }
+
+
+    public class SneakerShopAppTest
+    {
+
     }
 }

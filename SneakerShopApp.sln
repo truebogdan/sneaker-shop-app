@@ -11,6 +11,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBRepo", "DBRepo\DBRepo.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject1", "TestProject1\TestProject1.csproj", "{C5834C09-F145-44A3-98FE-8571954B5FFB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Uml", "Uml", "{259DBF20-7012-4875-B735-62C3B50186B1}"
+	ProjectSection(SolutionItems) = preProject
+		DBRepo\ClassDiagram1.cd = DBRepo\ClassDiagram1.cd
+		ESRepo\ClassDiagramESRepo.cd = ESRepo\ClassDiagramESRepo.cd
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
