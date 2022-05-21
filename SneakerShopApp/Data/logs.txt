@@ -1,0 +1,82 @@
+2022-05-21 11:48:16.824 +03:00 [INF] Now listening on: https://localhost:7249
+2022-05-21 11:48:16.832 +03:00 [INF] Now listening on: http://localhost:5249
+2022-05-21 11:48:16.834 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-21 11:48:16.834 +03:00 [INF] Hosting environment: Development
+2022-05-21 11:48:16.834 +03:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2022-05-21 11:48:19.375 +03:00 [INF] Log message generated with INFORMATION severity level.
+2022-05-21 11:48:19.377 +03:00 [WRN] Log message generated with WARNING severity level.
+2022-05-21 11:48:19.377 +03:00 [ERR] Log message generated with ERROR severity level.
+2022-05-21 11:48:19.377 +03:00 [FTL] Log message log generated with CRITICAL severity level.
+2022-05-21 11:48:49.863 +03:00 [INF] Log message generated with INFORMATION severity level.
+2022-05-21 11:48:49.863 +03:00 [WRN] Log message generated with WARNING severity level.
+2022-05-21 11:48:49.863 +03:00 [ERR] Log message generated with ERROR severity level.
+2022-05-21 11:48:49.863 +03:00 [FTL] Log message log generated with CRITICAL severity level.
+2022-05-21 11:48:59.901 +03:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-05-21 11:49:01.317 +03:00 [INF] Executed DbCommand (174ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [CartProducts] ([Brand], [Customer], [Description], [ImgUrl], [Price])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [CartProductModelId]
+FROM [CartProducts]
+WHERE @@ROWCOUNT = 1 AND [CartProductModelId] = scope_identity();
+2022-05-21 11:49:01.502 +03:00 [WRN] User alb@alb.com just added the adidas at "2022-05-21T11:49:01.5022631+03:00" to his cart
+2022-05-21 11:50:09.361 +03:00 [INF] User logged out.
+2022-05-21 11:51:27.767 +03:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-05-21 11:51:28.191 +03:00 [INF] Executed DbCommand (182ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-05-21 11:51:28.435 +03:00 [INF] Executed DbCommand (145ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2022-05-21 11:51:28.441 +03:00 [DBG] User alb@alb.com logged in.
+2022-05-21 11:53:05.927 +03:00 [INF] Now listening on: https://localhost:7249
+2022-05-21 11:53:05.933 +03:00 [INF] Now listening on: http://localhost:5249
+2022-05-21 11:53:05.935 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-21 11:53:05.935 +03:00 [INF] Hosting environment: Development
+2022-05-21 11:53:05.935 +03:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2022-05-21 11:53:10.157 +03:00 [INF] User logged out.
+2022-05-21 11:53:53.895 +03:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-05-21 11:53:55.359 +03:00 [INF] Executed DbCommand (187ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-05-21 11:53:55.458 +03:00 [WRN] Invalid password for user.
+2022-05-21 11:53:55.458 +03:00 [WRN] User failed to provide the correct password.
+2022-05-21 11:53:55.458 +03:00 [DBG] Invalid login attemp from test@test.com on "2022-05-21T11:53:55.4588804+03:00"
+2022-05-21 11:55:07.056 +03:00 [INF] Now listening on: https://localhost:7249
+2022-05-21 11:55:07.063 +03:00 [INF] Now listening on: http://localhost:5249
+2022-05-21 11:55:07.065 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-21 11:55:07.065 +03:00 [INF] Hosting environment: Development
+2022-05-21 11:55:07.065 +03:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2022-05-21 11:55:45.580 +03:00 [INF] Log message generated with INFORMATION severity level.
+2022-05-21 11:55:45.581 +03:00 [WRN] Log message generated with WARNING severity level.
+2022-05-21 11:55:45.581 +03:00 [ERR] Log message generated with ERROR severity level.
+2022-05-21 11:55:45.581 +03:00 [FTL] Log message log generated with CRITICAL severity level.
+2022-05-21 11:56:37.367 +03:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-05-21 11:56:38.792 +03:00 [INF] Executed DbCommand (180ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-05-21 11:56:38.894 +03:00 [WRN] Invalid password for user.
+2022-05-21 11:56:38.895 +03:00 [WRN] User failed to provide the correct password.
+2022-05-21 11:56:38.895 +03:00 [WRN] Invalid login attemp from test@test.com on "2022-05-21T11:56:38.8956228+03:00"
+2022-05-21 11:57:54.332 +03:00 [INF] Now listening on: https://localhost:7249
+2022-05-21 11:57:54.341 +03:00 [INF] Now listening on: http://localhost:5249
+2022-05-21 11:57:54.345 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-21 11:57:54.345 +03:00 [INF] Hosting environment: Development
+2022-05-21 11:57:54.345 +03:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2022-05-21 11:58:20.858 +03:00 [FTL] Log message log generated with CRITICAL severity level.
+2022-05-21 11:58:50.799 +03:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-05-21 11:58:52.250 +03:00 [INF] Executed DbCommand (187ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-05-21 11:58:52.349 +03:00 [WRN] Invalid password for user.
+2022-05-21 11:58:52.349 +03:00 [WRN] User failed to provide the correct password.
+2022-05-21 11:59:35.655 +03:00 [INF] Now listening on: https://localhost:7249
+2022-05-21 11:59:35.661 +03:00 [INF] Now listening on: http://localhost:5249
+2022-05-21 11:59:35.664 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-21 11:59:35.664 +03:00 [INF] Hosting environment: Development
+2022-05-21 11:59:35.664 +03:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\

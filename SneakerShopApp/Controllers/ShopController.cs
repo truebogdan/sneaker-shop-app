@@ -20,7 +20,10 @@ namespace SneakerShopApp.Controllers
 
         public IActionResult Index()
         {
-
+            _logger.LogInformation("Log message generated with INFORMATION severity level.");
+            _logger.LogWarning("Log message generated with WARNING severity level.");
+            _logger.LogError("Log message generated with ERROR severity level.");
+            _logger.LogCritical("Log message log generated with CRITICAL severity level.");
             var searchResult = _esclient.GetProducts();
             var model = new ShopModel() { Products = searchResult.Products, Brands = searchResult.Brands, Checked = Array.Empty<string>(), SearchInput = "" };
             return View(model);
