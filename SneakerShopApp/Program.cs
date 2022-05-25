@@ -12,6 +12,7 @@ builder.Host.UseSerilog((context, config) =>
     config.MinimumLevel.Warning();
     config.MinimumLevel.Override("Microsoft", LogEventLevel.Information).MinimumLevel.Override("Microsoft.AspNetCore", LogEventLevel.Warning);
     config.WriteTo.File("Data/logs.txt");
+    config.WriteTo.Console();
 }
 );
 // Add services to the container.
