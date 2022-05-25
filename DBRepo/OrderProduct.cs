@@ -10,5 +10,15 @@
         public string? Price { get; set; }
 
         public Order? Order { get; set; }
+        public OrderProduct(string? imgUrl, string? description, string? brand, string? price, Order? order)
+        { 
+            ImgUrl = imgUrl;
+            Description = description;
+            Brand = brand;
+            Price = price;
+            Order = order;
+        }   
+        public OrderProduct() { }
     }
+   
 }

@@ -1,4 +1,6 @@
-﻿namespace DBRepo
+﻿using DBRepo.Builder;
+
+namespace DBRepo
 {
     public class OrdersManager : IOrdersManager
     {
@@ -17,7 +19,8 @@
             List<OrderProduct> orderProducts = new List<OrderProduct>();
             foreach (var product in cartProducts)
             {
-                orderProducts.Add(new OrderProduct() { Description = product.Description, Price = product.Price, Brand = product.Brand, ImgUrl = product.ImgUrl, Order = order });
+                var ord = OrderProductBuilder.CreateNew().SetImgUrl(product.ImgUrl).SetDescription(product.Description).SetBrand(product.Brand).SetPrice(product.Price).SetOrder(order).Build();
+                orderProducts.Add(ord);
             }
             _context.Orders.Add(order);
             _context.OrderProducts.AddRange(orderProducts);
