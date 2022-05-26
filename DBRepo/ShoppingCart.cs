@@ -35,10 +35,17 @@
         }
         public static double TotalCost(IEnumerable<CartProductModel> products)
         {
+            if (products == null)
+            {
+                return 0;
+            }
             double total = 0;
             foreach (var product in products)
             {
-
+                if(product == null || product.Price.Contains("-") )
+                {
+                    continue;
+                }
                 total += Double.Parse(product.Price);
             }
             return total;
