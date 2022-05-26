@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DBRepo.Builder
+﻿namespace DBRepo.Builder
 {
     internal interface IOrderProductSetOrder
     {
-        IOrderProduct SetOrder ( Order order );
+        IOrderProduct SetOrder(Order order);
     }
 }

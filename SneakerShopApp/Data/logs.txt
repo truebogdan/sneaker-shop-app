@@ -1057,3 +1057,84 @@ VALUES (@p0, @p1);
 SELECT [OrderId]
 FROM [Orders]
 WHERE @@ROWCOUNT = 1 AND [OrderId] = scope_identity();
+2022-05-26 16:38:59.627 +03:00 [INF] Now listening on: https://localhost:7249
+2022-05-26 16:38:59.646 +03:00 [INF] Now listening on: http://localhost:5249
+2022-05-26 16:38:59.650 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-26 16:38:59.651 +03:00 [INF] Hosting environment: Development
+2022-05-26 16:38:59.652 +03:00 [INF] Content root path: C:\Users\nutic\source\repos\sneaker-shop-app\SneakerShopApp\
+2022-05-26 16:40:13.092 +03:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-05-26 16:40:15.239 +03:00 [INF] Executed DbCommand (198ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-05-26 16:40:15.375 +03:00 [WRN] Invalid password for user.
+2022-05-26 16:40:15.377 +03:00 [WRN] User failed to provide the correct password.
+2022-05-26 16:40:15.379 +03:00 [WRN] Invalid login attemp from truebogdan1@gmail.com on "2022-05-26T16:40:15.3797170+03:00"
+2022-05-26 16:40:20.812 +03:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-05-26 16:40:20.961 +03:00 [INF] Executed DbCommand (140ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-05-26 16:40:21.194 +03:00 [INF] Executed DbCommand (138ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2022-05-26 16:40:27.856 +03:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-05-26 16:40:28.303 +03:00 [INF] Executed DbCommand (150ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [CartProducts] ([Brand], [Customer], [Description], [ImgUrl], [Price])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [CartProductModelId]
+FROM [CartProducts]
+WHERE @@ROWCOUNT = 1 AND [CartProductModelId] = scope_identity();
+2022-05-26 16:40:28.513 +03:00 [WRN] User nike@nike.com just added the Nike at "2022-05-26T16:40:28.5135009+03:00" to his cart
+2022-05-26 16:40:31.688 +03:00 [INF] Executed DbCommand (136ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-05-26 16:40:35.428 +03:00 [INF] Executed DbCommand (141ms) [Parameters=[@__productId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price]
+FROM [CartProducts] AS [c]
+WHERE [c].[CartProductModelId] = @__productId_0
+2022-05-26 16:40:38.564 +03:00 [INF] Executed DbCommand (139ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [CartProducts]
+WHERE [CartProductModelId] = @p0;
+SELECT @@ROWCOUNT;
+2022-05-26 16:40:38.848 +03:00 [INF] Executed DbCommand (135ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-05-26 16:40:40.489 +03:00 [INF] Executed DbCommand (139ms) [Parameters=[@__productId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price]
+FROM [CartProducts] AS [c]
+WHERE [c].[CartProductModelId] = @__productId_0
+2022-05-26 16:40:40.768 +03:00 [INF] Executed DbCommand (141ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [CartProducts]
+WHERE [CartProductModelId] = @p0;
+SELECT @@ROWCOUNT;
+2022-05-26 16:40:41.067 +03:00 [INF] Executed DbCommand (134ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-05-26 16:40:44.262 +03:00 [INF] Executed DbCommand (136ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-05-26 16:40:44.552 +03:00 [INF] Executed DbCommand (145ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [CartProducts]
+WHERE [CartProductModelId] = @p0;
+SELECT @@ROWCOUNT;
+2022-05-26 16:40:45.035 +03:00 [INF] Executed DbCommand (153ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Orders] ([Customer], [Total])
+VALUES (@p0, @p1);
+SELECT [OrderId]
+FROM [Orders]
+WHERE @@ROWCOUNT = 1 AND [OrderId] = scope_identity();
+2022-05-26 16:40:48.491 +03:00 [INF] Executed DbCommand (134ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0

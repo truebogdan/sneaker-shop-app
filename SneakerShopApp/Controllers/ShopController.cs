@@ -15,7 +15,7 @@ namespace SneakerShopApp.Controllers
         {
             _esclient = esclient;
             _cart = cart;
-            _logger = logger;   
+            _logger = logger;
         }
 
         public IActionResult Index()
@@ -31,7 +31,7 @@ namespace SneakerShopApp.Controllers
             {
                 _cart.AddProduct(new CartProductModel { Customer = User.Identity.Name, Brand = product.Brand, Price = product.Price, Description = product.Description, ImgUrl = product.ImgUrl });
                 var username = User.Identity.Name;
-                _logger.LogWarning("User {username} just added the {brand} at {date} to his cart", username,product.Brand, DateTime.Now);
+                _logger.LogWarning("User {username} just added the {brand} at {date} to his cart", username, product.Brand, DateTime.Now);
                 return Filter(brands, searchInput);
             }
             else

@@ -13,7 +13,7 @@ namespace DBRepo
         public OrdersManager(DbShopContext context, ILogger<OrdersManager> logger)
         {
             _context = context;
-            _logger = logger;   
+            _logger = logger;
         }
 
         public void AddOrder(string customer, double totalCost, IEnumerable<CartProductModel> cartProducts)

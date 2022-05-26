@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DBRepo.Iter
+﻿namespace DBRepo.Iter
 {
-     class Iterator : IAbstractIterator
+    class Iterator : IAbstractIterator
     {
         private ConcreteCollection collection;
-        private int index=0;
+        private int index = 0;
         private int step = 1;
 
         public Iterator(ConcreteCollection collection)
@@ -19,14 +13,14 @@ namespace DBRepo.Iter
 
         public bool IsCompleted
         {
-            get { return index >= collection.Count-1; }
+            get { return index >= collection.Count - 1; }
         }
 
         public CartProductModel First()
         {
             index = 0;
-            if(collection.Count > 0)
-            return collection.GetOrderProduct(index);
+            if (collection.Count > 0)
+                return collection.GetOrderProduct(index);
             return Next();
         }
 

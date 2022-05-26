@@ -1,6 +1,4 @@
 using DBRepo;
-using Microsoft.Extensions.Logging;
-using SneakerShopApp.Controllers;
 namespace TestProject1
 {
     [TestClass]
@@ -31,7 +29,7 @@ namespace TestProject1
             Assert.AreEqual(0, ShoppingCart.TotalCost(productslist));
         }
 
-        
+
     }
 
     public class ESRepoTest

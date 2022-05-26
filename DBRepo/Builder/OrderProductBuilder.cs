@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DBRepo.Builder
+﻿namespace DBRepo.Builder
 {
     internal class OrderProductBuilder : IOrderProduct, IOrderProductSetImgUrl, IOrderProductSetDescription, IOrderProductSetBrand, IOrderProductSetPrice, IOrderProductSetOrder
     {
-        private string? ImgUrl ="";
+        private string? ImgUrl = "";
         private string? Description = "";
         private string? Brand = "";
         private string? Price = "";
@@ -19,18 +13,18 @@ namespace DBRepo.Builder
         {
             return new OrderProductBuilder();
         }
-  
+
 
         public IOrderProductSetBrand SetDescription(string description)
         {
-          this.Description = description;   
+            this.Description = description;
             return this;
         }
 
         public IOrderProductSetDescription SetImgUrl(string imgUrl)
         {
-           this.ImgUrl = imgUrl;
-           return this;
+            this.ImgUrl = imgUrl;
+            return this;
         }
 
         public IOrderProduct SetOrder(Order order)
@@ -41,7 +35,7 @@ namespace DBRepo.Builder
 
         public IOrderProductSetOrder SetPrice(string price)
         {
-           this.Price= price;
+            this.Price = price;
             return this;
         }
 
@@ -52,7 +46,7 @@ namespace DBRepo.Builder
 
         IOrderProductSetPrice IOrderProductSetBrand.SetBrand(string brand)
         {
-           this.Brand= brand;
+            this.Brand = brand;
             return this;
         }
     }

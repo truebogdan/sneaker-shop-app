@@ -26,7 +26,7 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<DbShopContext>(options =>
-    options.UseSqlServer(connectionString),ServiceLifetime.Singleton);
+    options.UseSqlServer(connectionString), ServiceLifetime.Singleton);
 
 
 builder.Services.Configure<IdentityOptions>(options =>
