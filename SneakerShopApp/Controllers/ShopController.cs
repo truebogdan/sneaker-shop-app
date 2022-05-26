@@ -25,14 +25,14 @@ namespace SneakerShopApp.Controllers
             return View(model);
         }
         [HttpPost]
-        public IActionResult AddProductToCart(ProductModel product, string searchInput, string[] brands)
+        public async Task<IActionResult> AddProductToCart(ProductModel product, string searchInput, string[] brands)
         {
             if (User.Identity.IsAuthenticated)
             {
                 _cart.AddProduct(new CartProductModel { Customer = User.Identity.Name, Brand = product.Brand, Price = product.Price, Description = product.Description, ImgUrl = product.ImgUrl });
                 var username = User.Identity.Name;
                 _logger.LogWarning("User {username} just added the {brand} at {date} to his cart", username, product.Brand, DateTime.Now);
-                return Filter(brands, searchInput);
+                return await FilterAsync(brands, searchInput);
             }
             else
                 return Redirect("~/Identity/Account/Login");
@@ -63,10 +63,10 @@ namespace SneakerShopApp.Controllers
                 return Redirect("~/Identity/Account/Login");
         }
         [HttpPost]
-        public IActionResult Filter(string[] brands, string searchInput)
+        public async Task<IActionResult> FilterAsync(string[] brands, string searchInput)
         {
             brands = brands.Where(brand => brand != "false").ToArray();
-            var searchResult = _esclient.Filter(searchInput, brands);
+            var searchResult = await _esclient.Filter(searchInput, brands);
             var model = new ShopModel() { Products = searchResult.Products, Brands = searchResult.Brands, Checked = brands, SearchInput = searchInput };
             return View("Index", model);
         }

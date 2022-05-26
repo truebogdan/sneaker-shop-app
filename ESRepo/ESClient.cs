@@ -12,9 +12,9 @@ namespace ESRepo
             client = new ElasticClient(new Uri(configuration.GetConnectionString("ElasticsearchConnection")));
         }
 
-        public SearchResult Filter(string searchInput, string[] brands)
+        public async Task<SearchResult> Filter(string searchInput, string[] brands)
         {
-            var response = client.Search<ProductModel>(s =>
+            var response = await client.SearchAsync<ProductModel>(s =>
                s.Index("sneakers-index").Size(2000).Query(q =>
                    q.Bool(b =>
                      b.Must(m => m.Match(m =>
@@ -22,7 +22,7 @@ namespace ESRepo
                             f.Description).Query(searchInput)), m =>
                       m.Terms(ts => ts.Field(f => f.Brand.Suffix("keyword")).Terms(brands))))));
 
-            var aggregation = client.Search<ProductModel>(s =>
+            var aggregation = await client.SearchAsync<ProductModel>(s =>
                s.Index("sneakers-index").Size(0).Query(q =>
                      q.Match(m =>
                         m.Field(f =>
@@ -30,6 +30,7 @@ namespace ESRepo
                     aggs.Terms("brands", t =>
                        t.Field(f =>
                           f.Brand.Suffix("keyword")))));
+
             return new SearchResult() { Products = response.Documents, Brands = ConvertBucketsToDictionary(aggregation.Aggregations.Terms("brands").Buckets) };
         }
 
