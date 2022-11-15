@@ -44,7 +44,19 @@ builder.Services.Configure<IdentityOptions>(options =>
 builder.Services.AddSingleton<ISearchClient, ESClient>();
 builder.Services.AddTransient<ICart, ShoppingCart>();
 builder.Services.AddTransient<IOrdersManager, OrdersManager>();
+builder.Services.AddAuthentication()
+  .AddFacebook(options =>
+  {
+      options.AppId = "927355838434099";
+      options.AppSecret = "f6d8703cae817107fcfaa32938f917b0";
+  });
 
+builder.Services.AddAuthentication()
+    .AddGoogle(options =>
+    {
+        options.ClientId = "1074677550379-8gsvpbvph2jsv362b6bntl9ttmo5snc4.apps.googleusercontent.com";
+        options.ClientSecret = "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";
+    });
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -66,10 +78,8 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
-
 app.Run();

@@ -10,6 +10,8 @@
   <ItemGroup>
     <PackageReference Include="Elastic.Apm.Elasticsearch" Version="1.14.1" />
     <PackageReference Include="Elastic.Clients.Elasticsearch" Version="8.0.0-alpha.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="6.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.2" />
