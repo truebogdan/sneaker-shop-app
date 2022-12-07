@@ -26,7 +26,7 @@
 
                     </div>  
                     <div class="col-md-2">
-                          <p class="card-text">$@product.Price</p>
+                          <p class="card-text">@product.Price Ron</p>
                           <form method="post" asp-controller="Shop" asp-action="DeleteFromCart">
                             <input  name="productId" type="number" value="@product.CartProductModelId" hidden/>
                             <button class="btn btn-danger" type="submit"><i class="fa fa-trash"></i></button>
@@ -45,7 +45,7 @@
             <div class="col-md-6">
              @if(@Model.CartProducts.Count() > 0)
              {
-                         <h3>Total cost: $@Model.Total</h3>
+                         <h3>Total cost: @Model.Total Ron</h3>
                            <form  method="post" asp-action="CheckoutCart" asp-controller="Shop">
                                 <input  name="customer" type="text" value="@Model.CartProducts.First().Customer" hidden/>
                                 <button type="submit" class="btn btn-danger">Check Out</button>

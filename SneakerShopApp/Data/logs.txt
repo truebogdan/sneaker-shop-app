@@ -1704,13 +1704,89 @@ SELECT @@ROWCOUNT;
 SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
 FROM [AspNetUserClaims] AS [a]
 WHERE [a].[UserId] = @__user_Id_0
-2022-12-07 15:36:48.310 +02:00 [INF] Now listening on: https://localhost:7249
-2022-12-07 15:36:48.331 +02:00 [INF] Now listening on: http://localhost:5249
-2022-12-07 15:36:48.334 +02:00 [INF] Application started. Press Ctrl+C to shut down.
-2022-12-07 15:36:48.335 +02:00 [INF] Hosting environment: Development
-2022-12-07 15:36:48.336 +02:00 [INF] Content root path: D:\sneakerShop\SneakerShopApp\
-2022-12-07 17:32:08.219 +02:00 [INF] Now listening on: https://localhost:7249
-2022-12-07 17:32:08.248 +02:00 [INF] Now listening on: http://localhost:5249
-2022-12-07 17:32:08.252 +02:00 [INF] Application started. Press Ctrl+C to shut down.
-2022-12-07 17:32:08.253 +02:00 [INF] Hosting environment: Development
-2022-12-07 17:32:08.255 +02:00 [INF] Content root path: D:\sneakerShop\SneakerShopApp\
+2022-12-07 17:31:12.377 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-07 17:31:12.408 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-07 17:31:12.413 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-07 17:31:12.415 +02:00 [INF] Hosting environment: Development
+2022-12-07 17:31:12.416 +02:00 [INF] Content root path: C:\Users\giurg\OneDrive\Desktop\ISW PROIECT\SneakerShopApp\
+2022-12-07 17:38:14.771 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-07 17:38:14.821 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-07 17:38:14.829 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-07 17:38:14.832 +02:00 [INF] Hosting environment: Development
+2022-12-07 17:38:14.834 +02:00 [INF] Content root path: C:\Users\giurg\OneDrive\Desktop\ISW PROIECT\SneakerShopApp\
+2022-12-07 17:38:57.109 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-07 17:39:04.045 +02:00 [INF] Executed DbCommand (398ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-12-07 17:39:04.163 +02:00 [WRN] Invalid login attemp from giurgimihaigeorge10@gmail.com on "2022-12-07T17:39:04.1634739+02:00"
+2022-12-07 17:39:10.375 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-07 17:39:10.603 +02:00 [INF] Executed DbCommand (210ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-12-07 17:39:10.613 +02:00 [WRN] Invalid login attemp from giurgimihaigeorge10@gmail.com on "2022-12-07T17:39:10.6130953+02:00"
+2022-12-07 17:39:31.684 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-07 17:39:31.871 +02:00 [INF] Executed DbCommand (148ms) [Parameters=[@__loginProvider_0='?' (Size = 128), @__providerKey_1='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[LoginProvider], [a].[ProviderKey], [a].[ProviderDisplayName], [a].[UserId]
+FROM [AspNetUserLogins] AS [a]
+WHERE ([a].[LoginProvider] = @__loginProvider_0) AND ([a].[ProviderKey] = @__providerKey_1)
+2022-12-07 17:39:41.505 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-07 17:39:41.731 +02:00 [INF] Executed DbCommand (217ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-12-07 17:39:43.065 +02:00 [INF] Executed DbCommand (439ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 256), @p8='?' (Size = 256), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+2022-12-07 17:39:43.605 +02:00 [INF] Executed DbCommand (145ms) [Parameters=[@__loginProvider_0='?' (Size = 128), @__providerKey_1='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[LoginProvider], [a].[ProviderKey], [a].[ProviderDisplayName], [a].[UserId]
+FROM [AspNetUserLogins] AS [a]
+WHERE ([a].[LoginProvider] = @__loginProvider_0) AND ([a].[ProviderKey] = @__providerKey_1)
+2022-12-07 17:39:43.926 +02:00 [INF] Executed DbCommand (216ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-12-07 17:39:44.474 +02:00 [INF] Executed DbCommand (149ms) [Parameters=[@p0='?' (Size = 128), @p1='?' (Size = 128), @p2='?' (Size = 4000), @p3='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserLogins] ([LoginProvider], [ProviderKey], [ProviderDisplayName], [UserId])
+VALUES (@p0, @p1, @p2, @p3);
+2022-12-07 17:39:44.718 +02:00 [INF] Executed DbCommand (212ms) [Parameters=[@p14='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p15='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Boolean), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PhoneNumber] = @p9, [PhoneNumberConfirmed] = @p10, [SecurityStamp] = @p11, [TwoFactorEnabled] = @p12, [UserName] = @p13
+WHERE [Id] = @p14 AND [ConcurrencyStamp] = @p15;
+SELECT @@ROWCOUNT;
+2022-12-07 17:39:45.524 +02:00 [INF] Executed DbCommand (247ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2022-12-07 17:40:18.750 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-07 17:40:19.313 +02:00 [INF] Executed DbCommand (190ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [CartProducts] ([Brand], [Customer], [Description], [ImgUrl], [Price])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [CartProductModelId]
+FROM [CartProducts]
+WHERE @@ROWCOUNT = 1 AND [CartProductModelId] = scope_identity();
+2022-12-07 17:40:19.736 +02:00 [WRN] User chipsandfish88@gmail.com just added the adidas at "2022-12-07T17:40:19.7358183+02:00" to his cart
+2022-12-07 17:41:13.108 +02:00 [INF] Executed DbCommand (139ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-07 17:41:24.526 +02:00 [INF] Executed DbCommand (192ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-07 17:41:24.950 +02:00 [INF] Executed DbCommand (183ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [CartProducts]
+WHERE [CartProductModelId] = @p0;
+SELECT @@ROWCOUNT;
+2022-12-07 17:41:25.784 +02:00 [INF] Executed DbCommand (317ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Orders] ([Customer], [Total])
+VALUES (@p0, @p1);
+SELECT [OrderId]
+FROM [Orders]
+WHERE @@ROWCOUNT = 1 AND [OrderId] = scope_identity();
