@@ -1,0 +1,51 @@
+image: microsoft/dotnet:latest
+
+stages:
+    - build
+    - test
+    - deploy
+
+variables:
+    test: "TestProject1"
+
+# before_script:
+#     - "cd src"
+#     - "dotnet restore"
+
+buildDBRepo:
+    stage: build
+    script:
+        - "cd DBRepo"
+        - "dotnet build"
+        - "cd .."
+
+buildESRepo:
+    stage: build
+    script:
+        - "cd ESRepo"
+        - "dotnet build"
+        - "cd .."
+
+buildSneakerShopApp:
+    stage: build
+    script:
+        - "cd SneakerShopApp"
+        - "dotnet build"
+        - "cd .."       
+
+
+test:
+    stage: test
+    script: 
+        - "cd $test"
+        - "dotnet test"
+        - "cd .."
+
+
+deployToAppService:
+    stage: deploy
+    script: 
+        - "dotnet publish --output published"
+        - "Compress-Archive published/* site_v1.zip"
+        - "az login --service-principal -u $appId -p $secretClient --tenant $tenantId"
+        - "az webapp deploy --resource-group SneakerShop_group --name SneakerShopAPP --src-path site_v1.zip"
