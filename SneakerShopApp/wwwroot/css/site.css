@@ -35,6 +35,16 @@ img {
     display: block;
 }
 
+.card-img-top {
+    transition: transform .2s;
+    margin: 0 auto;
+}
+
+.card-img-top:hover {
+    transform: scale(1.5);
+
+}
+
 h1,
 h2,
 h3,
