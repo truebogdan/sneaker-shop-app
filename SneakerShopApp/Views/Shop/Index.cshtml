@@ -34,7 +34,7 @@
                       <img src="@product.ImgUrl" class="card-img-top" alt="...">
                       <div class="card-body">
                         <h6 class="card-title">@product.Description</h6>
-                        <p class="card-text">$@product.Price</p>
+                        <p class="card-text">@product.Price Ron</p>
                                 <form method="post"  asp-controller="Shop" asp-action="AddProductToCart"> 
                                     <input type="text" name="brand" value="@product.Brand" hidden>
                                     <input type="text" name="description" value="@product.Description" hidden>
