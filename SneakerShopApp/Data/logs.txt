@@ -1704,3 +1704,13 @@ SELECT @@ROWCOUNT;
 SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
 FROM [AspNetUserClaims] AS [a]
 WHERE [a].[UserId] = @__user_Id_0
+2022-12-07 15:36:48.310 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-07 15:36:48.331 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-07 15:36:48.334 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-07 15:36:48.335 +02:00 [INF] Hosting environment: Development
+2022-12-07 15:36:48.336 +02:00 [INF] Content root path: D:\sneakerShop\SneakerShopApp\
+2022-12-07 17:32:08.219 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-07 17:32:08.248 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-07 17:32:08.252 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-07 17:32:08.253 +02:00 [INF] Hosting environment: Development
+2022-12-07 17:32:08.255 +02:00 [INF] Content root path: D:\sneakerShop\SneakerShopApp\
