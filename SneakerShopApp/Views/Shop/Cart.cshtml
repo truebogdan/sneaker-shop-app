@@ -49,13 +49,14 @@
                            <form  method="post" asp-action="CheckoutCart" asp-controller="Shop">
                                 <input  name="customer" type="text" value="@Model.CartProducts.First().Customer" hidden/>
                                 <button type="submit" class="btn btn-danger">Check Out</button>
-                </form>
+                           </form>
             }
             else
             {
                 <h3>This cart is empty</h3>
             }
 
+             
                    
             </div>
     </div>

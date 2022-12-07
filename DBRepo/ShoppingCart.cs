@@ -24,7 +24,7 @@
 
         public void Checkout(string customer)
         {
-            IEnumerable<CartProductModel> productsFromCart = _context.CartProducts.Where(_x => _x.Customer == customer).ToList();
+            IEnumerable<CartProductModel> productsFromCart = GetCartProducts(customer);
 
             _context.CartProducts.RemoveRange(productsFromCart);
 
@@ -33,6 +33,7 @@
             _ordersManager.AddOrder(customer, TotalCost(productsFromCart), productsFromCart);
 
         }
+
         public static double TotalCost(IEnumerable<CartProductModel> products)
         {
             if (products == null)

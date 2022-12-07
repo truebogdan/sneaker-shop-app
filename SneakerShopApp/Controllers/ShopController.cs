@@ -1,5 +1,6 @@
 ﻿using DBRepo;
 using ESRepo;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using SneakerShopApp.Models;
 
@@ -56,8 +57,8 @@ namespace SneakerShopApp.Controllers
         {
             if (User.Identity.IsAuthenticated)
             {
-                _cart.Checkout(customer);
-                return RedirectToAction("Index");
+                var a = _cart.GetCartProducts(User.Identity.Name);
+                return RedirectToAction("Checkout");
             }
             else
                 return Redirect("~/Identity/Account/Login");
@@ -87,6 +88,35 @@ namespace SneakerShopApp.Controllers
             {
                 _cart.RemoveProduct(productId);
                 return Cart();
+            }
+            else
+                return Redirect("~/Identity/Account/Login");
+        }
+
+        [HttpGet]
+        public JsonResult GetCartProducts()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                var products = _cart.GetCartProducts(User.Identity.Name);
+                return Json(products);
+            }
+            else
+            {
+                return null;
+            }
+        }
+        public IActionResult Checkout()
+        {
+           return View("Checkout");
+        }
+
+        public IActionResult OrderConfirmation()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                _cart.Checkout(User.Identity.Name);
+                return View();
             }
             else
                 return Redirect("~/Identity/Account/Login");
