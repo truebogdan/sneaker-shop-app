@@ -35,17 +35,12 @@
                       <div class="card-body">
                         <h6 class="card-title">@product.Description</h6>
                         <p class="card-text">@product.Price Ron</p>
-                                <form method="post"  asp-controller="Shop" asp-action="AddProductToCart"> 
+                                <form method="post"  asp-controller="Shop" asp-action="ShowDetails"> 
                                     <input type="text" name="brand" value="@product.Brand" hidden>
                                     <input type="text" name="description" value="@product.Description" hidden>
                                     <input type="text" name="price" value="@product.Price" hidden>
                                     <input type="text" name="imgurl" value="@product.ImgUrl" hidden>
-                                    <input type="text" name="searchInput" value="@Model.SearchInput" hidden>
-                                    @foreach(var brand in Model.Checked)
-                                      {
-                                         <input type="text" name="brands" value="@brand" hidden>
-                                      }
-                        <button class="btn btn-danger" type ="submit">Add To Cart</button>
+                                    <button class="btn btn-danger" type ="submit">Details</button>
                                 </form>
                       </div>
                     </div>

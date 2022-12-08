@@ -26,19 +26,25 @@ namespace SneakerShopApp.Controllers
             return View(model);
         }
         [HttpPost]
-        public async Task<IActionResult> AddProductToCart(ProductModel product, string searchInput, string[] brands)
+        public async Task<IActionResult> AddProductToCart(ProductModel product)
         {
             if (User.Identity.IsAuthenticated)
             {
                 _cart.AddProduct(new CartProductModel { Customer = User.Identity.Name, Brand = product.Brand, Price = product.Price, Description = product.Description, ImgUrl = product.ImgUrl });
                 var username = User.Identity.Name;
                 _logger.LogWarning("User {username} just added the {brand} at {date} to his cart", username, product.Brand, DateTime.Now);
-                return await FilterAsync(brands, searchInput);
+                return await ShowDetails(product);
             }
             else
                 return Redirect("~/Identity/Account/Login");
 
 
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ShowDetails(ProductModel product)
+        {
+            return View("Details",product);
         }
 
         public IActionResult Cart()
