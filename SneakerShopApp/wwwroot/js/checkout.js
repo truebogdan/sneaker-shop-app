@@ -4,7 +4,6 @@
     const API_KEY = "u_test_api_7dee60ad-e518-411f-a22a-5c1ec437f1cc";
     const url = "https://" + window.location.host;
 
-
     $.ajax({
         url: url + "/Shop/GetCartProducts",
         type: 'GET',

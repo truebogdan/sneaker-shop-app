@@ -258,3 +258,24 @@ section {
     --clr-outer: #2193b0;
     --clr-accent: #008951;
 }
+
+.slim-card {
+    float:left;
+    text-align:left;
+}
+
+.card-price {
+    float:right;
+    width:40px;
+}
+
+.input-price {
+    width:80px;
+}
+#products-container {
+    margin-top:10px;
+}
+
+#add-button {
+    margin-top:10px;
+}

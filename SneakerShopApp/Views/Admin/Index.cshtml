@@ -1,0 +1,59 @@
+﻿<h1>Admin panel</h1>
+<br />
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Statistics</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Products</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Orders</button>
+    </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <button class="btn btn-success" id="add-button" data-bs-toggle="modal" data-bs-target="#exampleModal" >Add New Product</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add new product</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <label> Brand:</label>
+                        <input id="brand" type="text"/>
+                        <br />
+                        <label> Description:</label>
+                        <input  id="description" type="text" />
+                        <br />
+                        <label> Long description:</label>
+                        <textarea id="long-description" rows="5" cols="50"></textarea>
+                        <br />
+                        <label>Price</label>
+                        <input  id="price" type="number"/>
+                        <br />
+                        <label> Images</label>
+                        <input id="images" type="file" multiple="multiple" accept="image/png, image/jpeg , image/webp" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" id="create-btn" class="btn btn-primary">Create product</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="products-container">
+
+        </div>
+    </div>
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+</div>
+
+<script src="~/js/products.js"></script>
