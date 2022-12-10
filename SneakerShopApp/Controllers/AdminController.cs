@@ -1,4 +1,5 @@
-﻿using ESRepo;
+﻿using DBRepo;
+using ESRepo;
 using Firebase.Storage;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -9,10 +10,12 @@ namespace SneakerShopApp.Controllers
     {
         private FirebaseStorage _storage;
         private ISearchClient _esclient;
-        public AdminController(ISearchClient esclient)
+        private IOrdersManager _ordersManager;
+        public AdminController(ISearchClient esclient , IOrdersManager ordersManager)
         {
             _storage = new FirebaseStorage("sneakershop-31c90.appspot.com");
             _esclient = esclient;
+            _ordersManager = ordersManager;
         }
         public IActionResult Index()
         {
@@ -61,6 +64,30 @@ namespace SneakerShopApp.Controllers
         public async void DeleteProduct(string guid)
         {
             await _esclient.DeleteProduct(guid);
+        }
+
+        [HttpGet]
+        public string GetAllOrders()
+        {
+            List<object> result = new List<object>();
+            var orders = _ordersManager.GetAllOrders();
+            foreach(var order in orders.Keys)
+            {
+                result.Add(new {
+                    products = orders.GetValueOrDefault(order),
+                    total = order.Total,
+                    customer = order.Customer,
+                    orderId = order.OrderId,
+                    isCompleted = order.IsCompleted
+                });
+            }
+            return JsonConvert.SerializeObject(result);
+        }
+
+        [HttpPost]
+        public void CompleteOrder(int orderId)
+        {
+            _ordersManager.CompleteOrder(orderId);
         }
     }
 }

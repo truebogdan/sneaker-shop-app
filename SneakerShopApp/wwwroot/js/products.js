@@ -8,7 +8,6 @@
         dataType: 'json', 
         success: function (res) {
             $.each(res, function (i, product) {
-                console.log(product);
                 var productCard =   `
                     <div class="card">
                       <div class="card-header">
@@ -101,7 +100,6 @@
             contentType: false,
             processData: false,
             success: function (data) {
-                console.log(data);
                 var productCard = `
                     <div class="card">
                       <div class="card-header">

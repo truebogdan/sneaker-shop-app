@@ -279,3 +279,19 @@ section {
 #add-button {
     margin-top:10px;
 }
+
+.order-products-link {
+    color:darkblue;
+    cursor:pointer;
+    width:auto;
+}
+
+.order-products-link:hover {
+    color:darkviolet;
+}
+#order-products-container img {
+    width:50px;
+}
+.order-status {
+    float:right;
+}
