@@ -79,5 +79,25 @@ namespace DBRepo
             }
             return result;
         }
+
+        public int GetCustomersCount()
+        {
+            return _context.Orders.Select(a => a.Customer).Distinct().Count();
+        }
+
+        public int GetOrdersCount()
+        {
+           return _context.Orders.Count();
+        }
+
+        public int GetProductsSoldCount()
+        {
+            return _context.OrderProducts.Count();
+        }
+
+        public double GetTotalEarnings()
+        {
+            return _context.Orders.Sum(a => a.Total);
+        }
     }
 }

@@ -3,6 +3,7 @@ using ESRepo;
 using Firebase.Storage;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using SneakerShopApp.Models;
 
 namespace SneakerShopApp.Controllers
 {
@@ -19,7 +20,16 @@ namespace SneakerShopApp.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+
+            StatsModel model = new StatsModel() { 
+                customersCount = _ordersManager.GetCustomersCount(),
+                productsSoldCount = _ordersManager.GetProductsSoldCount(),
+                ordersCount = _ordersManager.GetOrdersCount(),
+                totalEarnings = _ordersManager.GetTotalEarnings()
+            };
+
+
+            return View(model);
         }
 
         [HttpPost]
@@ -92,5 +102,6 @@ namespace SneakerShopApp.Controllers
         {
             _ordersManager.CompleteOrder(orderId);
         }
+
     }
 }

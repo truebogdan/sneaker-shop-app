@@ -12,7 +12,83 @@
     </li>
 </ul>
 <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+
+@*     start*@
+           <div class="row stats-panel">
+           <div class="col-xl-3 col-lg-6">
+                <div class="card card-stats mb-4 mb-xl-0">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title text-uppercase text-muted mb-0">Orders:</h5>
+                                <span class="h2 font-weight-bold mb-0">@Model.ordersCount</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                                    <i class="fas fa-cubes"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6">
+                <div class="card card-stats mb-4 mb-xl-0">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title text-uppercase text-muted mb-0">Customers:</h5>
+                                <span class="h2 font-weight-bold mb-0">@Model.customersCount</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6">
+                <div class="card card-stats mb-4 mb-xl-0">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title text-uppercase text-muted mb-0">Sales:</h5>
+                                <span class="h2 font-weight-bold mb-0">@Model.productsSoldCount</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape bg-primary text-white rounded-circle shadow">
+                                    <i class="fas fa-shoe-prints"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6">
+                <div class="card card-stats mb-4 mb-xl-0">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title text-uppercase text-muted mb-0">Earnings:</h5>
+                                <span class="h2 font-weight-bold mb-0">@Model.totalEarnings RON</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape bg-success text-white rounded-circle shadow">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+@*     emd*@
+    </div>
     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
         <button class="btn btn-success" id="add-button" data-bs-toggle="modal" data-bs-target="#exampleModal" >Add New Product</button>
 

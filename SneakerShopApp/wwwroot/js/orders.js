@@ -1,7 +1,5 @@
 ﻿document.addEventListener("DOMContentLoaded", function (event) {
     const url = "https://" + window.location.host;
-    const completedString = "completed";
-    const inProgressString = " in progress";
     const openProductsModal = (products, orderId) => {
         $("#order-products-container").html('');
         $("#order-products-modal").modal('toggle');
