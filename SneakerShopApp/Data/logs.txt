@@ -6269,3 +6269,634 @@ SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o1].[OrderId], [
 FROM [OrderProducts] AS [o]
 LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
 INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 19:34:57.135 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-10 19:34:57.163 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-10 19:34:57.167 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-10 19:34:57.168 +02:00 [INF] Hosting environment: Development
+2022-12-10 19:34:57.169 +02:00 [INF] Content root path: C:\Users\nutic\source\repos\sneaker-shop-app\SneakerShopApp\
+2022-12-10 19:35:18.571 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-10 19:35:20.463 +02:00 [INF] Executed DbCommand (168ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o1].[OrderId], [o1].[Customer], [o1].[IsCompleted], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 19:36:24.634 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-10 19:36:24.677 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-10 19:36:24.683 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-10 19:36:24.685 +02:00 [INF] Hosting environment: Development
+2022-12-10 19:36:24.686 +02:00 [INF] Content root path: C:\Users\nutic\source\repos\sneaker-shop-app\SneakerShopApp\
+2022-12-10 19:47:18.533 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-10 19:47:18.559 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-10 19:47:18.563 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-10 19:47:18.564 +02:00 [INF] Hosting environment: Development
+2022-12-10 19:47:18.565 +02:00 [INF] Content root path: C:\Users\nutic\source\repos\sneaker-shop-app\SneakerShopApp\
+2022-12-10 19:47:29.281 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-10 19:47:31.149 +02:00 [ERR] Failed executing DbCommand (218ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-10 19:47:31.251 +02:00 [ERR] An exception occurred while iterating over the results of a query for context type 'DBRepo.DbShopContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Size'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:0a6cc397-cd15-43cf-bf4a-ad0decf0cc67
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Size'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:0a6cc397-cd15-43cf-bf4a-ad0decf0cc67
+Error Number:207,State:1,Class:16
+2022-12-10 19:48:31.020 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-10 19:49:28.449 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-10 19:49:29.552 +02:00 [INF] Executed DbCommand (153ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-10 19:49:29.729 +02:00 [INF] Executed DbCommand (166ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-10 19:49:29.872 +02:00 [INF] Executed DbCommand (139ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-10 19:49:30.004 +02:00 [INF] Executed DbCommand (132ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-10 19:49:30.160 +02:00 [INF] Executed DbCommand (135ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-12-10 19:49:30.180 +02:00 [INF] Applying migration '20221210174831_SizeSupport'.
+2022-12-10 19:49:30.495 +02:00 [INF] Executed DbCommand (137ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [OrderProducts] ADD [Size] nvarchar(max) NULL;
+2022-12-10 19:49:30.633 +02:00 [INF] Executed DbCommand (134ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [CartProducts] ADD [Size] nvarchar(max) NULL;
+2022-12-10 19:49:30.767 +02:00 [INF] Executed DbCommand (134ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20221210174831_SizeSupport', N'6.0.3');
+2022-12-10 19:49:36.681 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-10 19:49:36.705 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-10 19:49:36.708 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-10 19:49:36.709 +02:00 [INF] Hosting environment: Development
+2022-12-10 19:49:36.710 +02:00 [INF] Content root path: C:\Users\nutic\source\repos\sneaker-shop-app\SneakerShopApp\
+2022-12-10 19:49:52.240 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-10 19:49:54.770 +02:00 [ERR] An exception occurred while iterating over the results of a query for context type 'DBRepo.DbShopContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+2022-12-10 19:50:06.755 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at DBRepo.ShoppingCart.GetCartProducts(String customer) in C:\Users\nutic\source\repos\sneaker-shop-app\DBRepo\ShoppingCart.cs:line 22
+   at SneakerShopApp.Controllers.ShopController.Cart() in C:\Users\nutic\source\repos\sneaker-shop-app\SneakerShopApp\Controllers\ShopController.cs:line 66
+   at lambda_method123(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-12-10 19:50:06.770 +02:00 [INF] Executed DbCommand (13,108ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [CartProducts] ([Brand], [Customer], [Description], [ImgUrl], [Price], [Size])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [CartProductModelId]
+FROM [CartProducts]
+WHERE @@ROWCOUNT = 1 AND [CartProductModelId] = scope_identity();
+2022-12-10 19:50:07.064 +02:00 [WRN] User admin@sneakershop.com just added the Christian Louboutin at "2022-12-10T19:50:07.0643541+02:00" to his cart
+2022-12-10 19:50:16.126 +02:00 [INF] Executed DbCommand (139ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-10 19:50:17.800 +02:00 [INF] Executed DbCommand (134ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-10 19:50:18.140 +02:00 [INF] Executed DbCommand (134ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-10 19:52:51.437 +02:00 [INF] Executed DbCommand (150ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-10 19:52:51.740 +02:00 [INF] Executed DbCommand (138ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [CartProducts]
+WHERE [CartProductModelId] = @p0;
+SELECT @@ROWCOUNT;
+2022-12-10 19:52:52.216 +02:00 [INF] Executed DbCommand (135ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Boolean), @p2='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Orders] ([Customer], [IsCompleted], [Total])
+VALUES (@p0, @p1, @p2);
+SELECT [OrderId]
+FROM [Orders]
+WHERE @@ROWCOUNT = 1 AND [OrderId] = scope_identity();
+2022-12-10 19:52:52.365 +02:00 [INF] Executed DbCommand (135ms) [Parameters=[@p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (Size = 4000), @p8='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [OrderProducts] ([Brand], [Description], [ImgUrl], [OrderId], [Price], [Size])
+VALUES (@p3, @p4, @p5, @p6, @p7, @p8);
+SELECT [Id]
+FROM [OrderProducts]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2022-12-10 19:53:10.764 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-10 19:53:11.008 +02:00 [INF] Executed DbCommand (172ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2022-12-10 19:53:11.293 +02:00 [INF] Executed DbCommand (133ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2022-12-10 19:53:11.775 +02:00 [INF] Executed DbCommand (136ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-10 19:54:33.449 +02:00 [INF] Executed DbCommand (134ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [CartProducts] ([Brand], [Customer], [Description], [ImgUrl], [Price], [Size])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [CartProductModelId]
+FROM [CartProducts]
+WHERE @@ROWCOUNT = 1 AND [CartProductModelId] = scope_identity();
+2022-12-10 19:54:33.591 +02:00 [WRN] User admin@sneakershop.com just added the Christian Louboutin at "2022-12-10T19:54:33.5912938+02:00" to his cart
+2022-12-10 19:54:40.816 +02:00 [INF] Executed DbCommand (133ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-10 19:54:42.074 +02:00 [INF] Executed DbCommand (133ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-10 19:54:42.411 +02:00 [INF] Executed DbCommand (133ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-10 19:54:57.763 +02:00 [INF] Executed DbCommand (133ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-10 19:54:59.509 +02:00 [INF] Executed DbCommand (141ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-10 19:54:59.849 +02:00 [INF] Executed DbCommand (133ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-10 20:00:28.109 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-10 20:00:28.150 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-10 20:00:28.155 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-10 20:00:28.156 +02:00 [INF] Hosting environment: Development
+2022-12-10 20:00:28.157 +02:00 [INF] Content root path: C:\Users\nutic\source\repos\sneaker-shop-app\SneakerShopApp\
+2022-12-10 20:00:35.275 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-10 20:00:37.354 +02:00 [INF] Executed DbCommand (193ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-10 20:00:48.006 +02:00 [INF] Executed DbCommand (136ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-10 20:00:48.360 +02:00 [INF] Executed DbCommand (134ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-10 20:01:38.368 +02:00 [INF] Executed DbCommand (140ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-10 20:48:21.720 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-10 20:48:21.771 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-10 20:48:21.776 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-10 20:48:21.778 +02:00 [INF] Hosting environment: Development
+2022-12-10 20:48:21.779 +02:00 [INF] Content root path: C:\Users\nutic\source\repos\sneaker-shop-app\SneakerShopApp\
+2022-12-10 20:48:24.319 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-10 20:48:26.397 +02:00 [INF] Executed DbCommand (229ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2022-12-10 20:48:26.762 +02:00 [INF] Executed DbCommand (135ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2022-12-10 20:48:55.426 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-10 20:48:55.713 +02:00 [ERR] Failed executing DbCommand (152ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 20:48:55.807 +02:00 [ERR] An exception occurred while iterating over the results of a query for context type 'DBRepo.DbShopContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Address'.
+Invalid column name 'FullName'.
+Invalid column name 'Phone'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:45a092c3-0fed-440d-95d9-7cf1509732d7
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Address'.
+Invalid column name 'FullName'.
+Invalid column name 'Phone'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:45a092c3-0fed-440d-95d9-7cf1509732d7
+Error Number:207,State:1,Class:16
+2022-12-10 20:49:48.714 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-10 20:50:00.797 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-10 20:50:01.929 +02:00 [INF] Executed DbCommand (172ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-10 20:50:02.107 +02:00 [INF] Executed DbCommand (163ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-10 20:50:02.269 +02:00 [INF] Executed DbCommand (158ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-12-10 20:50:02.423 +02:00 [INF] Executed DbCommand (154ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-12-10 20:50:02.581 +02:00 [INF] Executed DbCommand (140ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-12-10 20:50:02.597 +02:00 [INF] Applying migration '20221210184948_CheckoutDetails'.
+2022-12-10 20:50:02.935 +02:00 [INF] Executed DbCommand (159ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Orders] ADD [Address] nvarchar(max) NOT NULL DEFAULT N'';
+2022-12-10 20:50:03.071 +02:00 [INF] Executed DbCommand (135ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Orders] ADD [FullName] nvarchar(max) NOT NULL DEFAULT N'';
+2022-12-10 20:50:03.208 +02:00 [INF] Executed DbCommand (136ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Orders] ADD [Phone] nvarchar(max) NOT NULL DEFAULT N'';
+2022-12-10 20:50:03.342 +02:00 [INF] Executed DbCommand (134ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20221210184948_CheckoutDetails', N'6.0.3');
+2022-12-10 20:50:09.835 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-10 20:50:09.858 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-10 20:50:09.862 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-10 20:50:09.863 +02:00 [INF] Hosting environment: Development
+2022-12-10 20:50:09.865 +02:00 [INF] Content root path: C:\Users\nutic\source\repos\sneaker-shop-app\SneakerShopApp\
+2022-12-10 20:50:17.496 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-10 20:50:19.331 +02:00 [INF] Executed DbCommand (173ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 20:50:26.799 +02:00 [INF] Executed DbCommand (174ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-10 20:50:35.110 +02:00 [INF] Executed DbCommand (139ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-10 20:50:35.476 +02:00 [INF] Executed DbCommand (135ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-10 20:51:44.191 +02:00 [INF] Executed DbCommand (134ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-10 20:51:44.613 +02:00 [INF] Executed DbCommand (136ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [CartProducts]
+WHERE [CartProductModelId] = @p0;
+SELECT @@ROWCOUNT;
+2022-12-10 20:51:44.755 +02:00 [INF] Executed DbCommand (132ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [CartProducts]
+WHERE [CartProductModelId] = @p0;
+SELECT @@ROWCOUNT;
+2022-12-10 20:51:50.080 +02:00 [INF] Executed DbCommand (136ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Orders] ([Address], [Customer], [FullName], [IsCompleted], [Phone], [Total])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [OrderId]
+FROM [Orders]
+WHERE @@ROWCOUNT = 1 AND [OrderId] = scope_identity();
+2022-12-10 20:51:50.260 +02:00 [INF] Executed DbCommand (141ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [OrderProducts] ([Brand], [Description], [ImgUrl], [OrderId], [Price], [Size])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [OrderProducts]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2022-12-10 20:51:50.400 +02:00 [INF] Executed DbCommand (135ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [OrderProducts] ([Brand], [Description], [ImgUrl], [OrderId], [Price], [Size])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [OrderProducts]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2022-12-10 20:51:54.980 +02:00 [INF] Executed DbCommand (141ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 20:54:56.816 +02:00 [INF] Executed DbCommand (139ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 20:56:55.763 +02:00 [INF] Executed DbCommand (134ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 20:58:19.780 +02:00 [INF] Executed DbCommand (134ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 20:59:01.622 +02:00 [INF] Executed DbCommand (134ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 21:00:21.300 +02:00 [INF] Executed DbCommand (135ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 21:01:22.633 +02:00 [INF] Executed DbCommand (137ms) [Parameters=[@__orderId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[OrderId], [o].[Address], [o].[Customer], [o].[FullName], [o].[IsCompleted], [o].[Phone], [o].[Total]
+FROM [Orders] AS [o]
+WHERE [o].[OrderId] = @__orderId_0
+2022-12-10 21:01:22.925 +02:00 [INF] Executed DbCommand (135ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Orders] SET [IsCompleted] = @p0
+WHERE [OrderId] = @p1;
+SELECT @@ROWCOUNT;
+2022-12-10 21:01:24.124 +02:00 [INF] Executed DbCommand (158ms) [Parameters=[@__orderId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[OrderId], [o].[Address], [o].[Customer], [o].[FullName], [o].[IsCompleted], [o].[Phone], [o].[Total]
+FROM [Orders] AS [o]
+WHERE [o].[OrderId] = @__orderId_0
+2022-12-10 21:01:24.405 +02:00 [INF] Executed DbCommand (134ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Orders] SET [IsCompleted] = @p0
+WHERE [OrderId] = @p1;
+SELECT @@ROWCOUNT;
+2022-12-10 21:01:26.989 +02:00 [INF] Executed DbCommand (151ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 21:03:05.063 +02:00 [INF] Executed DbCommand (134ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 21:09:15.815 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-10 21:09:15.837 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-10 21:09:15.840 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-10 21:09:15.842 +02:00 [INF] Hosting environment: Development
+2022-12-10 21:09:15.843 +02:00 [INF] Content root path: C:\Users\nutic\source\repos\sneaker-shop-app\SneakerShopApp\
+2022-12-10 21:09:35.762 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-10 21:09:37.883 +02:00 [INF] Executed DbCommand (175ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 21:11:21.951 +02:00 [INF] Executed DbCommand (141ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 21:15:13.355 +02:00 [INF] Executed DbCommand (135ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 21:19:01.459 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-10 21:19:01.757 +02:00 [INF] Executed DbCommand (201ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2022-12-10 21:19:02.006 +02:00 [INF] Executed DbCommand (147ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2022-12-10 21:19:02.464 +02:00 [INF] Executed DbCommand (134ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 21:25:49.681 +02:00 [INF] Executed DbCommand (137ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 21:25:56.669 +02:00 [INF] Executed DbCommand (134ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 21:25:58.115 +02:00 [INF] Executed DbCommand (134ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 21:30:54.344 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-10 21:30:54.372 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-10 21:30:54.379 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-10 21:30:54.380 +02:00 [INF] Hosting environment: Development
+2022-12-10 21:30:54.381 +02:00 [INF] Content root path: C:\Users\nutic\source\repos\sneaker-shop-app\SneakerShopApp\
+2022-12-10 21:31:05.466 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-10 21:31:07.308 +02:00 [INF] Executed DbCommand (185ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 23:48:03.236 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-10 23:48:03.261 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-10 23:48:03.266 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-10 23:48:03.267 +02:00 [INF] Hosting environment: Development
+2022-12-10 23:48:03.268 +02:00 [INF] Content root path: C:\Users\nutic\source\repos\sneaker-shop-app\SneakerShopApp\
+2022-12-10 23:48:05.959 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-10 23:48:08.375 +02:00 [INF] Executed DbCommand (237ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2022-12-10 23:48:08.788 +02:00 [INF] Executed DbCommand (162ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2022-12-10 23:48:11.712 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-10 23:48:11.991 +02:00 [INF] Executed DbCommand (149ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 23:49:08.169 +02:00 [INF] Executed DbCommand (149ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 23:50:03.600 +02:00 [INF] Executed DbCommand (145ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 23:50:31.757 +02:00 [INF] Executed DbCommand (158ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 23:51:15.064 +02:00 [INF] Executed DbCommand (135ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 23:51:33.759 +02:00 [INF] Executed DbCommand (146ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 23:51:49.332 +02:00 [INF] Executed DbCommand (136ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 23:52:15.461 +02:00 [INF] Executed DbCommand (2,672ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [CartProducts] ([Brand], [Customer], [Description], [ImgUrl], [Price], [Size])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [CartProductModelId]
+FROM [CartProducts]
+WHERE @@ROWCOUNT = 1 AND [CartProductModelId] = scope_identity();
+2022-12-10 23:52:15.672 +02:00 [WRN] User admin@sneakershop.com just added the Christian Louboutin at "2022-12-10T23:52:15.6725025+02:00" to his cart
+2022-12-10 23:52:22.775 +02:00 [INF] Executed DbCommand (263ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [CartProducts] ([Brand], [Customer], [Description], [ImgUrl], [Price], [Size])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [CartProductModelId]
+FROM [CartProducts]
+WHERE @@ROWCOUNT = 1 AND [CartProductModelId] = scope_identity();
+2022-12-10 23:52:22.914 +02:00 [WRN] User admin@sneakershop.com just added the Christian Louboutin at "2022-12-10T23:52:22.9144800+02:00" to his cart
+2022-12-10 23:52:23.740 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-10 23:52:23.895 +02:00 [INF] Executed DbCommand (148ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2022-12-10 23:52:25.221 +02:00 [INF] Executed DbCommand (136ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-10 23:52:27.374 +02:00 [INF] Executed DbCommand (133ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-10 23:53:08.896 +02:00 [INF] Executed DbCommand (135ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-10 23:53:26.348 +02:00 [INF] Executed DbCommand (134ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-10 23:53:31.414 +02:00 [INF] Executed DbCommand (133ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-10 23:53:32.510 +02:00 [INF] Executed DbCommand (719ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-10 23:54:40.590 +02:00 [INF] Executed DbCommand (132ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-10 23:54:40.888 +02:00 [INF] Executed DbCommand (148ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [CartProducts]
+WHERE [CartProductModelId] = @p0;
+SELECT @@ROWCOUNT;
+2022-12-10 23:54:41.027 +02:00 [INF] Executed DbCommand (132ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [CartProducts]
+WHERE [CartProductModelId] = @p0;
+SELECT @@ROWCOUNT;
+2022-12-10 23:54:41.505 +02:00 [INF] Executed DbCommand (137ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Orders] ([Address], [Customer], [FullName], [IsCompleted], [Phone], [Total])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [OrderId]
+FROM [Orders]
+WHERE @@ROWCOUNT = 1 AND [OrderId] = scope_identity();
+2022-12-10 23:54:41.681 +02:00 [INF] Executed DbCommand (136ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [OrderProducts] ([Brand], [Description], [ImgUrl], [OrderId], [Price], [Size])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [OrderProducts]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2022-12-10 23:54:41.823 +02:00 [INF] Executed DbCommand (133ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [OrderProducts] ([Brand], [Description], [ImgUrl], [OrderId], [Price], [Size])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [OrderProducts]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2022-12-10 23:54:47.819 +02:00 [INF] Executed DbCommand (133ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-10 23:55:20.361 +02:00 [INF] Executed DbCommand (136ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]

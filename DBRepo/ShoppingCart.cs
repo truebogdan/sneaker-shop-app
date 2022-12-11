@@ -22,7 +22,7 @@
             return _context.CartProducts.Where(x => x.Customer == customer).ToList();
         }
 
-        public void Checkout(string customer)
+        public void Checkout(string customer , string name , string address , string phone)
         {
             IEnumerable<CartProductModel> productsFromCart = GetCartProducts(customer);
 
@@ -30,7 +30,7 @@
 
             _context.SaveChanges();
 
-            _ordersManager.AddOrder(customer, TotalCost(productsFromCart), productsFromCart);
+            _ordersManager.AddOrder(customer, TotalCost(productsFromCart), productsFromCart, name , address,phone);
 
         }
 

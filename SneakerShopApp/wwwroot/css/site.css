@@ -295,3 +295,7 @@ section {
 .order-status {
     float:right;
 }
+.form-switch{
+    margin-top:20px;
+    margin-bottom:20px;
+}

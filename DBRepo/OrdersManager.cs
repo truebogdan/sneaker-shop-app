@@ -17,9 +17,9 @@ namespace DBRepo
             _logger = logger;
         }
 
-        public void AddOrder(string customer, double totalCost, IEnumerable<CartProductModel> cartProducts)
+        public void AddOrder(string customer, double totalCost, IEnumerable<CartProductModel> cartProducts, string name , string address, string phone)
         {
-            Order order = new Order() { Customer = customer, Total = totalCost, IsCompleted = false };
+            Order order = new Order() { Customer = customer, Total = totalCost, IsCompleted = false , FullName = name , Address = address , Phone = phone};
             List<OrderProduct> orderProducts = new List<OrderProduct>();
             ConcreteCollection collection = new ConcreteCollection();
             Iterator iterator = collection.CreateIterator(cartProducts);
@@ -34,6 +34,7 @@ namespace DBRepo
             {
                 var ord = OrderProductBuilder.CreateNew().SetImgUrl(product.ImgUrl).SetDescription(product.Description).SetBrand(product.Brand).SetPrice(product.Price).SetOrder(order).Build();
                 orderProducts.Add(ord);
+                ord.Size= product.Size;
             }
 
 
@@ -58,6 +59,7 @@ namespace DBRepo
                 ImgUrl = op.ImgUrl,
                 Description = op.Description,
                 Price = op.Price,
+                Size = op.Size,
                 Order = o
             }).ToList();
 

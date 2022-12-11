@@ -14,7 +14,7 @@
             var items = [];
             for (var id in res) {
                 total += +res[id].price
-                items.push({ name: res[id].description, price: res[id].price, quantity:1, currency :"RON"});
+                items.push({ name: res[id].description + ' ' + res[id].size, price: res[id].price, quantity:1, currency :"RON"});
             }
             orderParams = {
                 data: {
@@ -52,7 +52,14 @@
                     }).then((response) => response.json()),
             };
             $("#utrust-checkout").click(function () {
+                const name = $("#customer-name").val();
+                const address = $("#customer-address").val();
+                const phone = $("#customer-phone").val();
+
+                orderParams.data.attributes.order.return_urls.return_url += "?customerName=" + name + "&customerAddress=" + address + "&customerPhone=" + phone;
+
                 utrustApi.createOrder(orderParams).then((response) => {
+
                     window.location.replace(response.data.attributes.redirect_url);
                 });
             });

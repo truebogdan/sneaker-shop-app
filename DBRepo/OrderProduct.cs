@@ -8,6 +8,7 @@
         public string? Brand { get; set; }
 
         public string? Price { get; set; }
+        public string? Size { get; set; }
 
         public Order? Order { get; set; }
         public OrderProduct(string? imgUrl, string? description, string? brand, string? price, Order? order)

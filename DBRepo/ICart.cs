@@ -6,7 +6,7 @@
         public void RemoveProduct(int productId);
         public IEnumerable<CartProductModel> GetCartProducts(String customer);
 
-        public void Checkout(String customer);
+        public void Checkout(String customer, string name, string address, string phone);
 
     }
 }

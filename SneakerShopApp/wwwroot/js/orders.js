@@ -6,9 +6,8 @@
         $("#order-products-container").html('');
         $("#order-products-modal").modal('toggle');
         $("#modal-order-id").html(orderId);
-        console.log(products);
         $.each(products, function (i, product) {
-            $("#order-products-container").append("<hr><p>" + product.Description + "</p>");
+            $("#order-products-container").append("<hr><p>" + product.Description + " size " + product.Size +"</p>");
             $("#order-products-container").append("<p> Price:" + product.Price + " Ron </p>");
             $("#order-products-container").append(" <img  src="+ product.ImgUrl +"/>");
         });
@@ -20,6 +19,7 @@
         dataType: 'json',
         success: function (res) {
             $.each(res, function (i, order) {
+                console.log(order);
                 const orderStatus = order.isCompleted ? "completed" : "in progress";
                 var orderCard = `
                     <div class="card">
@@ -31,13 +31,16 @@
                           <p class="order-customer"> Customer: `+ order.customer + ` </p>
                           <button data-order-id=` + order.orderId + ` class='btn btn-success  complete-button order-status'> Complete </button>
                           <p class="order-products-link" data-order=`+ i + ` data-order-id=` + order.orderId + ` > View ` + order.products.length + `  products </p>
+                          <p>`+order.fullName+`</p> 
+                          <p>`+order.address+`</p> 
+                          <p>`+order.phone+`</p> 
 
                       </div>
                     </div>
                 `
                 if (order.isCompleted) {
                     orderCardWithoutButton = `
-                    <div class="card">
+                    <div class="card completed-card">
                       <div class="card-header">
                         Order#`+ order.orderId + ` <span class="order-status order` + order.orderId + `"> Status: ` + orderStatus + `</span>
                       </div>
@@ -45,7 +48,9 @@
                           <p> Total: `+ order.total + ` Ron</p>
                           <p class="order-customer"> Customer: `+ order.customer + ` </p>
                           <p class="order-products-link" data-order=`+ i + ` data-order-id=` + order.orderId + ` > View ` + order.products.length + `  products </p>
-
+                          <p>`+ order.fullName + `</p> 
+                          <p>`+ order.address + `</p> 
+                          <p>`+ order.phone +`</p> 
                       </div>
                     </div>
                 `
@@ -63,6 +68,14 @@
 
 
             });
+
+            // Toggle completed cards
+
+            $("#completedSwitch").on('change', function () {
+                console.log("test");
+                $(".completed-card").toggle();
+            });
+
 
             $(".complete-button").click(function (event) {
                 const orderId = event.target.getAttribute('data-order-id');

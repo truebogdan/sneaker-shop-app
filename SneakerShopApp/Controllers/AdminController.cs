@@ -78,7 +78,10 @@ namespace SneakerShopApp.Controllers
                     total = order.Total,
                     customer = order.Customer,
                     orderId = order.OrderId,
-                    isCompleted = order.IsCompleted
+                    isCompleted = order.IsCompleted,
+                    fullName = order.FullName,
+                    address = order.Address,
+                    phone = order.Phone
                 });
             }
             return JsonConvert.SerializeObject(result);

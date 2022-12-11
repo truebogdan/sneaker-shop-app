@@ -2,6 +2,7 @@
 using ESRepo;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Diagnostics.Tracing.Parsers.IIS_Trace;
 using Newtonsoft.Json;
 using SneakerShopApp.Models;
 
@@ -34,11 +35,11 @@ namespace SneakerShopApp.Controllers
             return View(model);
         }
         [HttpPost]
-        public async Task<IActionResult> AddProductToCart(ProductModel product)
+        public async Task<IActionResult> AddProductToCart(ProductModel product ,string size)
         {
             if (User.Identity.IsAuthenticated)
             {
-                _cart.AddProduct(new CartProductModel { Customer = User.Identity.Name, Brand = product.Brand, Price = product.Price, Description = product.Description, ImgUrl = product.ImgUrl });
+                _cart.AddProduct(new CartProductModel { Customer = User.Identity.Name, Brand = product.Brand, Price = product.Price, Description = product.Description, ImgUrl = product.ImgUrl  , Size = size});
                 var username = User.Identity.Name;
                 _logger.LogWarning("User {username} just added the {brand} at {date} to his cart", username, product.Brand, DateTime.Now);
                 return await ShowDetails(product.Guid.ToString());
@@ -140,11 +141,11 @@ namespace SneakerShopApp.Controllers
            return View("Checkout");
         }
 
-        public IActionResult OrderConfirmation()
+        public IActionResult OrderConfirmation(string customerName ,string customerAddress,string customerPhone)
         {
             if (User.Identity.IsAuthenticated)
             {
-                _cart.Checkout(User.Identity.Name);
+                _cart.Checkout(User.Identity.Name, customerName , customerAddress , customerPhone);
                 return View();
             }
             else
