@@ -8321,3 +8321,159 @@ SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].
 FROM [OrderProducts] AS [o]
 LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
 INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2022-12-13 09:25:16.446 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-13 09:25:16.473 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-13 09:25:16.476 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-13 09:25:16.477 +02:00 [INF] Hosting environment: Development
+2022-12-13 09:25:16.478 +02:00 [INF] Content root path: D:\sneakerShop\SneakerShopApp\
+2022-12-13 09:25:44.366 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-13 09:25:46.422 +02:00 [INF] Executed DbCommand (210ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-12-13 09:25:46.947 +02:00 [INF] Executed DbCommand (138ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 256), @p8='?' (Size = 256), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+2022-12-13 09:25:47.308 +02:00 [INF] Executed DbCommand (132ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2022-12-13 09:26:10.513 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-13 09:26:10.839 +02:00 [INF] Executed DbCommand (137ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [CartProducts] ([Brand], [Customer], [Description], [ImgUrl], [Price], [Size])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [CartProductModelId]
+FROM [CartProducts]
+WHERE @@ROWCOUNT = 1 AND [CartProductModelId] = scope_identity();
+2022-12-13 09:26:11.008 +02:00 [WRN] User florin_nic07@yahoo.com just added the Versace at "2022-12-13T09:26:11.0085761+02:00" to his cart
+2022-12-13 09:26:14.934 +02:00 [INF] Executed DbCommand (134ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-13 09:26:17.750 +02:00 [INF] Executed DbCommand (131ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-13 09:26:18.220 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-13 09:26:47.001 +02:00 [INF] Executed DbCommand (131ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-13 09:51:27.463 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-13 09:51:27.493 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-13 09:51:27.497 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-13 09:51:27.498 +02:00 [INF] Hosting environment: Development
+2022-12-13 09:51:27.499 +02:00 [INF] Content root path: D:\sneakerShop\SneakerShopApp\
+2022-12-13 12:19:54.832 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-13 12:19:54.882 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-13 12:19:54.888 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-13 12:19:54.890 +02:00 [INF] Hosting environment: Development
+2022-12-13 12:19:54.891 +02:00 [INF] Content root path: D:\sneakerShop\SneakerShopApp\
+2022-12-13 12:19:57.365 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-13 12:20:00.463 +02:00 [INF] Executed DbCommand (289ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2022-12-13 12:20:01.022 +02:00 [INF] Executed DbCommand (236ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2022-12-13 12:21:16.607 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-13 12:21:20.180 +02:00 [INF] Executed DbCommand (3,192ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [CartProducts] ([Brand], [Customer], [Description], [ImgUrl], [Price], [Size])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [CartProductModelId]
+FROM [CartProducts]
+WHERE @@ROWCOUNT = 1 AND [CartProductModelId] = scope_identity();
+2022-12-13 12:21:20.404 +02:00 [WRN] User florin_nic07@yahoo.com just added the Christian Louboutin at "2022-12-13T12:21:20.4043552+02:00" to his cart
+2022-12-13 12:21:28.681 +02:00 [INF] Executed DbCommand (134ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-13 12:21:51.923 +02:00 [INF] Executed DbCommand (207ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-13 12:21:52.494 +02:00 [INF] Executed DbCommand (135ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-13 12:22:17.932 +02:00 [INF] Executed DbCommand (186ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-13 12:23:11.489 +02:00 [INF] Executed DbCommand (295ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-13 12:23:14.391 +02:00 [INF] Executed DbCommand (224ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-13 12:23:15.200 +02:00 [INF] Executed DbCommand (328ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-13 12:23:50.707 +02:00 [INF] Executed DbCommand (158ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2022-12-13 12:26:41.030 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-13 12:26:41.066 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-13 12:26:41.071 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-13 12:26:41.072 +02:00 [INF] Hosting environment: Development
+2022-12-13 12:26:41.074 +02:00 [INF] Content root path: D:\sneakerShop\SneakerShopApp\
+2022-12-13 17:12:05.804 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-13 17:12:05.840 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-13 17:12:05.851 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-13 17:12:05.858 +02:00 [INF] Hosting environment: Development
+2022-12-13 17:12:05.859 +02:00 [INF] Content root path: D:\sneakerShop\SneakerShopApp\
+2022-12-13 17:12:07.676 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-13 17:12:09.807 +02:00 [INF] Executed DbCommand (205ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2022-12-13 17:12:10.133 +02:00 [INF] Executed DbCommand (142ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2022-12-13 17:51:27.476 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-13 17:51:27.498 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-13 17:51:27.502 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-13 17:51:27.503 +02:00 [INF] Hosting environment: Development
+2022-12-13 17:51:27.504 +02:00 [INF] Content root path: D:\sneakerShop\SneakerShopApp\
+2022-12-13 17:51:29.072 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-12-13 17:51:30.915 +02:00 [INF] Executed DbCommand (339ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2022-12-13 17:51:31.358 +02:00 [INF] Executed DbCommand (254ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2022-12-13 18:33:04.366 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-13 18:33:04.388 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-13 18:33:04.391 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-13 18:33:04.392 +02:00 [INF] Hosting environment: Development
+2022-12-13 18:33:04.393 +02:00 [INF] Content root path: D:\sneakerShop\SneakerShopApp\
+2022-12-13 18:33:30.235 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-13 18:33:30.256 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-13 18:33:30.259 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-13 18:33:30.260 +02:00 [INF] Hosting environment: Development
+2022-12-13 18:33:30.261 +02:00 [INF] Content root path: D:\sneakerShop\SneakerShopApp\
+2022-12-13 18:38:18.508 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-13 18:38:18.535 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-13 18:38:18.539 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-13 18:38:18.539 +02:00 [INF] Hosting environment: Development
+2022-12-13 18:38:18.540 +02:00 [INF] Content root path: D:\sneakerShop\SneakerShopApp\
+2022-12-13 18:45:54.813 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-13 18:45:54.837 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-13 18:45:54.841 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-13 18:45:54.842 +02:00 [INF] Hosting environment: Development
+2022-12-13 18:45:54.843 +02:00 [INF] Content root path: D:\sneakerShop\SneakerShopApp\
