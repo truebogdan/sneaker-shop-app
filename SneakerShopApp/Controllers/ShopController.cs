@@ -2,6 +2,8 @@
 using ESRepo;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Diagnostics.Tracing.Parsers.IIS_Trace;
+using Newtonsoft.Json;
 using SneakerShopApp.Models;
 
 namespace SneakerShopApp.Controllers
@@ -22,18 +24,25 @@ namespace SneakerShopApp.Controllers
         public IActionResult Index()
         {
             var searchResult = _esclient.GetProducts();
+
+            foreach(var product in searchResult.Products)
+            {
+                List<string> imagesList = JsonConvert.DeserializeObject<List<string>>(product.ImgUrl);
+
+                product.ImgUrl = imagesList.FirstOrDefault();
+            }
             var model = new ShopModel() { Products = searchResult.Products, Brands = searchResult.Brands, Checked = Array.Empty<string>(), SearchInput = "" };
             return View(model);
         }
         [HttpPost]
-        public async Task<IActionResult> AddProductToCart(ProductModel product)
+        public async Task<IActionResult> AddProductToCart(ProductModel product ,string size)
         {
             if (User.Identity.IsAuthenticated)
             {
-                _cart.AddProduct(new CartProductModel { Customer = User.Identity.Name, Brand = product.Brand, Price = product.Price, Description = product.Description, ImgUrl = product.ImgUrl });
+                _cart.AddProduct(new CartProductModel { Customer = User.Identity.Name, Brand = product.Brand, Price = product.Price, Description = product.Description, ImgUrl = product.ImgUrl  , Size = size});
                 var username = User.Identity.Name;
                 _logger.LogWarning("User {username} just added the {brand} at {date} to his cart", username, product.Brand, DateTime.Now);
-                return await ShowDetails(product);
+                return await ShowDetails(product.Guid.ToString());
             }
             else
                 return Redirect("~/Identity/Account/Login");
@@ -42,9 +51,12 @@ namespace SneakerShopApp.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> ShowDetails(ProductModel product)
+        public async Task<IActionResult> ShowDetails(string guid)
         {
-            return View("Details",product);
+            var product = await _esclient.GetProductByGuid(guid);
+            List<string> images = JsonConvert.DeserializeObject<List<string>>(product.ImgUrl);
+            var model = new DetailsModel() { Product = product, Images = images };
+            return View("Details",model);
         }
 
         public IActionResult Cart()
@@ -74,6 +86,12 @@ namespace SneakerShopApp.Controllers
         {
             brands = brands.Where(brand => brand != "false").ToArray();
             var searchResult = await _esclient.Filter(searchInput, brands);
+            foreach (var product in searchResult.Products)
+            {
+                List<string> imagesList = JsonConvert.DeserializeObject<List<string>>(product.ImgUrl);
+
+                product.ImgUrl = imagesList.FirstOrDefault();
+            }
             var model = new ShopModel() { Products = searchResult.Products, Brands = searchResult.Brands, Checked = brands, SearchInput = searchInput };
             return View("Index", model);
         }
@@ -83,6 +101,12 @@ namespace SneakerShopApp.Controllers
         public IActionResult Search(string searchInput)
         {
             var searchResult = _esclient.Search(searchInput);
+            foreach (var product in searchResult.Products)
+            {
+                List<string> imagesList = JsonConvert.DeserializeObject<List<string>>(product.ImgUrl);
+
+                product.ImgUrl = imagesList.FirstOrDefault();
+            }
             var model = new ShopModel() { Products = searchResult.Products, Brands = searchResult.Brands, Checked = Array.Empty<string>(), SearchInput = searchInput };
             return View("Index", model);
         }
@@ -117,11 +141,11 @@ namespace SneakerShopApp.Controllers
            return View("Checkout");
         }
 
-        public IActionResult OrderConfirmation()
+        public IActionResult OrderConfirmation(string customerName ,string customerAddress,string customerPhone)
         {
             if (User.Identity.IsAuthenticated)
             {
-                _cart.Checkout(User.Identity.Name);
+                _cart.Checkout(User.Identity.Name, customerName , customerAddress , customerPhone);
                 return View();
             }
             else

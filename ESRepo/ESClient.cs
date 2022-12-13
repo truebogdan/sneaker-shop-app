@@ -12,6 +12,16 @@ namespace ESRepo
             client = new ElasticClient(new Uri(configuration.GetConnectionString("ElasticsearchConnection")));
         }
 
+        public async Task AddProduct(ProductModel product)
+        {
+            await client.CreateAsync<ProductModel>(product, a => a.Index("sneakers-index").Id(product.Guid));
+        }
+
+        public async Task DeleteProduct(string guid)
+        {
+            await client.DeleteAsync<ProductModel>(guid , d => d.Index("sneakers-index"));
+        }
+
         public async Task<SearchResult> Filter(string searchInput, string[] brands)
         {
             var response = await client.SearchAsync<ProductModel>(s =>
@@ -32,6 +42,15 @@ namespace ESRepo
                           f.Brand.Suffix("keyword")))));
 
             return new SearchResult() { Products = response.Documents, Brands = ConvertBucketsToDictionary(aggregation.Aggregations.Terms("brands").Buckets) };
+        }
+
+        public async Task<ProductModel> GetProductByGuid(string guid)
+        {
+           var response = await client.SearchAsync<ProductModel>(s => s.Index("sneakers-index").Size(2000).Query(q=>
+                q.Match( m => m.Field(f=> 
+                    f.Guid.Suffix("keyword")).Query(guid))
+                ));
+            return response.Documents.FirstOrDefault();
         }
 
         public SearchResult GetProducts()
@@ -59,6 +78,13 @@ namespace ESRepo
                            f.Brand.Suffix("keyword")))));
 
             return new SearchResult() { Products = response.Documents, Brands = ConvertBucketsToDictionary(response.Aggregations.Terms("brands").Buckets) };
+        }
+
+        public async Task UpdatePrice(string guid, double price)
+        {
+            var product = await GetProductByGuid(guid);
+            product.Price = price.ToString();
+            var partialUpdateResponse = await client.UpdateAsync<ProductModel, object>(guid, u => u.Doc(product).Index("sneakers-index"));
         }
 
         private Dictionary<string, long> ConvertBucketsToDictionary(IReadOnlyCollection<KeyedBucket<string>> buckets)
