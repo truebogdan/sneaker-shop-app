@@ -2741,3 +2741,48 @@ SET NOCOUNT ON;
 UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PhoneNumber] = @p9, [PhoneNumberConfirmed] = @p10, [SecurityStamp] = @p11, [TwoFactorEnabled] = @p12, [UserName] = @p13
 WHERE [Id] = @p14 AND [ConcurrencyStamp] = @p15;
 SELECT @@ROWCOUNT;
+2022-12-08 16:28:39.174 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-08 16:28:39.205 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-08 16:28:39.209 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-08 16:28:39.210 +02:00 [INF] Hosting environment: Development
+2022-12-08 16:28:39.210 +02:00 [INF] Content root path: D:\sneakerShop\SneakerShopApp\
+2022-12-08 16:30:20.777 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-08 16:30:20.801 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-08 16:30:20.806 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-08 16:30:20.807 +02:00 [INF] Hosting environment: Development
+2022-12-08 16:30:20.808 +02:00 [INF] Content root path: D:\sneakerShop\SneakerShopApp\
+2022-12-08 16:58:39.699 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-08 16:58:39.746 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-08 16:58:39.753 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-08 16:58:39.754 +02:00 [INF] Hosting environment: Development
+2022-12-08 16:58:39.756 +02:00 [INF] Content root path: D:\sneakerShop\SneakerShopApp\
+2022-12-08 17:01:41.522 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-08 17:01:41.576 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-08 17:01:41.582 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-08 17:01:41.588 +02:00 [INF] Hosting environment: Development
+2022-12-08 17:01:41.589 +02:00 [INF] Content root path: D:\sneakerShop\SneakerShopApp\
+2022-12-08 17:02:55.378 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-08 17:02:55.422 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-08 17:02:55.427 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-08 17:02:55.429 +02:00 [INF] Hosting environment: Development
+2022-12-08 17:02:55.430 +02:00 [INF] Content root path: D:\sneakerShop\SneakerShopApp\
+2022-12-08 17:04:40.142 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-08 17:04:40.182 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-08 17:04:40.187 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-08 17:04:40.189 +02:00 [INF] Hosting environment: Development
+2022-12-08 17:04:40.190 +02:00 [INF] Content root path: D:\sneakerShop\SneakerShopApp\
+2022-12-08 17:14:15.315 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-08 17:14:15.339 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-08 17:14:15.343 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-08 17:14:15.344 +02:00 [INF] Hosting environment: Development
+2022-12-08 17:14:15.345 +02:00 [INF] Content root path: D:\sneakerShop\SneakerShopApp\
+2022-12-08 17:15:28.223 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-08 17:15:28.256 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-08 17:15:28.260 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-08 17:15:28.261 +02:00 [INF] Hosting environment: Development
+2022-12-08 17:15:28.262 +02:00 [INF] Content root path: D:\sneakerShop\SneakerShopApp\
+2022-12-13 09:17:05.043 +02:00 [INF] Now listening on: https://localhost:7249
+2022-12-13 09:17:05.091 +02:00 [INF] Now listening on: http://localhost:5249
+2022-12-13 09:17:05.099 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-13 09:17:05.101 +02:00 [INF] Hosting environment: Development
+2022-12-13 09:17:05.103 +02:00 [INF] Content root path: D:\sneakerShop\SneakerShopApp\
