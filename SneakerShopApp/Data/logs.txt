@@ -9193,3 +9193,28 @@ WHERE @@ROWCOUNT = 1 AND [CartProductModelId] = scope_identity();
 SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
 FROM [CartProducts] AS [c]
 WHERE [c].[Customer] = @__customer_0
+2023-01-13 20:01:29.774 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-13 20:01:29.816 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-13 20:01:29.824 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-13 20:01:29.828 +02:00 [INF] Hosting environment: Development
+2023-01-13 20:01:29.829 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-13 20:11:04.294 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-13 20:11:04.358 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-13 20:11:04.366 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-13 20:11:04.368 +02:00 [INF] Hosting environment: Development
+2023-01-13 20:11:04.371 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-13 20:29:00.496 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-13 20:29:00.570 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-13 20:29:00.577 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-13 20:29:00.580 +02:00 [INF] Hosting environment: Development
+2023-01-13 20:29:00.583 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-13 20:43:51.405 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-13 20:43:51.428 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-13 20:43:51.432 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-13 20:43:51.432 +02:00 [INF] Hosting environment: Development
+2023-01-13 20:43:51.433 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-13 20:49:15.308 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-13 20:49:15.331 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-13 20:49:15.335 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-13 20:49:15.336 +02:00 [INF] Hosting environment: Development
+2023-01-13 20:49:15.337 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\

@@ -8,6 +8,19 @@ html {
   }
 }
 
+.provider-wraper {
+    display: grid;
+}
+
+.register-provider {
+    display: block;
+    padding: 0 1em;
+    text-align: center;
+    align-items: center;
+    height: 50px;
+    width: auto;
+}
+
 html {
   position: relative;
   min-height: 100%;
