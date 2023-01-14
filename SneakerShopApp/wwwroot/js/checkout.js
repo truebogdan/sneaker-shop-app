@@ -56,15 +56,14 @@
                         body: JSON.stringify(params),
                     }).then((response) => response.json()),
             };
-            $("#utrust-checkout").click(function () {
+            $("#checkout-form").submit(function (event) {
+                event.preventDefault();
                 const name = $("#customer-name").val();
                 const address = $("#customer-address").val();
                 const phone = $("#customer-phone").val();
                 if (name != "" && address != "" && phone != "") {
                     orderParams.data.attributes.order.return_urls.return_url += "?customerName=" + name + "&customerAddress=" + address + "&customerPhone=" + phone;
-
                     utrustApi.createOrder(orderParams).then((response) => {
-
                         window.location.replace(response.data.attributes.redirect_url);
                         console.log(response.data.attributes.redirect_url)
                     });
