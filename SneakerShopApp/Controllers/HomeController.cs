@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DBRepo;
+using Microsoft.AspNetCore.Mvc;
 using SneakerShopApp.Models;
 using System.Diagnostics;
 
@@ -7,14 +8,16 @@ namespace SneakerShopApp.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ICart _cart;
+        public HomeController(ILogger<HomeController> logger, ICart cart)
         {
             _logger = logger;
+            _cart = cart;
         }
 
         public IActionResult Index()
         {
+            ViewBag.CartItems = _cart.GetCartProducts(User.Identity.Name).ToList().Count();
             return View();
         }
 

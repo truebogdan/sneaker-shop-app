@@ -9218,3 +9218,453 @@ WHERE [c].[Customer] = @__customer_0
 2023-01-13 20:49:15.335 +02:00 [INF] Application started. Press Ctrl+C to shut down.
 2023-01-13 20:49:15.336 +02:00 [INF] Hosting environment: Development
 2023-01-13 20:49:15.337 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-13 20:56:06.496 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-13 20:56:08.411 +02:00 [INF] Executed DbCommand (220ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-01-13 20:56:08.943 +02:00 [INF] Executed DbCommand (139ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 256), @p8='?' (Size = 256), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+2023-01-13 20:56:09.307 +02:00 [INF] Executed DbCommand (132ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-01-13 20:56:18.019 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-13 20:56:18.169 +02:00 [INF] Executed DbCommand (134ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-13 20:56:31.957 +02:00 [INF] Executed DbCommand (137ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [CartProducts] ([Brand], [Customer], [Description], [ImgUrl], [Price], [Size])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [CartProductModelId]
+FROM [CartProducts]
+WHERE @@ROWCOUNT = 1 AND [CartProductModelId] = scope_identity();
+2023-01-13 20:56:32.132 +02:00 [WRN] User test@test.com just added the Christian Louboutin at "2023-01-13T20:56:32.1321062+02:00" to his cart
+2023-01-13 20:56:47.807 +02:00 [INF] Executed DbCommand (302ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [CartProducts] ([Brand], [Customer], [Description], [ImgUrl], [Price], [Size])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [CartProductModelId]
+FROM [CartProducts]
+WHERE @@ROWCOUNT = 1 AND [CartProductModelId] = scope_identity();
+2023-01-13 20:56:47.942 +02:00 [WRN] User test@test.com just added the Christian Louboutin at "2023-01-13T20:56:47.9423812+02:00" to his cart
+2023-01-13 20:56:51.104 +02:00 [INF] Executed DbCommand (131ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-13 20:56:54.290 +02:00 [INF] Executed DbCommand (131ms) [Parameters=[@__productId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[CartProductModelId] = @__productId_0
+2023-01-13 20:56:54.565 +02:00 [INF] Executed DbCommand (132ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [CartProducts]
+WHERE [CartProductModelId] = @p0;
+SELECT @@ROWCOUNT;
+2023-01-13 20:56:54.834 +02:00 [INF] Executed DbCommand (131ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 12:42:59.722 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 12:42:59.746 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 12:42:59.750 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 12:42:59.751 +02:00 [INF] Hosting environment: Development
+2023-01-14 12:42:59.751 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 12:46:17.760 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 12:46:19.711 +02:00 [INF] Executed DbCommand (216ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-01-14 12:46:20.068 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-01-14 12:46:32.864 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 12:46:32.887 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 12:46:32.890 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 12:46:32.891 +02:00 [INF] Hosting environment: Development
+2023-01-14 12:46:32.892 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 12:46:54.449 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 12:46:56.110 +02:00 [INF] Executed DbCommand (195ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-01-14 12:46:56.450 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-01-14 12:51:49.972 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 12:51:49.994 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 12:51:49.998 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 12:51:49.999 +02:00 [INF] Hosting environment: Development
+2023-01-14 12:51:50.000 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 12:51:54.922 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 12:51:56.544 +02:00 [INF] Executed DbCommand (192ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:06:07.363 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 13:06:07.389 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 13:06:07.394 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 13:06:07.396 +02:00 [INF] Hosting environment: Development
+2023-01-14 13:06:07.397 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 13:06:09.476 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 13:06:11.079 +02:00 [INF] Executed DbCommand (178ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:06:20.623 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-14 13:06:27.005 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 13:06:27.194 +02:00 [INF] Executed DbCommand (145ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-01-14 13:06:27.466 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-01-14 13:06:27.615 +02:00 [INF] Executed DbCommand (123ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:20:40.392 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 13:20:40.414 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 13:20:40.418 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 13:20:40.419 +02:00 [INF] Hosting environment: Development
+2023-01-14 13:20:40.420 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 13:21:21.724 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 13:21:21.748 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 13:21:21.752 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 13:21:21.753 +02:00 [INF] Hosting environment: Development
+2023-01-14 13:21:21.754 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 13:22:17.988 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 13:22:18.012 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 13:22:18.016 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 13:22:18.017 +02:00 [INF] Hosting environment: Development
+2023-01-14 13:22:18.018 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 13:22:52.365 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 13:22:52.390 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 13:22:52.394 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 13:22:52.395 +02:00 [INF] Hosting environment: Development
+2023-01-14 13:22:52.396 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 13:23:24.205 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 13:23:24.233 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 13:23:24.236 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 13:23:24.237 +02:00 [INF] Hosting environment: Development
+2023-01-14 13:23:24.239 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 13:24:13.567 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 13:24:13.593 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 13:24:13.597 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 13:24:13.598 +02:00 [INF] Hosting environment: Development
+2023-01-14 13:24:13.600 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 13:29:33.883 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 13:29:33.905 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 13:29:33.909 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 13:29:33.909 +02:00 [INF] Hosting environment: Development
+2023-01-14 13:29:33.910 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 13:33:36.327 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 13:33:36.352 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 13:33:36.356 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 13:33:36.357 +02:00 [INF] Hosting environment: Development
+2023-01-14 13:33:36.358 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 13:33:37.950 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 13:33:39.580 +02:00 [INF] Executed DbCommand (192ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:33:49.115 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:33:51.029 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:33:52.379 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:33:55.886 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:33:58.071 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:33:58.453 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [CartProducts] ([Brand], [Customer], [Description], [ImgUrl], [Price], [Size])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [CartProductModelId]
+FROM [CartProducts]
+WHERE @@ROWCOUNT = 1 AND [CartProductModelId] = scope_identity();
+2023-01-14 13:33:58.624 +02:00 [WRN] User test@test.com just added the Christian Louboutin at "2023-01-14T13:33:58.6242013+02:00" to his cart
+2023-01-14 13:33:58.753 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:34:02.447 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:34:02.578 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:34:04.066 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 13:34:04.282 +02:00 [INF] Executed DbCommand (147ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-01-14 13:34:22.604 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 13:34:22.735 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-01-14 13:34:27.597 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 13:34:27.727 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-01-14 13:34:29.262 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 13:34:29.392 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-01-14 13:34:29.577 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[LoginProvider], [a].[ProviderKey], [a].[ProviderDisplayName]
+FROM [AspNetUserLogins] AS [a]
+WHERE [a].[UserId] = @__userId_0
+2023-01-14 13:34:30.864 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 13:34:30.994 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-01-14 13:34:31.135 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 128), @__p_2='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2023-01-14 13:34:31.271 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 128), @__p_2='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2023-01-14 13:34:32.168 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 13:34:32.299 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-01-14 13:34:42.825 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 13:34:42.966 +02:00 [INF] Executed DbCommand (137ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-01-14 13:41:17.112 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 13:41:17.778 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-01-14 13:41:17.932 +02:00 [INF] Executed DbCommand (131ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-01-14 13:41:18.097 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-01-14 13:41:18.423 +02:00 [INF] Executed DbCommand (140ms) [Parameters=[@p14='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p15='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Boolean), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PhoneNumber] = @p9, [PhoneNumberConfirmed] = @p10, [SecurityStamp] = @p11, [TwoFactorEnabled] = @p12, [UserName] = @p13
+WHERE [Id] = @p14 AND [ConcurrencyStamp] = @p15;
+SELECT @@ROWCOUNT;
+2023-01-14 13:41:18.707 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-01-14 13:41:18.726 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 13:41:18.858 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-01-14 13:41:18.991 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-01-14 13:41:21.347 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 13:41:21.480 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-01-14 13:41:27.428 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 13:41:27.563 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-01-14 13:41:29.148 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 13:41:29.281 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-01-14 13:41:29.415 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[LoginProvider], [a].[ProviderKey], [a].[ProviderDisplayName]
+FROM [AspNetUserLogins] AS [a]
+WHERE [a].[UserId] = @__userId_0
+2023-01-14 13:41:36.794 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 13:41:36.926 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-01-14 13:41:37.058 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 128), @__p_2='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2023-01-14 13:41:37.191 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 128), @__p_2='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2023-01-14 13:41:40.952 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 13:41:41.084 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-01-14 13:41:41.221 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 128), @__p_2='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2023-01-14 13:41:41.357 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 128), @__p_2='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2023-01-14 13:41:41.502 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-01-14 13:41:41.771 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@p0='?' (Size = 128), @p1='?' (Size = 128), @p2='?' (Size = 450), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserTokens] ([LoginProvider], [Name], [UserId], [Value])
+VALUES (@p0, @p1, @p2, @p3);
+2023-01-14 13:41:41.902 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@p14='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p15='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Boolean), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PhoneNumber] = @p9, [PhoneNumberConfirmed] = @p10, [SecurityStamp] = @p11, [TwoFactorEnabled] = @p12, [UserName] = @p13
+WHERE [Id] = @p14 AND [ConcurrencyStamp] = @p15;
+SELECT @@ROWCOUNT;
+2023-01-14 13:41:47.499 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 13:41:47.632 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-01-14 13:41:50.531 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 13:41:50.663 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-01-14 13:41:50.800 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[LoginProvider], [a].[ProviderKey], [a].[ProviderDisplayName]
+FROM [AspNetUserLogins] AS [a]
+WHERE [a].[UserId] = @__userId_0
+2023-01-14 13:41:50.934 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 128), @__p_2='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2023-01-14 13:43:29.745 +02:00 [INF] Executed DbCommand (131ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-14 13:43:33.324 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 13:43:33.454 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-01-14 13:43:33.622 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-01-14 13:43:33.765 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:43:38.530 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:43:38.661 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:43:39.999 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:43:40.138 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__productId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[CartProductModelId] = @__productId_0
+2023-01-14 13:43:40.407 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [CartProducts]
+WHERE [CartProductModelId] = @p0;
+SELECT @@ROWCOUNT;
+2023-01-14 13:43:40.670 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:43:40.801 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:43:42.160 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:43:42.292 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:43:42.430 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:43:42.756 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:43:42.888 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:43:44.936 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:43:46.345 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 13:43:46.479 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-01-14 13:45:14.569 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 13:45:14.592 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 13:45:14.595 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 13:45:14.596 +02:00 [INF] Hosting environment: Development
+2023-01-14 13:45:14.597 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 13:45:16.588 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 13:45:18.202 +02:00 [INF] Executed DbCommand (175ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:46:24.300 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 13:46:24.345 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 13:46:24.351 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 13:46:24.353 +02:00 [INF] Hosting environment: Development
+2023-01-14 13:46:24.354 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 13:46:25.868 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 13:46:27.688 +02:00 [INF] Executed DbCommand (182ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0

@@ -24,8 +24,8 @@ namespace SneakerShopApp.Controllers
         public IActionResult Index()
         {
             var searchResult = _esclient.GetProducts();
-
-            foreach(var product in searchResult.Products)
+            ViewBag.CartItems = _cart.GetCartProducts(User.Identity.Name).ToList().Count();
+            foreach (var product in searchResult.Products)
             {
                 List<string> imagesList = JsonConvert.DeserializeObject<List<string>>(product.ImgUrl);
 
@@ -37,6 +37,7 @@ namespace SneakerShopApp.Controllers
         [HttpPost]
         public async Task<IActionResult> AddProductToCart(ProductModel product ,string size)
         {
+            ViewBag.CartItems = _cart.GetCartProducts(User.Identity.Name).ToList().Count();
             if (User.Identity.IsAuthenticated)
             {
                 _cart.AddProduct(new CartProductModel { Customer = User.Identity.Name, Brand = product.Brand, Price = product.Price, Description = product.Description, ImgUrl = product.ImgUrl  , Size = size});
@@ -53,6 +54,7 @@ namespace SneakerShopApp.Controllers
         [HttpPost]
         public async Task<IActionResult> ShowDetails(string guid)
         {
+            ViewBag.CartItems = _cart.GetCartProducts(User.Identity.Name).ToList().Count();
             var product = await _esclient.GetProductByGuid(guid);
             List<string> images = JsonConvert.DeserializeObject<List<string>>(product.ImgUrl);
             var model = new DetailsModel() { Product = product, Images = images };
@@ -61,6 +63,7 @@ namespace SneakerShopApp.Controllers
 
         public IActionResult Cart()
         {
+            ViewBag.CartItems = _cart.GetCartProducts(User.Identity.Name).ToList().Count();
             if (User.Identity.IsAuthenticated)
             {
                 var products = _cart.GetCartProducts(User.Identity.Name);
@@ -73,6 +76,7 @@ namespace SneakerShopApp.Controllers
         [HttpPost]
         public IActionResult CheckoutCart(String customer)
         {
+            ViewBag.CartItems = _cart.GetCartProducts(User.Identity.Name).ToList().Count();
             if (User.Identity.IsAuthenticated)
             {
                 var a = _cart.GetCartProducts(User.Identity.Name);
@@ -84,6 +88,7 @@ namespace SneakerShopApp.Controllers
         [HttpPost]
         public async Task<IActionResult> FilterAsync(string[] brands, string searchInput)
         {
+            ViewBag.CartItems = _cart.GetCartProducts(User.Identity.Name).ToList().Count();
             brands = brands.Where(brand => brand != "false").ToArray();
             var searchResult = await _esclient.Filter(searchInput, brands);
             foreach (var product in searchResult.Products)
@@ -100,6 +105,7 @@ namespace SneakerShopApp.Controllers
 
         public IActionResult Search(string searchInput)
         {
+            ViewBag.CartItems = _cart.GetCartProducts(User.Identity.Name).ToList().Count();
             var searchResult = _esclient.Search(searchInput);
             foreach (var product in searchResult.Products)
             {
@@ -113,7 +119,7 @@ namespace SneakerShopApp.Controllers
         [HttpPost]
         public IActionResult DeleteFromCart(int productId)
         {
-
+            ViewBag.CartItems = _cart.GetCartProducts(User.Identity.Name).ToList().Count();
             if (User.Identity.IsAuthenticated)
             {
                 _cart.RemoveProduct(productId);
@@ -126,6 +132,7 @@ namespace SneakerShopApp.Controllers
         [HttpGet]
         public JsonResult GetCartProducts()
         {
+            ViewBag.CartItems = _cart.GetCartProducts(User.Identity.Name).ToList().Count();
             if (User.Identity.IsAuthenticated)
             {
                 var products = _cart.GetCartProducts(User.Identity.Name);
@@ -138,11 +145,13 @@ namespace SneakerShopApp.Controllers
         }
         public IActionResult Checkout()
         {
-           return View("Checkout");
+            ViewBag.CartItems = _cart.GetCartProducts(User.Identity.Name).ToList().Count();
+            return View("Checkout");
         }
 
         public IActionResult OrderConfirmation(string customerName ,string customerAddress,string customerPhone)
         {
+            ViewBag.CartItems = _cart.GetCartProducts(User.Identity.Name).ToList().Count();
             if (User.Identity.IsAuthenticated)
             {
                 _cart.Checkout(User.Identity.Name, customerName , customerAddress , customerPhone);
