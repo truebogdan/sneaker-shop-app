@@ -15,11 +15,11 @@
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
 
-@*     start*@
-           <div class="row stats-panel">
-           <div class="col-xl-3 col-lg-6">
+        @*     start*@
+        <div class="row stats-panel">
+            <div class="col-xl-3 col-lg-6">
                 <div class="card card-stats mb-4 mb-xl-0">
-                    <div class="card-body">
+                    <div class="card-body" style="height : 95.2px">
                         <div class="row">
                             <div class="col">
                                 <h5 class="card-title text-uppercase text-muted mb-0">Orders:</h5>
@@ -36,7 +36,7 @@
             </div>
             <div class="col-xl-3 col-lg-6">
                 <div class="card card-stats mb-4 mb-xl-0">
-                    <div class="card-body">
+                    <div class="card-body" style="height : 95.2px">
                         <div class="row">
                             <div class="col">
                                 <h5 class="card-title text-uppercase text-muted mb-0">Customers:</h5>
@@ -53,7 +53,7 @@
             </div>
             <div class="col-xl-3 col-lg-6">
                 <div class="card card-stats mb-4 mb-xl-0">
-                    <div class="card-body">
+                    <div class="card-body" style="height : 95.2px">
                         <div class="row">
                             <div class="col">
                                 <h5 class="card-title text-uppercase text-muted mb-0">Sales:</h5>
@@ -70,11 +70,11 @@
             </div>
             <div class="col-xl-3 col-lg-6">
                 <div class="card card-stats mb-4 mb-xl-0">
-                    <div class="card-body">
+                    <div class="card-body" style="height : 95.2px">
                         <div class="row">
                             <div class="col">
                                 <h5 class="card-title text-uppercase text-muted mb-0">Earnings:</h5>
-                                <span class="h2 font-weight-bold mb-0">@Model.totalEarnings RON</span>
+                                <span class="h2 font-weight-bold mb-0" style=" position: absolute">@Model.totalEarnings RON</span>
                             </div>
                             <div class="col-auto">
                                 <div class="icon icon-shape bg-success text-white rounded-circle shadow">
@@ -86,11 +86,11 @@
                 </div>
             </div>
 
-            </div>
-@*     emd*@
+        </div>
+        @*     emd*@
     </div>
     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-        <button class="btn btn-success" id="add-button" data-bs-toggle="modal" data-bs-target="#exampleModal" >Add New Product</button>
+        <button class="btn btn-success" id="add-button" data-bs-toggle="modal" data-bs-target="#exampleModal">Add New Product</button>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -104,16 +104,16 @@
                     </div>
                     <div class="modal-body">
                         <label> Brand:</label>
-                        <input id="brand" type="text"/>
+                        <input id="brand" type="text" />
                         <br />
                         <label> Description:</label>
-                        <input  id="description" type="text" />
+                        <input id="description" type="text" />
                         <br />
                         <label> Long description:</label>
                         <textarea id="long-description" rows="5" cols="50"></textarea>
                         <br />
                         <label>Price</label>
-                        <input  id="price" type="number"/>
+                        <input id="price" type="number" />
                         <br />
                         <label> Images</label>
                         <input id="images" type="file" multiple="multiple" accept="image/png, image/jpeg , image/webp" />
@@ -126,7 +126,6 @@
             </div>
         </div>
         <div id="products-container">
-
         </div>
     </div>
     <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
@@ -135,7 +134,6 @@
             <label class="form-check-label" for="completedSwitch">Show completed orders</label>
         </div>
         <div id="orders-container">
-            
         </div>
 
 
