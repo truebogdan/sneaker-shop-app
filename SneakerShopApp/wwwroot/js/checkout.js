@@ -14,7 +14,7 @@
             var items = [];
             for (var id in res) {
                 total += +res[id].price
-                items.push({ name: res[id].description + ' ' + res[id].size, price: res[id].price, quantity:1, currency :"RON"});
+                items.push({ name: res[id].description + ' ' + res[id].size, price: res[id].price, quantity: 1, currency: "RON" });
             }
             orderParams = {
                 data: {
@@ -38,7 +38,12 @@
                     },
                 },
             };
-
+            //function wait(ms) {
+            //    var d = new Date();
+            //    var d2 = null;
+            //    do { d2 = new Date(); }
+            //    while (d2 - d < ms);
+            //}
             // utrust api
             const utrustApi = {
                 createOrder: (params, token) =>
@@ -55,13 +60,16 @@
                 const name = $("#customer-name").val();
                 const address = $("#customer-address").val();
                 const phone = $("#customer-phone").val();
+                if (name != "" && address != "" && phone != "") {
+                    orderParams.data.attributes.order.return_urls.return_url += "?customerName=" + name + "&customerAddress=" + address + "&customerPhone=" + phone;
 
-                orderParams.data.attributes.order.return_urls.return_url += "?customerName=" + name + "&customerAddress=" + address + "&customerPhone=" + phone;
+                    utrustApi.createOrder(orderParams).then((response) => {
 
-                utrustApi.createOrder(orderParams).then((response) => {
-
-                    window.location.replace(response.data.attributes.redirect_url);
-                });
+                        window.location.replace(response.data.attributes.redirect_url);
+                        console.log(response.data.attributes.redirect_url)
+                    });
+                }
+              //  wait(6000);
             });
         }
     });

@@ -9668,3 +9668,1791 @@ WHERE [c].[Customer] = @__customer_0
 SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
 FROM [CartProducts] AS [c]
 WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:51:21.016 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 13:51:21.040 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 13:51:21.044 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 13:51:21.046 +02:00 [INF] Hosting environment: Development
+2023-01-14 13:51:21.047 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 13:51:22.933 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 13:51:24.580 +02:00 [INF] Executed DbCommand (180ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:51:37.294 +02:00 [INF] Executed DbCommand (133ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:51:40.842 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:51:55.553 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:51:55.938 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [CartProducts] ([Brand], [Customer], [Description], [ImgUrl], [Price], [Size])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [CartProductModelId]
+FROM [CartProducts]
+WHERE @@ROWCOUNT = 1 AND [CartProductModelId] = scope_identity();
+2023-01-14 13:51:56.116 +02:00 [WRN] User test@test.com just added the Christian Louboutin at "2023-01-14T13:51:56.1159808+02:00" to his cart
+2023-01-14 13:51:56.247 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:51:57.683 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:51:57.814 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:52:09.495 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:52:09.628 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:52:09.766 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:52:10.030 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:52:10.163 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:52:41.057 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:52:41.333 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 13:52:41.465 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:20:18.741 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 14:20:19.615 +02:00 [INF] Executed DbCommand (146ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-01-14 14:20:19.862 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-01-14 14:20:20.005 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:20:20.135 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:20:21.948 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:20:22.078 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:20:22.214 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:20:22.471 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:20:22.602 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:20:38.298 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:20:38.428 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:21:30.245 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:21:30.374 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:21:30.516 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:21:30.777 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:21:30.909 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:22:05.551 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:22:05.797 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:22:05.927 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:22:22.375 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:22:22.637 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:22:22.768 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:26:28.812 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:26:29.083 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:26:29.213 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:29:13.650 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:29:13.924 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:29:14.054 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:30:50.128 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 14:30:50.151 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 14:30:50.155 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 14:30:50.156 +02:00 [INF] Hosting environment: Development
+2023-01-14 14:30:50.158 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 14:30:53.847 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 14:30:55.420 +02:00 [INF] Executed DbCommand (163ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-14 14:31:02.357 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 14:31:02.606 +02:00 [INF] Executed DbCommand (182ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-01-14 14:31:02.938 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-01-14 14:31:03.096 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:31:09.709 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:31:09.841 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:31:13.085 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:31:13.214 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:31:13.349 +02:00 [INF] Executed DbCommand (124ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:31:13.962 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:31:14.092 +02:00 [INF] Executed DbCommand (124ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:32:27.597 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 14:32:27.620 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 14:32:27.623 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 14:32:27.624 +02:00 [INF] Hosting environment: Development
+2023-01-14 14:32:27.625 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 14:32:30.566 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 14:32:32.201 +02:00 [INF] Executed DbCommand (157ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-14 14:32:37.255 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 14:32:37.498 +02:00 [INF] Executed DbCommand (183ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-01-14 14:32:37.823 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-01-14 14:32:37.982 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:32:40.493 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:32:40.625 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:32:41.839 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:32:41.970 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:32:42.109 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:32:42.622 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:32:42.753 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:32:56.163 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:32:56.296 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:34:17.587 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:34:17.719 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:34:43.552 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:34:43.682 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:34:43.817 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:34:44.233 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:34:44.364 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:35:07.836 +02:00 [INF] Executed DbCommand (138ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:35:08.296 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:35:08.431 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:35:30.407 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 14:35:30.438 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 14:35:30.444 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 14:35:30.447 +02:00 [INF] Hosting environment: Development
+2023-01-14 14:35:30.450 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 14:35:33.370 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 14:35:35.050 +02:00 [INF] Executed DbCommand (155ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-14 14:35:41.520 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 14:35:41.757 +02:00 [INF] Executed DbCommand (175ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-01-14 14:35:42.077 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-01-14 14:35:42.239 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:35:44.196 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:35:44.327 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:35:45.665 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:35:45.794 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:35:45.929 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:35:46.372 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:35:46.503 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:36:13.069 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:36:13.528 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:36:13.659 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:36:56.803 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 14:36:56.835 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 14:36:56.840 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 14:36:56.841 +02:00 [INF] Hosting environment: Development
+2023-01-14 14:36:56.842 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 14:36:59.935 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 14:37:01.657 +02:00 [INF] Executed DbCommand (154ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-14 14:37:12.376 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 14:37:12.616 +02:00 [INF] Executed DbCommand (178ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-01-14 14:37:12.937 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-01-14 14:37:13.099 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:37:15.018 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:37:15.152 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:37:16.671 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:37:16.800 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:37:16.937 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:37:17.325 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:37:17.455 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:37:21.899 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:37:22.313 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:37:22.448 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:38:09.500 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:38:10.082 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:38:10.217 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:39:21.543 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 14:39:21.572 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 14:39:21.578 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 14:39:21.580 +02:00 [INF] Hosting environment: Development
+2023-01-14 14:39:21.581 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 14:39:24.092 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 14:39:25.752 +02:00 [INF] Executed DbCommand (178ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:39:45.884 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:39:46.015 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:39:47.189 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:39:47.317 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:39:47.453 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:39:47.908 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:39:48.039 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 14:40:12.863 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:15:27.512 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 15:15:28.382 +02:00 [INF] Executed DbCommand (149ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-01-14 15:15:28.639 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-01-14 15:15:28.782 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:15:28.915 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:15:30.679 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:15:30.810 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:15:30.947 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:15:31.402 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:15:31.533 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:15:37.426 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:15:37.840 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:15:37.972 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:15:43.213 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:15:43.639 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:15:43.772 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:15:45.209 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:15:45.630 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:15:45.763 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:16:26.794 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:16:31.885 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 15:16:31.919 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 15:16:31.923 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 15:16:31.924 +02:00 [INF] Hosting environment: Development
+2023-01-14 15:16:31.925 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 15:16:34.966 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 15:16:36.722 +02:00 [INF] Executed DbCommand (206ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:16:39.370 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:16:39.502 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:16:40.915 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:16:41.062 +02:00 [INF] Executed DbCommand (144ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:16:41.202 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:16:44.152 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:16:56.081 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:17:00.855 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:17:09.672 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:17:14.958 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 15:17:15.003 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 15:17:15.009 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 15:17:15.010 +02:00 [INF] Hosting environment: Development
+2023-01-14 15:17:15.012 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 15:17:17.501 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 15:17:19.184 +02:00 [INF] Executed DbCommand (187ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:17:21.703 +02:00 [INF] Executed DbCommand (132ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:17:21.839 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:17:23.434 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:17:23.568 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:17:23.708 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:17:26.284 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:17:42.273 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 15:17:42.302 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 15:17:42.305 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 15:17:42.306 +02:00 [INF] Hosting environment: Development
+2023-01-14 15:17:42.307 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 15:17:44.856 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 15:17:46.642 +02:00 [INF] Executed DbCommand (216ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:17:51.473 +02:00 [INF] Executed DbCommand (132ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:17:52.775 +02:00 [INF] Executed DbCommand (131ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:17:54.388 +02:00 [INF] Executed DbCommand (131ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:17:54.524 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:17:56.720 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:17:56.856 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:17:56.998 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:17:59.652 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:18:51.298 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:18:54.366 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:20:11.492 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 15:20:11.526 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 15:20:11.530 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 15:20:11.531 +02:00 [INF] Hosting environment: Development
+2023-01-14 15:20:11.532 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 15:20:13.995 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 15:20:15.693 +02:00 [INF] Executed DbCommand (185ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:20:55.047 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:20:55.179 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:20:56.664 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:20:56.794 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:20:56.931 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:20:57.442 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:20:57.574 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:22:04.672 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 15:22:04.715 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 15:22:04.720 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 15:22:04.722 +02:00 [INF] Hosting environment: Development
+2023-01-14 15:22:04.730 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 15:22:07.354 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 15:22:09.117 +02:00 [INF] Executed DbCommand (219ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:22:11.210 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:22:11.339 +02:00 [INF] Executed DbCommand (123ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:22:12.439 +02:00 [INF] Executed DbCommand (123ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:22:12.565 +02:00 [INF] Executed DbCommand (123ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:22:12.699 +02:00 [INF] Executed DbCommand (123ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:22:13.142 +02:00 [INF] Executed DbCommand (123ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:22:13.271 +02:00 [INF] Executed DbCommand (123ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:23:51.274 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 15:23:51.328 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 15:23:51.335 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 15:23:51.336 +02:00 [INF] Hosting environment: Development
+2023-01-14 15:23:51.337 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 15:23:54.283 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 15:23:55.977 +02:00 [INF] Executed DbCommand (208ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:23:58.412 +02:00 [INF] Executed DbCommand (131ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:23:58.546 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:23:59.633 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:23:59.766 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:23:59.908 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:24:02.316 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:25:51.439 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:25:51.922 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:25:52.054 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:25:56.240 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 15:25:56.270 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 15:25:56.275 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 15:25:56.276 +02:00 [INF] Hosting environment: Development
+2023-01-14 15:25:56.277 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 15:25:59.306 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 15:26:01.072 +02:00 [INF] Executed DbCommand (196ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:26:04.123 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:26:04.257 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:26:05.499 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:26:05.631 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:26:05.773 +02:00 [INF] Executed DbCommand (132ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:26:06.146 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:26:06.279 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:26:08.967 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:26:09.336 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:26:09.469 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:26:27.976 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:26:28.434 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:26:28.567 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:26:37.059 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:26:37.543 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:26:37.676 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:26:42.508 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:26:42.909 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:26:43.042 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:27:25.671 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:27:27.929 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:27:28.550 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:27:28.683 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:28:12.799 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 15:28:12.853 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 15:28:12.860 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 15:28:12.863 +02:00 [INF] Hosting environment: Development
+2023-01-14 15:28:12.865 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 15:28:15.363 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 15:28:17.044 +02:00 [INF] Executed DbCommand (186ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:31:36.349 +02:00 [INF] Executed DbCommand (132ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:31:36.485 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:31:37.685 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:31:37.818 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:31:37.959 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:31:38.462 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:31:38.596 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:31:49.726 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:31:50.233 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:31:50.367 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:32:05.145 +02:00 [INF] Executed DbCommand (131ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:32:05.570 +02:00 [INF] Executed DbCommand (131ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:32:05.705 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:32:22.134 +02:00 [INF] Executed DbCommand (131ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:32:22.620 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:32:22.754 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:32:23.957 +02:00 [INF] Executed DbCommand (142ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:32:24.091 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:32:25.483 +02:00 [INF] Executed DbCommand (131ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:32:25.617 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:32:25.757 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:32:26.232 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:32:26.366 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:32:31.221 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:32:31.705 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:32:31.844 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:33:01.763 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 15:33:01.794 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 15:33:01.798 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 15:33:01.799 +02:00 [INF] Hosting environment: Development
+2023-01-14 15:33:01.801 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 15:33:04.663 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 15:33:06.339 +02:00 [INF] Executed DbCommand (187ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:33:17.686 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:33:17.820 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:33:20.480 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:33:20.609 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:33:21.053 +02:00 [INF] Executed DbCommand (434ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:33:21.428 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:33:21.559 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:33:24.038 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:33:24.408 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:33:24.538 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:33:29.639 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:33:29.770 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:33:30.711 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:33:30.857 +02:00 [INF] Executed DbCommand (141ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:33:30.994 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:33:31.368 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:33:31.502 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:34:13.124 +02:00 [INF] Executed DbCommand (134ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:34:13.565 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:34:13.699 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:34:15.287 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:34:15.435 +02:00 [INF] Executed DbCommand (143ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:34:17.333 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:34:17.464 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:34:18.424 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:34:18.559 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:34:18.705 +02:00 [INF] Executed DbCommand (135ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:34:19.929 +02:00 [INF] Executed DbCommand (854ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:34:20.063 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:34:36.521 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:34:36.994 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:34:37.130 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:35:57.275 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:35:57.812 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:35:57.945 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:36:09.222 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 15:36:09.252 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 15:36:09.257 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 15:36:09.259 +02:00 [INF] Hosting environment: Development
+2023-01-14 15:36:09.261 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 15:36:12.505 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 15:36:14.228 +02:00 [INF] Executed DbCommand (188ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:36:16.483 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:36:16.614 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:36:18.096 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:36:18.225 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:36:18.361 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:36:18.874 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:36:19.004 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:36:29.017 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:36:29.858 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:36:29.992 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:36:49.568 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:36:50.223 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:36:50.353 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:36:56.964 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:36:57.094 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:36:58.949 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:36:59.085 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:36:59.224 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:37:00.052 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:37:00.182 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:37:01.659 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:37:02.624 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:37:02.756 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:38:32.767 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:38:33.661 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:38:33.791 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:38:38.657 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 15:38:38.698 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 15:38:38.704 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 15:38:38.706 +02:00 [INF] Hosting environment: Development
+2023-01-14 15:38:38.707 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 15:39:01.747 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 15:39:01.781 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 15:39:01.787 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 15:39:01.788 +02:00 [INF] Hosting environment: Development
+2023-01-14 15:39:01.789 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 15:39:04.340 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 15:39:06.012 +02:00 [INF] Executed DbCommand (192ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:39:10.136 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:39:10.273 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:39:11.673 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:39:11.804 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:39:11.942 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:39:12.321 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:39:12.450 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:39:14.762 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:39:15.139 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:39:15.268 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:39:40.556 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:39:40.697 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:39:42.118 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:39:42.248 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:39:42.382 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:39:42.813 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:39:42.942 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:39:45.427 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:39:45.871 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:39:45.999 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:41:02.802 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:41:02.930 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:41:04.402 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:41:04.531 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:41:04.665 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:41:05.097 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:41:05.225 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:41:07.741 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:41:08.160 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:41:08.292 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:41:35.498 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:41:35.643 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:41:37.522 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:41:37.652 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:41:37.792 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:41:38.229 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:41:38.356 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:41:55.882 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:41:56.317 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:41:56.446 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:44:19.046 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:44:19.603 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:44:19.731 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:44:25.620 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 15:44:25.669 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 15:44:25.676 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 15:44:25.679 +02:00 [INF] Hosting environment: Development
+2023-01-14 15:44:25.683 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 15:44:37.314 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 15:44:37.352 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 15:44:37.356 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 15:44:37.357 +02:00 [INF] Hosting environment: Development
+2023-01-14 15:44:37.358 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 15:44:39.962 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 15:44:41.636 +02:00 [INF] Executed DbCommand (187ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:44:54.876 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:44:55.011 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:44:56.310 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:44:56.441 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:44:56.580 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:44:57.025 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:44:57.158 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:44:59.255 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:44:59.768 +02:00 [INF] Executed DbCommand (133ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:44:59.901 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:45:30.446 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 15:45:30.671 +02:00 [INF] Executed DbCommand (151ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-01-14 15:45:30.919 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-01-14 15:45:31.062 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:45:31.829 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:45:31.959 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:45:32.449 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:45:32.589 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:45:34.381 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:45:34.518 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:45:34.656 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:45:35.568 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:45:35.700 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:47:45.530 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 15:47:45.587 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 15:47:45.592 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 15:47:45.593 +02:00 [INF] Hosting environment: Development
+2023-01-14 15:47:45.595 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 15:47:54.325 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 15:47:54.355 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 15:47:54.359 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 15:47:54.360 +02:00 [INF] Hosting environment: Development
+2023-01-14 15:47:54.361 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 15:47:57.214 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 15:47:58.889 +02:00 [INF] Executed DbCommand (184ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:48:01.698 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:48:01.830 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:48:03.391 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:48:03.520 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:48:03.657 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:48:04.167 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:48:04.297 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:48:09.659 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:48:10.121 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:48:10.252 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:48:22.540 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:48:22.669 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:48:23.959 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:48:24.089 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:48:24.224 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:48:24.745 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:48:24.876 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:48:50.172 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 15:48:50.201 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 15:48:50.205 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 15:48:50.206 +02:00 [INF] Hosting environment: Development
+2023-01-14 15:48:50.208 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 15:48:53.053 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 15:48:54.802 +02:00 [INF] Executed DbCommand (233ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:48:57.314 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:48:57.445 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:48:58.778 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:48:58.910 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:48:59.047 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:48:59.495 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:48:59.626 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:49:24.077 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 15:49:24.119 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 15:49:24.122 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 15:49:24.123 +02:00 [INF] Hosting environment: Development
+2023-01-14 15:49:24.124 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 15:49:26.913 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 15:49:28.628 +02:00 [INF] Executed DbCommand (194ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:49:31.271 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:49:31.404 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:49:33.356 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:49:33.486 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:49:33.623 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:49:34.013 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:49:34.144 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:49:42.458 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:49:42.845 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 15:49:42.976 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
