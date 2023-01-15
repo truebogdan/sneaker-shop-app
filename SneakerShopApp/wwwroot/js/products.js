@@ -16,9 +16,11 @@
                       <div class="card-body">
                           <img class="slim-card" src=`+ product.imgUrl +` / style="width:50px">
                           <p>`+ product.longDescription +`</p>
-                          <button class="btn btn-danger delete-product" data-guid=`+ product.guid + ` >Delete</button>
-                          <input data-guid=`+ product.guid + ` value=`+ product.price +` class="card-price input-price" type=number />
+                          <br/>
+                          <input data-guid=`+ product.guid + ` value=` + product.price +` class="card-price input-price" type=number />
                           <p class="card-price"> Ron </p> 
+                          <br/>
+                          <button class="btn btn-danger delete-product" data-guid=`+ product.guid + ` >Delete</button>
                       </div>
                     </div>
                 `;
