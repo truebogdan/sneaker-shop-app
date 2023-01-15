@@ -3,38 +3,58 @@
     ViewData["Title"] = "Shop";
 }
 
-<div class="row">
+<div class="row display-page">
     <div class="col-md-6">
         <h1>@Model.Product.Description</h1>
-        @foreach(var url in Model.Images)
+        @*        @foreach(var url in Model.Images)
         {
-            <img  src="@url"/>
-        }
+        <img  src="@url"/>
+        }*@
+
+
+        <div class="carousel" data-carousel>
+            <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+            <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+            <ul data-slides>
+                <li class="slide" data-active>
+                    <img class="img-carousel" src="@Model.Images[0]" alt="Nature Image #1">
+                </li>
+                @for (int i=1;i<@Model.Images.Count();i++)
+                {
+                    <li class="slide" >
+                        <img class="img-carousel" src="@Model.Images[@i]" alt="Nature Image #1">
+                    </li>
+                }
+            </ul>
+        </div>
     </div>
 
-    <div class="col-md-6">
 
-        <h2>@Model.Product.Price Ron</h2>
-        <form method="post" asp-controller="Shop" asp-action="AddProductToCart">
-            <input type="text" name="brand" value="@Model.Product.Brand" hidden>
-            <input type="text" name="description" value="@Model.Product.Description" hidden>
-            <input type="text" name="price" value="@Model.Product.Price" hidden>
-            <input type="text" name="imgurl" value="@Model.Images.First()" hidden>
-            <input type="text" name="guid" value="@Model.Product.Guid" hidden>
-            <select id="size" name="size">
-                <option value="40">40</option>
-                <option value="41">41</option>
-                <option value="42">42</option>
-                <option value="43">43</option>
-                <option value="44">44</option>
-                <option value="45">45</option>
-                <option value="46">46</option>
-            </select>
-            <button class="btn btn-danger" type="submit">Add To Cart</button>
-        </form>
-        <h5>@Model.Product.LongDescription</h5>
-    </div>
 
+
+
+
+<div class="col-md-6">
+
+    <h2>@Model.Product.Price Ron</h2>
+    <form method="post" asp-controller="Shop" asp-action="AddProductToCart">
+        <input type="text" name="brand" value="@Model.Product.Brand" hidden>
+        <input type="text" name="description" value="@Model.Product.Description" hidden>
+        <input type="text" name="price" value="@Model.Product.Price" hidden>
+        <input type="text" name="imgurl" value="@Model.Images.First()" hidden>
+        <input type="text" name="guid" value="@Model.Product.Guid" hidden>
+        <select id="size" name="size">
+            <option value="40">40</option>
+            <option value="41">41</option>
+            <option value="42">42</option>
+            <option value="43">43</option>
+            <option value="44">44</option>
+            <option value="45">45</option>
+            <option value="46">46</option>
+        </select>
+        <button class="btn btn-danger" type="submit">Add To Cart</button>
+    </form>
+    <h5>@Model.Product.LongDescription</h5>
 </div>
 
-
+</div>

@@ -12258,3 +12258,547 @@ SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].
 FROM [OrderProducts] AS [o]
 LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
 INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2023-01-15 13:18:28.965 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-15 13:18:28.990 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-15 13:18:28.994 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 13:18:28.995 +02:00 [INF] Hosting environment: Development
+2023-01-15 13:18:28.996 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-15 13:18:32.128 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-15 13:18:33.840 +02:00 [INF] Executed DbCommand (161ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:18:43.779 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:18:52.483 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:18:57.215 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:19:00.922 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:19:04.190 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:19:08.647 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:19:14.119 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:19:15.609 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:19:17.914 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-15 13:19:18.167 +02:00 [INF] Executed DbCommand (184ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-01-15 13:19:18.506 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-01-15 13:19:18.662 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 13:19:20.422 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 13:19:20.554 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 13:19:29.568 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 13:19:29.703 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__productId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[CartProductModelId] = @__productId_0
+2023-01-15 13:19:30.076 +02:00 [INF] Executed DbCommand (131ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [CartProducts]
+WHERE [CartProductModelId] = @p0;
+SELECT @@ROWCOUNT;
+2023-01-15 13:19:30.352 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 13:19:30.483 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 13:19:33.053 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 13:19:33.186 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__productId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[CartProductModelId] = @__productId_0
+2023-01-15 13:19:33.445 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [CartProducts]
+WHERE [CartProductModelId] = @p0;
+SELECT @@ROWCOUNT;
+2023-01-15 13:19:33.715 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 13:19:33.844 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 13:19:35.915 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 13:19:36.045 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__productId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[CartProductModelId] = @__productId_0
+2023-01-15 13:19:36.300 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [CartProducts]
+WHERE [CartProductModelId] = @p0;
+SELECT @@ROWCOUNT;
+2023-01-15 13:19:36.556 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 13:19:36.687 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 13:19:39.117 +02:00 [INF] Executed DbCommand (134ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 13:19:39.247 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__productId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[CartProductModelId] = @__productId_0
+2023-01-15 13:19:39.504 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [CartProducts]
+WHERE [CartProductModelId] = @p0;
+SELECT @@ROWCOUNT;
+2023-01-15 13:19:39.760 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 13:19:39.890 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 13:19:41.787 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 13:19:41.917 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__productId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[CartProductModelId] = @__productId_0
+2023-01-15 13:19:42.173 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [CartProducts]
+WHERE [CartProductModelId] = @p0;
+SELECT @@ROWCOUNT;
+2023-01-15 13:19:42.432 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 13:19:42.561 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 13:19:46.826 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 13:19:48.963 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 13:19:50.484 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 13:25:51.471 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 13:26:11.779 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 13:26:25.230 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-15 13:26:25.253 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-15 13:26:25.257 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 13:26:25.259 +02:00 [INF] Hosting environment: Development
+2023-01-15 13:26:25.260 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-15 13:26:27.873 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-15 13:26:29.475 +02:00 [INF] Executed DbCommand (160ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:26:34.369 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:26:35.997 +02:00 [INF] Executed DbCommand (124ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:29:45.494 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-15 13:29:45.517 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-15 13:29:45.520 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 13:29:45.521 +02:00 [INF] Hosting environment: Development
+2023-01-15 13:29:45.522 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-15 13:29:48.100 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-15 13:29:49.721 +02:00 [INF] Executed DbCommand (163ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:30:03.140 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:30:05.953 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:31:33.977 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-15 13:31:34.009 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-15 13:31:34.013 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 13:31:34.014 +02:00 [INF] Hosting environment: Development
+2023-01-15 13:31:34.015 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-15 13:31:36.520 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-15 13:31:38.147 +02:00 [INF] Executed DbCommand (170ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:31:41.718 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:31:49.836 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:37:45.539 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:38:22.487 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-15 13:38:22.525 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-15 13:38:22.535 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 13:38:22.539 +02:00 [INF] Hosting environment: Development
+2023-01-15 13:38:22.551 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-15 13:38:37.322 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-15 13:38:37.350 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-15 13:38:37.354 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 13:38:37.355 +02:00 [INF] Hosting environment: Development
+2023-01-15 13:38:37.357 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-15 13:38:41.523 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-15 13:38:43.852 +02:00 [INF] Executed DbCommand (167ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:38:49.642 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:38:51.383 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:39:53.621 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:40:20.182 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:40:25.243 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:41:15.026 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-15 13:41:15.056 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-15 13:41:15.061 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 13:41:15.063 +02:00 [INF] Hosting environment: Development
+2023-01-15 13:41:15.065 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-15 13:41:23.697 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-15 13:41:23.726 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-15 13:41:23.731 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 13:41:23.733 +02:00 [INF] Hosting environment: Development
+2023-01-15 13:41:23.734 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-15 13:41:26.882 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-15 13:41:28.602 +02:00 [INF] Executed DbCommand (174ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:41:34.754 +02:00 [INF] Executed DbCommand (132ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:41:36.550 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:58:28.233 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-15 13:58:28.268 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-15 13:58:28.280 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 13:58:28.287 +02:00 [INF] Hosting environment: Development
+2023-01-15 13:58:28.293 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-15 13:58:31.493 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-15 13:58:33.110 +02:00 [INF] Executed DbCommand (153ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:58:55.724 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:59:02.031 +02:00 [INF] Executed DbCommand (124ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 13:59:30.203 +02:00 [INF] Executed DbCommand (124ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:01:24.436 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-15 14:01:24.464 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-15 14:01:24.469 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 14:01:24.470 +02:00 [INF] Hosting environment: Development
+2023-01-15 14:01:24.471 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-15 14:01:44.691 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-15 14:01:44.716 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-15 14:01:44.720 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 14:01:44.721 +02:00 [INF] Hosting environment: Development
+2023-01-15 14:01:44.722 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-15 14:01:47.879 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-15 14:01:49.528 +02:00 [INF] Executed DbCommand (163ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:02:21.430 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:02:23.170 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:06:29.467 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-15 14:06:29.502 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-15 14:06:29.509 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 14:06:29.511 +02:00 [INF] Hosting environment: Development
+2023-01-15 14:06:29.513 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-15 14:06:39.044 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-15 14:06:39.074 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-15 14:06:39.079 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 14:06:39.081 +02:00 [INF] Hosting environment: Development
+2023-01-15 14:06:39.083 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-15 14:06:41.710 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-15 14:06:43.300 +02:00 [INF] Executed DbCommand (155ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:06:48.164 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:06:49.986 +02:00 [INF] Executed DbCommand (123ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:08:59.574 +02:00 [INF] Executed DbCommand (123ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:09:27.482 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-15 14:09:27.505 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-15 14:09:27.509 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 14:09:27.509 +02:00 [INF] Hosting environment: Development
+2023-01-15 14:09:27.510 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-15 14:09:30.250 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-15 14:09:31.904 +02:00 [INF] Executed DbCommand (177ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:09:35.251 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:09:37.063 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:11:52.563 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:12:08.147 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-15 14:12:08.172 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-15 14:12:08.175 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 14:12:08.176 +02:00 [INF] Hosting environment: Development
+2023-01-15 14:12:08.177 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-15 14:12:18.831 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-15 14:12:18.871 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-15 14:12:18.875 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 14:12:18.876 +02:00 [INF] Hosting environment: Development
+2023-01-15 14:12:18.877 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-15 14:12:21.556 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-15 14:12:23.384 +02:00 [INF] Executed DbCommand (173ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:12:26.276 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:12:31.785 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:14:27.368 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:20:50.562 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-15 14:20:50.585 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-15 14:20:50.589 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 14:20:50.590 +02:00 [INF] Hosting environment: Development
+2023-01-15 14:20:50.591 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-15 14:20:58.271 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-15 14:20:58.318 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-15 14:20:58.324 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 14:20:58.326 +02:00 [INF] Hosting environment: Development
+2023-01-15 14:20:58.327 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-15 14:21:00.828 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-15 14:21:02.418 +02:00 [INF] Executed DbCommand (160ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:21:08.436 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:21:10.294 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:27:43.415 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:28:00.301 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-15 14:28:00.344 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-15 14:28:00.348 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 14:28:00.350 +02:00 [INF] Hosting environment: Development
+2023-01-15 14:28:00.351 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-15 14:28:02.976 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-15 14:28:04.785 +02:00 [INF] Executed DbCommand (171ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:28:51.842 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:28:54.876 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:30:16.959 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:30:33.368 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-15 14:30:33.391 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-15 14:30:33.395 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 14:30:33.396 +02:00 [INF] Hosting environment: Development
+2023-01-15 14:30:33.396 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-15 14:30:36.221 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-15 14:30:37.948 +02:00 [INF] Executed DbCommand (176ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:30:41.314 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:30:43.457 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:37:21.990 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-15 14:37:22.024 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-15 14:37:22.029 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 14:37:22.030 +02:00 [INF] Hosting environment: Development
+2023-01-15 14:37:22.031 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-15 14:37:25.035 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-15 14:37:26.832 +02:00 [INF] Executed DbCommand (170ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:37:34.800 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:37:40.333 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:37:42.215 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:38:29.311 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:38:31.654 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 14:38:54.080 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 21:10:51.469 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-15 21:10:51.496 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-15 21:10:51.502 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 21:10:51.504 +02:00 [INF] Hosting environment: Development
+2023-01-15 21:10:51.505 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-15 21:10:54.665 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-15 21:10:56.681 +02:00 [INF] Executed DbCommand (164ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 21:11:00.579 +02:00 [INF] Executed DbCommand (132ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 21:11:03.025 +02:00 [INF] Executed DbCommand (131ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
