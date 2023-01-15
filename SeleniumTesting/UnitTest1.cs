@@ -31,6 +31,8 @@ namespace SeleniumTesting
 
         }
 
+
+        /*
         [Test]
 
         public void FullSequence()
@@ -234,6 +236,130 @@ namespace SeleniumTesting
 
             //select payment method
             driver.FindElement(By.XPath("//button[@class='_3ctB3' and @data-test='rateButtonEGLD']")).Click(); //egld method chosen
+
+
+        }
+        */
+
+        [Test]
+
+        public void FullAdminSequence()
+        {
+            //maximaze window
+            driver.Manage().Window.Maximize();
+
+            //ignore google chrome's safety recomandation
+            driver.Navigate().GoToUrl("https://localhost:7249");  //open the application
+
+
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10)); //initiate explicit wait obj
+
+
+
+            //click on details button
+            IWebElement detailsButton = wait.Until(ExpectedConditions.ElementExists(By.XPath("//button[@id='details-button']")));
+            detailsButton.Click();
+
+
+            //click on proceed to application button
+            IWebElement proceedButton = wait.Until(ExpectedConditions.ElementExists(By.XPath("//*[@id='proceed-link']")));
+            proceedButton.Click();
+
+
+            //get on login page
+            IWebElement logInRedirectButton = wait.Until(ExpectedConditions.ElementExists(By.XPath("//a[contains(text(), 'Login')]")));
+            logInRedirectButton.Click();
+
+
+            //log in admin credentials
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//*[@id='Input_Email']"))); //wait page to load
+            driver.FindElement(By.XPath("//*[@id='Input_Email']")).SendKeys("admin@sneakershop.com");
+            driver.FindElement(By.XPath("//*[@id='Input_Password']")).SendKeys("adminadmin");
+
+
+            //click on log in button
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//button[contains(text(), 'Log in')]")));  //wait page to load
+            driver.FindElement(By.XPath("//button[contains(text(), 'Log in')]")).Click();
+
+
+            //verify admin panel button in navbar and click it
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//a[@class='nav-link text-dark' and contains(. , 'Admin Panel')]"))); //wait page to load
+            driver.FindElement(By.XPath("//a[@class='nav-link text-dark' and contains(. , 'Admin Panel')]")).Click();
+
+
+            //verify orders,customers,sales and earnings
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//h5[@class='card-title text-uppercase text-muted mb-0']"))); //wait page to load
+            Assert.IsTrue(driver.FindElement(By.XPath("//h5[@class='card-title text-uppercase text-muted mb-0' and contains(. , 'Orders')]")).Displayed);
+            Assert.IsTrue(driver.FindElement(By.XPath("//h5[@class='card-title text-uppercase text-muted mb-0' and contains(. , 'Customers')]")).Displayed);
+            Assert.IsTrue(driver.FindElement(By.XPath("//h5[@class='card-title text-uppercase text-muted mb-0' and contains(. , 'Sales')]")).Displayed);
+            Assert.IsTrue(driver.FindElement(By.XPath("//h5[@class='card-title text-uppercase text-muted mb-0' and contains(. , 'Earnings')]")).Displayed);
+
+
+            //go to products page (admin required)
+            driver.FindElement(By.XPath("//button[@class='nav-link' and contains(. , 'Products')]")).Click();
+
+
+
+            /////////    ADD PRODUCT TEST - ADMIN   /////////
+            
+
+            //click on add product button
+            wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//div[@class='tab-pane fade active show']/button"))); //wait page to load
+            driver.FindElement(By.XPath("//div[@class='tab-pane fade active show']/button")).Click();
+
+            //description input
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div[@class='modal-dialog']/div/div[2]/input")));
+            driver.FindElement(By.XPath("//div[@class='modal-dialog']/div/div[2]/input")).SendKeys("Ronaldo best footballer");
+
+            //long description input
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//textarea[@id='long-description']")));
+            driver.FindElement(By.XPath("//textarea[@id='long-description']")).SendKeys("Test product, Ronaldo best footballer, winter sales");
+
+            //price input
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//input[@id='price']")));
+            driver.FindElement(By.XPath("//input[@id='price']")).SendKeys("9999");
+
+            //click on create product button
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//button[@id='create-btn']")));
+            driver.FindElement(By.XPath("//button[@id='create-btn']")).Click();
+
+            //refresh page
+            driver.Navigate().Refresh();
+
+            //go to shop page
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[@class='nav-link text-dark' and contains(. ,'Shop')]")));
+            driver.FindElement(By.XPath("//a[@class='nav-link text-dark' and contains(. ,'Shop')]")).Click();
+
+            //filter for the new product
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//form[@action='/Shop/Search']/input")));
+            driver.FindElement(By.XPath("//form[@action='/Shop/Search']/input")).SendKeys("Ronaldo");
+
+            driver.FindElement(By.XPath("//form[@action='/Shop/Search']/button")).Click();
+
+            //verify if product appears
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div[@class='card mx-auto my-auto' and contains(. ,'Ronaldo best footballer')]/div/h6")));
+            Assert.IsTrue(driver.FindElement(By.XPath("//div[@class='card mx-auto my-auto' and contains(. ,'Ronaldo best footballer')]/div/h6")).Displayed);
+
+
+
+            /////////    DELETED PRODUCT TEST - ADMIN   /////////
+
+
+            //go to admin panel
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//a[@class='nav-link text-dark' and contains(. , 'Admin Panel')]"))); //wait page to load
+            driver.FindElement(By.XPath("//a[@class='nav-link text-dark' and contains(. , 'Admin Panel')]")).Click();
+
+            //go to products page (admin required)
+            driver.FindElement(By.XPath("//button[@class='nav-link' and contains(. , 'Products')]")).Click();
+
+
+            //scroll until element is viewed
+            Thread.Sleep(500);
+            IWebElement s = driver.FindElement(By.XPath("//div[@class='card-body' and contains(. ,'Ronaldo')]/button")); ;
+            IJavaScriptExecutor je = (IJavaScriptExecutor)driver;
+            je.ExecuteScript("arguments[0].scrollIntoView(false);", s);
+            //je.ExecuteScript("window.scrollBy(0,2500)", "");
+
 
 
 
