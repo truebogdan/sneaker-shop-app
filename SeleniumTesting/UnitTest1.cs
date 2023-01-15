@@ -184,10 +184,56 @@ namespace SeleniumTesting
             Assert.That(valueWebiste, Is.EqualTo(totalPrice));
 
 
+            //click check out button
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//button[@class='btn btn-danger' and contains(. , 'Check Out')]")));
+            driver.FindElement(By.XPath("//button[@class='btn btn-danger' and contains(. , 'Check Out')]")).Click();
 
 
+            //fill in full name input
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//input[@id='customer-name']")));
+            driver.FindElement(By.XPath("//input[@id='customer-name']")).SendKeys("Gigi Becali");
+
+            //verify that user received error message for not filling in all the input labels (user is on the same page)
+            Assert.IsTrue(driver.FindElement(By.XPath("//a[@class='navbar-brand' and contains(. ,'SneakerShopApp')]")).Displayed);
+
+            //fill in address input
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//input[@id='customer-address']")));
+            driver.FindElement(By.XPath("//input[@id='customer-address']")).SendKeys("Pipera, Str Oilor, nr1");
+
+            //verify that user received error message for not filling in all the input labels (user is on the same page)
+            Assert.IsTrue(driver.FindElement(By.XPath("//a[@class='navbar-brand' and contains(. ,'SneakerShopApp')]")).Displayed);
+
+            //fill in phone number input
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//input[@id='customer-phone']")));
+            driver.FindElement(By.XPath("//input[@id='customer-phone']")).SendKeys("0123456789");
+
+            //click on checkout button
+            driver.FindElement(By.XPath("//button[@class='btn btn-danger' and contains (. ,'Checkout')]")).Click();
 
 
+            //verify amount to be paid (should match the one from sneakershopapp)
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//div[@class='_34xbI' and contains (. ,'Rates are locked for 15 minutes')]")));  //wait for page to load
+            IWebElement finalMoney = driver.FindElement(By.XPath("//div[@class='_1Hl7N']"));
+            string finalResult = "";
+            foreach (Char i in finalMoney.Text.ToString())
+            {
+                if (Char.IsNumber(i))
+                {
+                    finalResult += i;
+                }
+                else if (i == '.')
+                {
+                    break;
+                }
+
+            }
+
+            int finalResultInt = int.Parse(finalResult);
+            Assert.That(finalResultInt, Is.EqualTo(totalPrice));
+
+
+            //select payment method
+            driver.FindElement(By.XPath("//button[@class='_3ctB3' and @data-test='rateButtonEGLD']")).Click(); //egld method chosen
 
 
 
