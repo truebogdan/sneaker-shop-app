@@ -1,40 +1,49 @@
 ﻿@model DetailsModel
 @{
     ViewData["Title"] = "Shop";
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 }
 
-<div class="row">
-    <div class="col-md-6">
-        <h1>@Model.Product.Description</h1>
-        @foreach(var url in Model.Images)
-        {
-            <img  src="@url"/>
-        }
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <h1 class="text-center">@Model.Product.Description</h1>
+            <div class="card-columns">
+                @foreach(var url in Model.Images)
+                {
+                    <div class="card">
+                        <img class="card-img-top" src="@url" alt="Product Image">
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <h2 class="text-center mb-3">@Model.Product.Price Ron</h2>
+            <form method="post" asp-controller="Shop" asp-action="AddProductToCart" class="form-inline justify-content-center">
+                <input type="text" name="brand" value="@Model.Product.Brand" hidden>
+                <input type="text" name="description" value="@Model.Product.Description" hidden>
+                <input type="text" name="price" value="@Model.Product.Price" hidden>
+                <input type="text" name="imgurl" value="@Model.Images.First()" hidden>
+                <input type="text" name="guid" value="@Model.Product.Guid" hidden>
+                <div class="form-group mr-2">
+                    <label for="size" class="sr-only">Size</label>
+                    <select class="form-control" id="size" name="size">
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                        <option value="45">45</option>
+                        <option value="46">46</option>
+                    </select>
+                </div>
+                <button class="btn btn-danger" type="submit">Add To Cart</button>
+            </form>
+            <h5 class="text-center mt-3">@Model.Product.LongDescription</h5>
+        </div>
     </div>
-
-    <div class="col-md-6">
-
-        <h2>@Model.Product.Price Ron</h2>
-        <form method="post" asp-controller="Shop" asp-action="AddProductToCart">
-            <input type="text" name="brand" value="@Model.Product.Brand" hidden>
-            <input type="text" name="description" value="@Model.Product.Description" hidden>
-            <input type="text" name="price" value="@Model.Product.Price" hidden>
-            <input type="text" name="imgurl" value="@Model.Images.First()" hidden>
-            <input type="text" name="guid" value="@Model.Product.Guid" hidden>
-            <select id="size" name="size">
-                <option value="40">40</option>
-                <option value="41">41</option>
-                <option value="42">42</option>
-                <option value="43">43</option>
-                <option value="44">44</option>
-                <option value="45">45</option>
-                <option value="46">46</option>
-            </select>
-            <button class="btn btn-danger" type="submit">Add To Cart</button>
-        </form>
-        <h5>@Model.Product.LongDescription</h5>
-    </div>
-
 </div>
-
-
