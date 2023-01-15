@@ -1,3 +1,5 @@
+using System;
+
 using NUnit.Framework;
 
 using OpenQA.Selenium;
@@ -6,6 +8,10 @@ using OpenQA.Selenium.Chrome;
 
 using OpenQA.Selenium.Support.UI;
 
+using SeleniumExtras.WaitHelpers;
+
+using System;
+using System.Xml.Linq;
 
 namespace SeleniumTesting
 {
@@ -24,6 +30,8 @@ namespace SeleniumTesting
 
         }
 
+
+        
         [Test]
 
         public void FullSequence()
@@ -34,76 +42,106 @@ namespace SeleniumTesting
             //ignore google chrome's safety recomandation
             driver.Navigate().GoToUrl("https://localhost:7249");  //open the application
 
-            Thread.Sleep(1000);
+
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10)); //initiate explicit wait obj
 
 
-            //click on advanced button
-            driver.FindElement(By.XPath("//button[@id='details-button']")).Click();
 
-            Thread.Sleep(1000);
+            //click on details button
+            IWebElement detailsButton = wait.Until(ExpectedConditions.ElementExists(By.XPath("//button[@id='details-button']")));
+            detailsButton.Click();
 
-            //click on 
-            driver.FindElement(By.XPath("//*[@id='proceed-link']")).Click();
 
-            Thread.Sleep(1500);
+            //click on proceed to application button
+            IWebElement proceedButton = wait.Until(ExpectedConditions.ElementExists(By.XPath("//*[@id='proceed-link']")));
+            proceedButton.Click();
+
 
             //get on login page
-            driver.FindElement(By.XPath("//a[contains(text(), 'Login')]")).Click();
-            
-            Thread.Sleep(500);
+            IWebElement logInRedirectButton = wait.Until(ExpectedConditions.ElementExists(By.XPath("//a[contains(text(), 'Login')]")));
+            logInRedirectButton.Click();
+
 
             //wrong username and password log in test
-            driver.FindElement(By.XPath("//*[@id='Input_Email']")).SendKeys("andrei@yahoo.com");
-            driver.FindElement(By.XPath("//*[@id='Input_Password']")).SendKeys("andrei");
+            IWebElement inputEmail = wait.Until(ExpectedConditions.ElementExists(By.XPath("//*[@id='Input_Email']")));
+            inputEmail.SendKeys("andrei@yahoo.com");
+            IWebElement inputPassword = wait.Until(ExpectedConditions.ElementExists(By.XPath("//*[@id='Input_Password']")));
+            inputPassword.SendKeys("andrei");
 
-            
-            driver.FindElement(By.XPath("//button[contains(text(), 'Log in')]")).Click(); //click on log in button
+            //click on log in button
+            IWebElement logInButton = wait.Until(ExpectedConditions.ElementExists(By.XPath("//button[contains(text(), 'Log in')]")));
+            logInButton.Click();
 
-            Thread.Sleep(500);
 
-            Assert.IsTrue(driver.FindElement(By.XPath("//*[contains(text(), 'Invalid login attempt')]")).Displayed); //check if error message appears
+            //check if error message appears
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//*[contains(text(), 'Invalid login attempt')]")));
+            Assert.IsTrue(driver.FindElement(By.XPath("//*[contains(text(), 'Invalid login attempt')]")).Displayed);
 
-            driver.FindElement(By.XPath("//*[@id='Input_Email']")).Clear(); //clear email input
-            driver.FindElement(By.XPath("//*[@id='Input_Password']")).Clear(); //clear password input
+            //no username or no password log in test
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//*[@id='Input_Password']"))); //wait page to load
+            driver.FindElement(By.XPath("//*[@id='Input_Email']")).Clear();
+            driver.FindElement(By.XPath("//*[@id='Input_Password']")).Clear();
+
+            //no username test
+            driver.FindElement(By.XPath("//*[@id='Input_Password']")).SendKeys("florin");
+            driver.FindElement(By.XPath("//button[contains(text(), 'Log in')]")).Click();
+
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//*[contains(text(), 'Invalid login attempt')]")));
+            Assert.IsTrue(driver.FindElement(By.XPath("//*[contains(text(), 'Invalid login attempt')]")).Displayed);
+
+            //no password test
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//*[@id='Input_Email']"))); //wait page to load
+            driver.FindElement(By.XPath("//*[@id='Input_Email']")).Clear();
+            driver.FindElement(By.XPath("//*[@id='Input_Password']")).Clear();
+
+            driver.FindElement(By.XPath("//*[@id='Input_Password']")).SendKeys("florin_nic07@yahoo.com");
+            driver.FindElement(By.XPath("//button[contains(text(), 'Log in')]")).Click();
+
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//*[contains(text(), 'Invalid login attempt')]"))); //wait page to load
+            Assert.IsTrue(driver.FindElement(By.XPath("//*[contains(text(), 'Invalid login attempt')]")).Displayed);
+
 
             //correct username and password log in test
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//*[@id='Input_Email']"))); //wait page to load
+            driver.FindElement(By.XPath("//*[@id='Input_Email']")).Clear();
+            driver.FindElement(By.XPath("//*[@id='Input_Password']")).Clear();
             driver.FindElement(By.XPath("//*[@id='Input_Email']")).SendKeys("florin_nic07@yahoo.com");
             driver.FindElement(By.XPath("//*[@id='Input_Password']")).SendKeys("florin");
 
-            Thread.Sleep(500);
+
             //click on log in button
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//button[contains(text(), 'Log in')]")));  //wait page to load
             driver.FindElement(By.XPath("//button[contains(text(), 'Log in')]")).Click();
 
-            Thread.Sleep(500);
 
+            // click on shop button
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//li[@class='nav-item' and contains(a, 'Shop')]"))); //wait page to load
+            driver.FindElement(By.XPath("//li[@class='nav-item' and contains(a, 'Shop')]")).Click();
 
-            driver.FindElement(By.XPath("//li[@class='nav-item' and contains(a, 'Shop')]")).Click(); // click on shop button
-
-            Thread.Sleep(500);
-
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//form[@action='/Shop/Search']/*[1]"))); //wait page to load
             driver.FindElement(By.XPath("//form[@action='/Shop/Search']/*[1]")).SendKeys("Black"); // send keys to search box input
             driver.FindElement(By.XPath("//form[@action='/Shop/Search']/*[2]")).Click(); // press on filter button
 
-            Thread.Sleep(500);
 
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//div[@class='card-body' and contains(h6 , 'Sneakers BALMAIN, Unicorn Low Top, Orange Black')]/form/button")));
             driver.FindElement(By.XPath("//div[@class='card-body' and contains(h6 , 'Sneakers BALMAIN, Unicorn Low Top, Orange Black')]/form/button")).Click();  //click on details button for balmain orange black shoes
 
-            Thread.Sleep(500);
 
             //select shoes' number
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//select[@id='size']"))); //wait page to load
             SelectElement selectItem = new SelectElement(driver.FindElement(By.XPath("//select[@id='size']")));
             selectItem.SelectByValue("44");
 
 
             driver.FindElement(By.XPath("//button[@class='btn btn-danger' and contains(text(), 'Add To Cart')]")).Click(); // add item to cart
 
-            Thread.Sleep(500);
 
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//a[@class='nav-link' and @href='/Shop/Cart']")));
             driver.FindElement(By.XPath("//a[@class='nav-link' and @href='/Shop/Cart']")).Click(); // click on shop icon (inventory)
 
-            Thread.Sleep(500);
 
             //check if the item appears in the shopping card
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//div[@class='card-body col-md-6']")));
             Assert.IsTrue(driver.FindElement(By.XPath("//div[@class='card-body col-md-6']/p[contains(text(), 'Sneakers BALMAIN, Unicorn Low Top, Orange Black')]/following-sibling::p[contains(text(), '44')]")).Displayed);
 
 
@@ -145,7 +183,210 @@ namespace SeleniumTesting
 
 
             Assert.That(valueWebiste, Is.EqualTo(totalPrice));
+
+
+            //click check out button
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//button[@class='btn btn-danger' and contains(. , 'Check Out')]")));
+            driver.FindElement(By.XPath("//button[@class='btn btn-danger' and contains(. , 'Check Out')]")).Click();
+
+
+            //fill in full name input
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//input[@id='customer-name']")));
+            driver.FindElement(By.XPath("//input[@id='customer-name']")).SendKeys("Gigi Becali");
+
+            //verify that user received error message for not filling in all the input labels (user is on the same page)
+            Assert.IsTrue(driver.FindElement(By.XPath("//a[@class='navbar-brand' and contains(. ,'SneakerShopApp')]")).Displayed);
+
+            //fill in address input
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//input[@id='customer-address']")));
+            driver.FindElement(By.XPath("//input[@id='customer-address']")).SendKeys("Pipera, Str Oilor, nr1");
+
+            //verify that user received error message for not filling in all the input labels (user is on the same page)
+            Assert.IsTrue(driver.FindElement(By.XPath("//a[@class='navbar-brand' and contains(. ,'SneakerShopApp')]")).Displayed);
+
+            //fill in phone number input
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//input[@id='customer-phone']")));
+            driver.FindElement(By.XPath("//input[@id='customer-phone']")).SendKeys("0123456789");
+
+            //click on checkout button
+            driver.FindElement(By.XPath("//button[@class='btn btn-danger' and contains (. ,'Checkout')]")).Click();
+
+
+            //verify amount to be paid (should match the one from sneakershopapp)
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//div[@class='_34xbI' and contains (. ,'Rates are locked for 15 minutes')]")));  //wait for page to load
+            IWebElement finalMoney = driver.FindElement(By.XPath("//div[@class='_1Hl7N']"));
+            string finalResult = "";
+            foreach (Char i in finalMoney.Text.ToString())
+            {
+                if (Char.IsNumber(i))
+                {
+                    finalResult += i;
+                }
+                else if (i == '.')
+                {
+                    break;
+                }
+
+            }
+
+            int finalResultInt = int.Parse(finalResult);
+            Assert.That(finalResultInt, Is.EqualTo(totalPrice));
+
+
+            //select payment method
+            driver.FindElement(By.XPath("//button[@class='_3ctB3' and @data-test='rateButtonEGLD']")).Click(); //egld method chosen
+
+
+        }
+        
+
+        [Test]
+
+        public void FullAdminSequence()
+        {
+            //maximaze window
+            driver.Manage().Window.Maximize();
+
+            //ignore google chrome's safety recomandation
+            driver.Navigate().GoToUrl("https://localhost:7249");  //open the application
+
+
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10)); //initiate explicit wait obj
+
+
+
+            //click on details button
+            IWebElement detailsButton = wait.Until(ExpectedConditions.ElementExists(By.XPath("//button[@id='details-button']")));
+            detailsButton.Click();
+
+
+            //click on proceed to application button
+            IWebElement proceedButton = wait.Until(ExpectedConditions.ElementExists(By.XPath("//*[@id='proceed-link']")));
+            proceedButton.Click();
+
+
+            //get on login page
+            IWebElement logInRedirectButton = wait.Until(ExpectedConditions.ElementExists(By.XPath("//a[contains(text(), 'Login')]")));
+            logInRedirectButton.Click();
+
+
+            //log in admin credentials
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//*[@id='Input_Email']"))); //wait page to load
+            driver.FindElement(By.XPath("//*[@id='Input_Email']")).SendKeys("admin@sneakershop.com");
+            driver.FindElement(By.XPath("//*[@id='Input_Password']")).SendKeys("adminadmin");
+
+
+            //click on log in button
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//button[contains(text(), 'Log in')]")));  //wait page to load
+            driver.FindElement(By.XPath("//button[contains(text(), 'Log in')]")).Click();
+
+
+            //verify admin panel button in navbar and click it
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//a[@class='nav-link text-dark' and contains(. , 'Admin Panel')]"))); //wait page to load
+            driver.FindElement(By.XPath("//a[@class='nav-link text-dark' and contains(. , 'Admin Panel')]")).Click();
+
+
+            //verify orders,customers,sales and earnings
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//h5[@class='card-title text-uppercase text-muted mb-0']"))); //wait page to load
+            Assert.IsTrue(driver.FindElement(By.XPath("//h5[@class='card-title text-uppercase text-muted mb-0' and contains(. , 'Orders')]")).Displayed);
+            Assert.IsTrue(driver.FindElement(By.XPath("//h5[@class='card-title text-uppercase text-muted mb-0' and contains(. , 'Customers')]")).Displayed);
+            Assert.IsTrue(driver.FindElement(By.XPath("//h5[@class='card-title text-uppercase text-muted mb-0' and contains(. , 'Sales')]")).Displayed);
+            Assert.IsTrue(driver.FindElement(By.XPath("//h5[@class='card-title text-uppercase text-muted mb-0' and contains(. , 'Earnings')]")).Displayed);
+
+
+            //go to products page (admin required)
+            driver.FindElement(By.XPath("//button[@class='nav-link' and contains(. , 'Products')]")).Click();
+
+
+
+            /////////    ADD PRODUCT TEST - ADMIN   /////////
             
+
+            //click on add product button
+            wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//div[@class='tab-pane fade active show']/button"))); //wait page to load
+            driver.FindElement(By.XPath("//div[@class='tab-pane fade active show']/button")).Click();
+
+            //description input
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div[@class='modal-dialog']/div/div[2]/input")));
+            driver.FindElement(By.XPath("//div[@class='modal-dialog']/div/div[2]/input")).SendKeys("Ronaldo best footballer");
+
+            //long description input
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//textarea[@id='long-description']")));
+            driver.FindElement(By.XPath("//textarea[@id='long-description']")).SendKeys("Test product, Ronaldo best footballer, winter sales");
+
+            //price input
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//input[@id='price']")));
+            driver.FindElement(By.XPath("//input[@id='price']")).SendKeys("9999");
+
+            //click on create product button
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//button[@id='create-btn']")));
+            driver.FindElement(By.XPath("//button[@id='create-btn']")).Click();
+
+            //refresh page
+            driver.Navigate().Refresh();
+
+            //go to shop page
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[@class='nav-link text-dark' and contains(. ,'Shop')]")));
+            driver.FindElement(By.XPath("//a[@class='nav-link text-dark' and contains(. ,'Shop')]")).Click();
+
+            //filter for the new product
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//form[@action='/Shop/Search']/input")));
+            driver.FindElement(By.XPath("//form[@action='/Shop/Search']/input")).SendKeys("Ronaldo");
+
+            driver.FindElement(By.XPath("//form[@action='/Shop/Search']/button")).Click();
+
+            //verify if product appears
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div[@class='card mx-auto my-auto' and contains(. ,'Ronaldo best footballer')]/div/h6")));
+            Assert.IsTrue(driver.FindElement(By.XPath("//div[@class='card mx-auto my-auto' and contains(. ,'Ronaldo best footballer')]/div/h6")).Displayed);
+
+
+            /////////    DELETED PRODUCT TEST - ADMIN   /////////
+
+
+            //go to admin panel
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//a[@class='nav-link text-dark' and contains(. , 'Admin Panel')]"))); //wait page to load
+            driver.FindElement(By.XPath("//a[@class='nav-link text-dark' and contains(. , 'Admin Panel')]")).Click();
+
+            //go to products page (admin required)
+            driver.FindElement(By.XPath("//button[@class='nav-link' and contains(. , 'Products')]")).Click();
+
+
+            //scroll until element is viewed
+            wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//div[@class='card-body' and contains(. ,'Ronaldo')]/button")));
+            IWebElement deleteProductElement = driver.FindElement(By.XPath("//div[@class='card-body' and contains(. ,'Ronaldo')]/button"));
+            var js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'})", deleteProductElement);
+
+
+            Thread.Sleep(2000);
+            //click on delete button
+            driver.FindElement(By.XPath("//div[@class='card-body' and contains(. ,'Ronaldo')]/button")).Click();
+
+            //go to shop page
+            IWebElement shopElement = driver.FindElement(By.XPath("//a[@class='nav-link text-dark' and contains(. ,'Shop')]"));
+            js.ExecuteScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'})", shopElement);
+            Thread.Sleep(2000);
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[@class='nav-link text-dark' and contains(. ,'Shop')]")));
+            driver.FindElement(By.XPath("//a[@class='nav-link text-dark' and contains(. ,'Shop')]")).Click();
+
+            //filter for the new product
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//form[@action='/Shop/Search']/input")));
+            driver.FindElement(By.XPath("//form[@action='/Shop/Search']/input")).SendKeys("Ronaldo");
+
+            driver.FindElement(By.XPath("//form[@action='/Shop/Search']/button")).Click();
+
+            //verify if product appears
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@class='display-4' and contains( . , 'Shop')]")));
+            var elementList = driver.FindElements(By.XPath("//div[@class='card mx-auto my-auto' and contains(. ,'Ronaldo best footballer')]/div/h6"));
+            if (elementList.Count == 0)
+            {
+                Assert True;
+            }
+            else
+            {
+                Assert False;
+            }
+
 
 
 
@@ -156,86 +397,86 @@ namespace SeleniumTesting
 
         }
 
-/*        [Test]
+                [Test]
 
-        public void InitialPage()
-        {
-            //ignore google chrome's safety recomandation
-            driver.Navigate().GoToUrl("https://localhost:7249");  //open the application
+                public void InitialPage()
+                {
+                    //ignore google chrome's safety recomandation
+                    driver.Navigate().GoToUrl("https://localhost:7249");  //open the application
 
-            Thread.Sleep(1000);
-            //WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-
-
-            //click on advanced button
-            driver.FindElement(By.XPath("//button[@id='details-button']")).Click();
-
-            Thread.Sleep(1000);
-
-            //click on 
-            driver.FindElement(By.XPath("//*[@id='proceed-link']")).Click();
-
-            Thread.Sleep(1500);
-
-            //verify nav bar buttons
-            Assert.IsTrue(driver.FindElement(By.XPath("//a[contains(text(), 'Register')]")).Displayed);
-            Assert.IsTrue(driver.FindElement(By.XPath("//a[contains(text(), 'Login')]")).Displayed);
-            Assert.IsTrue(driver.FindElement(By.XPath("//a[contains(text(), 'Home')]")).Displayed);
-            Assert.IsTrue(driver.FindElement(By.XPath("//a[contains(text(), 'Shop')]")).Displayed);
-
-            //verify middle h1 text
-            Assert.IsTrue(driver.FindElement(By.XPath("//h1[contains(text(), 'Welcome to SneakerShop!')]")).Displayed);
+                    Thread.Sleep(1000);
+                    //WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
 
 
-            //verify featured products shoe list
-            var featuredProductsList = driver.FindElements(By.XPath("//a[@class='featured__item']"));
-            Console.Write(featuredProductsList.Count);
-            Assert.IsTrue(featuredProductsList.Count == 3);
+                    //click on advanced button
+                    driver.FindElement(By.XPath("//button[@id='details-button']")).Click();
 
-            //verify first shoe image
-            var firstShoeImage = driver.FindElement(By.XPath("//img[contains(@src, '/img/shoe-1.png')]"));
-            Assert.IsTrue(firstShoeImage.Displayed);
+                    Thread.Sleep(1000);
 
-            //verify second shoe image
-            var secondShoeImage = driver.FindElement(By.XPath("//img[contains(@src, '/img/shoe-2.png')]"));
-            Assert.IsTrue(secondShoeImage.Displayed);
+                    //click on 
+                    driver.FindElement(By.XPath("//*[@id='proceed-link']")).Click();
 
-            //verify third shoe image
-            var thirdShoeImage = driver.FindElement(By.XPath("//img[contains(@src, '/img/shoe-3.png')]"));
-            Assert.IsTrue(thirdShoeImage.Displayed);
+                    Thread.Sleep(1500);
 
-        }*/
+                    //verify nav bar buttons
+                    Assert.IsTrue(driver.FindElement(By.XPath("//a[contains(text(), 'Register')]")).Displayed);
+                    Assert.IsTrue(driver.FindElement(By.XPath("//a[contains(text(), 'Login')]")).Displayed);
+                    Assert.IsTrue(driver.FindElement(By.XPath("//a[contains(text(), 'Home')]")).Displayed);
+                    Assert.IsTrue(driver.FindElement(By.XPath("//a[contains(text(), 'Shop')]")).Displayed);
+
+                    //verify middle h1 text
+                    Assert.IsTrue(driver.FindElement(By.XPath("//h1[contains(text(), 'Welcome to SneakerShop!')]")).Displayed);
 
 
-/*        [Test]
+                    //verify featured products shoe list
+                    var featuredProductsList = driver.FindElements(By.XPath("//a[@class='featured__item']"));
+                    Console.Write(featuredProductsList.Count);
+                    Assert.IsTrue(featuredProductsList.Count == 3);
 
-        public void LogInPage()
-        {
-            //click on log in button
-            driver.FindElement(By.XPath("//a[contains(text(), 'Login')]")).Click();
+                    //verify first shoe image
+                    var firstShoeImage = driver.FindElement(By.XPath("//img[contains(@src, '/img/shoe-1.png')]"));
+                    Assert.IsTrue(firstShoeImage.Displayed);
 
-            Thread.Sleep(500);
+                    //verify second shoe image
+                    var secondShoeImage = driver.FindElement(By.XPath("//img[contains(@src, '/img/shoe-2.png')]"));
+                    Assert.IsTrue(secondShoeImage.Displayed);
 
-            //verify URL link
-            String URL = driver.Url.ToString();
-            Assert.IsTrue(URL.Equals("https://localhost:7249/Identity/Account/Login"));
+                    //verify third shoe image
+                    var thirdShoeImage = driver.FindElement(By.XPath("//img[contains(@src, '/img/shoe-3.png')]"));
+                    Assert.IsTrue(thirdShoeImage.Displayed);
 
-            //verify nav bar buttons
-            Assert.IsTrue(driver.FindElement(By.XPath("//a[contains(text(), 'Register')]")).Displayed);
-            Assert.IsTrue(driver.FindElement(By.XPath("//a[contains(text(), 'Login')]")).Displayed);
-            Assert.IsTrue(driver.FindElement(By.XPath("//a[contains(text(), 'Home')]")).Displayed);
-            Assert.IsTrue(driver.FindElement(By.XPath("//a[contains(text(), 'Shop')]")).Displayed);
+                }
 
-            //verify form labels
-            Assert.IsTrue(driver.FindElement(By.XPath("//label[@class='form-label' and contains(text(), 'Email')]")).Displayed);
-            Assert.IsTrue(driver.FindElement(By.XPath("//label[@class='form-label' and contains(text(), 'Password')]")).Displayed);
-            Assert.IsTrue(driver.FindElement(By.XPath("//label[@class='form-label' and @for='Input_RememberMe']")).Displayed);
 
-            //verify log in buttons
-            Assert.IsTrue(driver.FindElement(By.XPath("//button[contains(text(), 'Log in')]")).Displayed);
-            Assert.IsTrue(driver.FindElement(By.XPath("//button[contains(text(), 'Facebook')]")).Displayed);
-            Assert.IsTrue(driver.FindElement(By.XPath("//button[contains(text(), 'Google')]")).Displayed);
-        }*/
+                [Test]
+
+                public void LogInPage()
+                {
+                    //click on log in button
+                    driver.FindElement(By.XPath("//a[contains(text(), 'Login')]")).Click();
+
+                    Thread.Sleep(500);
+
+                    //verify URL link
+                    String URL = driver.Url.ToString();
+                    Assert.IsTrue(URL.Equals("https://localhost:7249/Identity/Account/Login"));
+
+                    //verify nav bar buttons
+                    Assert.IsTrue(driver.FindElement(By.XPath("//a[contains(text(), 'Register')]")).Displayed);
+                    Assert.IsTrue(driver.FindElement(By.XPath("//a[contains(text(), 'Login')]")).Displayed);
+                    Assert.IsTrue(driver.FindElement(By.XPath("//a[contains(text(), 'Home')]")).Displayed);
+                    Assert.IsTrue(driver.FindElement(By.XPath("//a[contains(text(), 'Shop')]")).Displayed);
+
+                    //verify form labels
+                    Assert.IsTrue(driver.FindElement(By.XPath("//label[@class='form-label' and contains(text(), 'Email')]")).Displayed);
+                    Assert.IsTrue(driver.FindElement(By.XPath("//label[@class='form-label' and contains(text(), 'Password')]")).Displayed);
+                    Assert.IsTrue(driver.FindElement(By.XPath("//label[@class='form-label' and @for='Input_RememberMe']")).Displayed);
+
+                    //verify log in buttons
+                    Assert.IsTrue(driver.FindElement(By.XPath("//button[contains(text(), 'Log in')]")).Displayed);
+                    Assert.IsTrue(driver.FindElement(By.XPath("//button[contains(text(), 'Facebook')]")).Displayed);
+                    Assert.IsTrue(driver.FindElement(By.XPath("//button[contains(text(), 'Google')]")).Displayed);
+                }
 
 
     }
