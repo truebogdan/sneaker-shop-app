@@ -103,20 +103,25 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <label> Brand:</label>
-                        <input id="brand" type="text" />
+                        <label for="brand">Brand</label>
+                        <select class="form-control" id="brand">
+                            <option>OFF WHITE</option>
+                            <option>VERSACE</option>
+                            <option>BALMAIN</option>
+                            <option>Balenciaga</option>
+                            <option>GUCCI</option>
+                            <option>Versace</option>
+                        </select>
+                        <label for="description">Description</label>
+                        <input class="form-control" id="description">
+                        <label for="long-description">Long description</label>
+                        <textarea class="form-control" id="long-description" rows="3"></textarea>
+
+                        <label for="price">Price</label>
+                        <input class="form-control" id="price" type="number" />
                         <br />
-                        <label> Description:</label>
-                        <input id="description" type="text" />
-                        <br />
-                        <label> Long description:</label>
-                        <textarea id="long-description" rows="5" cols="50"></textarea>
-                        <br />
-                        <label>Price</label>
-                        <input id="price" type="number" />
-                        <br />
-                        <label> Images</label>
-                        <input id="images" type="file" multiple="multiple" accept="image/png, image/jpeg , image/webp" />
+                        <label for="images"> Images</label>
+                        <input class="form-control"  id="images" type="file" multiple="multiple" accept="image/png, image/jpeg , image/webp" />
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

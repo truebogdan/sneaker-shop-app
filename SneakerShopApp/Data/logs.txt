@@ -11818,3 +11818,443 @@ SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].
 FROM [OrderProducts] AS [o]
 LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
 INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2023-01-14 18:12:48.303 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 18:12:49.231 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-01-14 18:12:49.367 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-01-14 18:12:49.503 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM (
+    SELECT DISTINCT [o].[Customer]
+    FROM [Orders] AS [o]
+) AS [t]
+2023-01-14 18:12:49.636 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [OrderProducts] AS [o]
+2023-01-14 18:12:49.766 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Orders] AS [o]
+2023-01-14 18:12:49.899 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([o].[Total]), 0.0E0)
+FROM [Orders] AS [o]
+2023-01-14 18:12:50.513 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2023-01-14 18:13:05.765 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-14 18:13:05.810 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-14 18:13:05.814 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-14 18:13:05.815 +02:00 [INF] Hosting environment: Development
+2023-01-14 18:13:05.816 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-14 18:13:08.260 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 18:13:09.931 +02:00 [INF] Executed DbCommand (161ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-14 18:13:25.134 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 18:13:25.370 +02:00 [INF] Executed DbCommand (176ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-01-14 18:13:25.695 +02:00 [INF] Executed DbCommand (123ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-01-14 18:13:25.851 +02:00 [INF] Executed DbCommand (124ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 18:13:27.901 +02:00 [INF] Executed DbCommand (135ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 18:13:28.030 +02:00 [INF] Executed DbCommand (123ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 18:13:29.081 +02:00 [INF] Executed DbCommand (123ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 18:13:29.208 +02:00 [INF] Executed DbCommand (124ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 18:13:29.344 +02:00 [INF] Executed DbCommand (123ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 18:13:29.724 +02:00 [INF] Executed DbCommand (123ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 18:13:29.852 +02:00 [INF] Executed DbCommand (123ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 18:13:42.003 +02:00 [INF] Executed DbCommand (124ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 18:13:42.132 +02:00 [INF] Executed DbCommand (123ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 18:14:40.608 +02:00 [INF] Executed DbCommand (124ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-14 18:15:12.621 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-14 18:15:12.749 +02:00 [INF] Executed DbCommand (124ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-01-14 18:15:12.887 +02:00 [INF] Executed DbCommand (123ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-01-14 18:15:13.020 +02:00 [INF] Executed DbCommand (123ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-14 18:15:52.206 +02:00 [INF] Executed DbCommand (123ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM (
+    SELECT DISTINCT [o].[Customer]
+    FROM [Orders] AS [o]
+) AS [t]
+2023-01-14 18:15:52.351 +02:00 [INF] Executed DbCommand (123ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [OrderProducts] AS [o]
+2023-01-14 18:15:52.484 +02:00 [INF] Executed DbCommand (123ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Orders] AS [o]
+2023-01-14 18:15:52.629 +02:00 [INF] Executed DbCommand (123ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([o].[Total]), 0.0E0)
+FROM [Orders] AS [o]
+2023-01-14 18:15:53.272 +02:00 [INF] Executed DbCommand (124ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2023-01-15 11:05:06.509 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-15 11:05:06.544 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-15 11:05:06.548 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 11:05:06.550 +02:00 [INF] Hosting environment: Development
+2023-01-15 11:05:06.552 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-15 11:05:20.967 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-15 11:05:21.011 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-15 11:05:21.016 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 11:05:21.017 +02:00 [INF] Hosting environment: Development
+2023-01-15 11:05:21.018 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-15 11:05:23.652 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-15 11:05:25.586 +02:00 [INF] Executed DbCommand (157ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 11:05:32.478 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-15 11:05:32.722 +02:00 [INF] Executed DbCommand (181ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-01-15 11:05:33.073 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-01-15 11:05:33.235 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 11:05:34.254 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM (
+    SELECT DISTINCT [o].[Customer]
+    FROM [Orders] AS [o]
+) AS [t]
+2023-01-15 11:05:34.385 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [OrderProducts] AS [o]
+2023-01-15 11:05:34.520 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Orders] AS [o]
+2023-01-15 11:05:34.664 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([o].[Total]), 0.0E0)
+FROM [Orders] AS [o]
+2023-01-15 11:05:35.205 +02:00 [INF] Executed DbCommand (131ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2023-01-15 11:10:30.488 +02:00 [INF] Executed DbCommand (124ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 11:10:55.221 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM (
+    SELECT DISTINCT [o].[Customer]
+    FROM [Orders] AS [o]
+) AS [t]
+2023-01-15 11:10:55.349 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [OrderProducts] AS [o]
+2023-01-15 11:10:55.479 +02:00 [INF] Executed DbCommand (124ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Orders] AS [o]
+2023-01-15 11:10:55.609 +02:00 [INF] Executed DbCommand (124ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([o].[Total]), 0.0E0)
+FROM [Orders] AS [o]
+2023-01-15 11:10:56.021 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2023-01-15 11:11:12.103 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM (
+    SELECT DISTINCT [o].[Customer]
+    FROM [Orders] AS [o]
+) AS [t]
+2023-01-15 11:11:12.231 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [OrderProducts] AS [o]
+2023-01-15 11:11:12.361 +02:00 [INF] Executed DbCommand (124ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Orders] AS [o]
+2023-01-15 11:11:12.491 +02:00 [INF] Executed DbCommand (124ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([o].[Total]), 0.0E0)
+FROM [Orders] AS [o]
+2023-01-15 11:11:12.880 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2023-01-15 11:11:14.961 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 11:21:11.416 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 11:21:12.737 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM (
+    SELECT DISTINCT [o].[Customer]
+    FROM [Orders] AS [o]
+) AS [t]
+2023-01-15 11:21:12.873 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [OrderProducts] AS [o]
+2023-01-15 11:21:13.006 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Orders] AS [o]
+2023-01-15 11:21:13.138 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([o].[Total]), 0.0E0)
+FROM [Orders] AS [o]
+2023-01-15 11:21:13.550 +02:00 [INF] Executed DbCommand (131ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2023-01-15 11:22:55.261 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM (
+    SELECT DISTINCT [o].[Customer]
+    FROM [Orders] AS [o]
+) AS [t]
+2023-01-15 11:22:55.391 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [OrderProducts] AS [o]
+2023-01-15 11:22:55.524 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Orders] AS [o]
+2023-01-15 11:22:55.657 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([o].[Total]), 0.0E0)
+FROM [Orders] AS [o]
+2023-01-15 11:22:56.182 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2023-01-15 11:24:16.705 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM (
+    SELECT DISTINCT [o].[Customer]
+    FROM [Orders] AS [o]
+) AS [t]
+2023-01-15 11:24:16.835 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [OrderProducts] AS [o]
+2023-01-15 11:24:16.967 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Orders] AS [o]
+2023-01-15 11:24:17.101 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([o].[Total]), 0.0E0)
+FROM [Orders] AS [o]
+2023-01-15 11:24:17.610 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2023-01-15 11:25:24.263 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM (
+    SELECT DISTINCT [o].[Customer]
+    FROM [Orders] AS [o]
+) AS [t]
+2023-01-15 11:25:24.395 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [OrderProducts] AS [o]
+2023-01-15 11:25:24.528 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Orders] AS [o]
+2023-01-15 11:25:24.661 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([o].[Total]), 0.0E0)
+FROM [Orders] AS [o]
+2023-01-15 11:25:25.100 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2023-01-15 11:28:57.181 +02:00 [INF] Executed DbCommand (130ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM (
+    SELECT DISTINCT [o].[Customer]
+    FROM [Orders] AS [o]
+) AS [t]
+2023-01-15 11:28:57.312 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [OrderProducts] AS [o]
+2023-01-15 11:28:57.442 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Orders] AS [o]
+2023-01-15 11:28:57.573 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([o].[Total]), 0.0E0)
+FROM [Orders] AS [o]
+2023-01-15 11:28:58.074 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2023-01-15 11:29:16.933 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM (
+    SELECT DISTINCT [o].[Customer]
+    FROM [Orders] AS [o]
+) AS [t]
+2023-01-15 11:29:17.065 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [OrderProducts] AS [o]
+2023-01-15 11:29:17.197 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Orders] AS [o]
+2023-01-15 11:29:17.329 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([o].[Total]), 0.0E0)
+FROM [Orders] AS [o]
+2023-01-15 11:29:17.745 +02:00 [INF] Executed DbCommand (128ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2023-01-15 11:31:07.569 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM (
+    SELECT DISTINCT [o].[Customer]
+    FROM [Orders] AS [o]
+) AS [t]
+2023-01-15 11:31:07.699 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [OrderProducts] AS [o]
+2023-01-15 11:31:07.829 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Orders] AS [o]
+2023-01-15 11:31:07.960 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([o].[Total]), 0.0E0)
+FROM [Orders] AS [o]
+2023-01-15 11:31:08.507 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2023-01-15 11:31:57.217 +02:00 [INF] Now listening on: https://localhost:7249
+2023-01-15 11:31:57.240 +02:00 [INF] Now listening on: http://localhost:5249
+2023-01-15 11:31:57.244 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-15 11:31:57.245 +02:00 [INF] Hosting environment: Development
+2023-01-15 11:31:57.246 +02:00 [INF] Content root path: C:\Users\User\Source\Repos\sneaker-shop-app\SneakerShopApp\
+2023-01-15 11:32:00.296 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'DbShopContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-15 11:32:02.791 +02:00 [INF] Executed DbCommand (166ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] IS NULL
+2023-01-15 11:34:02.017 +02:00 [INF] Entity Framework Core 6.0.3 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2023-01-15 11:34:02.271 +02:00 [INF] Executed DbCommand (181ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-01-15 11:34:02.597 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-01-15 11:34:02.756 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 11:34:04.319 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM (
+    SELECT DISTINCT [o].[Customer]
+    FROM [Orders] AS [o]
+) AS [t]
+2023-01-15 11:34:04.450 +02:00 [INF] Executed DbCommand (124ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [OrderProducts] AS [o]
+2023-01-15 11:34:04.582 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Orders] AS [o]
+2023-01-15 11:34:04.729 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([o].[Total]), 0.0E0)
+FROM [Orders] AS [o]
+2023-01-15 11:34:05.249 +02:00 [INF] Executed DbCommand (126ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
+2023-01-15 11:34:58.531 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 11:35:04.009 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 11:35:09.297 +02:00 [INF] Executed DbCommand (124ms) [Parameters=[@__customer_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartProductModelId], [c].[Brand], [c].[Customer], [c].[Description], [c].[ImgUrl], [c].[Price], [c].[Size]
+FROM [CartProducts] AS [c]
+WHERE [c].[Customer] = @__customer_0
+2023-01-15 11:35:17.276 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM (
+    SELECT DISTINCT [o].[Customer]
+    FROM [Orders] AS [o]
+) AS [t]
+2023-01-15 11:35:17.406 +02:00 [INF] Executed DbCommand (124ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [OrderProducts] AS [o]
+2023-01-15 11:35:17.535 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Orders] AS [o]
+2023-01-15 11:35:17.665 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([o].[Total]), 0.0E0)
+FROM [Orders] AS [o]
+2023-01-15 11:35:18.062 +02:00 [INF] Executed DbCommand (125ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[ImgUrl], [o].[Description], [o].[Price], [o].[Size], [o1].[OrderId], [o1].[Address], [o1].[Customer], [o1].[FullName], [o1].[IsCompleted], [o1].[Phone], [o1].[Total]
+FROM [OrderProducts] AS [o]
+LEFT JOIN [Orders] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+INNER JOIN [Orders] AS [o1] ON [o0].[OrderId] = [o1].[OrderId]
