@@ -11,8 +11,7 @@ using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
 
 using System;
-
-
+using System.Xml.Linq;
 
 namespace SeleniumTesting
 {
@@ -32,7 +31,7 @@ namespace SeleniumTesting
         }
 
 
-        /*
+        
         [Test]
 
         public void FullSequence()
@@ -239,7 +238,7 @@ namespace SeleniumTesting
 
 
         }
-        */
+        
 
         [Test]
 
@@ -341,7 +340,6 @@ namespace SeleniumTesting
             Assert.IsTrue(driver.FindElement(By.XPath("//div[@class='card mx-auto my-auto' and contains(. ,'Ronaldo best footballer')]/div/h6")).Displayed);
 
 
-
             /////////    DELETED PRODUCT TEST - ADMIN   /////////
 
 
@@ -354,11 +352,41 @@ namespace SeleniumTesting
 
 
             //scroll until element is viewed
-            Thread.Sleep(500);
-            IWebElement s = driver.FindElement(By.XPath("//div[@class='card-body' and contains(. ,'Ronaldo')]/button")); ;
-            IJavaScriptExecutor je = (IJavaScriptExecutor)driver;
-            je.ExecuteScript("arguments[0].scrollIntoView(false);", s);
-            //je.ExecuteScript("window.scrollBy(0,2500)", "");
+            wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//div[@class='card-body' and contains(. ,'Ronaldo')]/button")));
+            IWebElement deleteProductElement = driver.FindElement(By.XPath("//div[@class='card-body' and contains(. ,'Ronaldo')]/button"));
+            var js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'})", deleteProductElement);
+
+
+            Thread.Sleep(2000);
+            //click on delete button
+            driver.FindElement(By.XPath("//div[@class='card-body' and contains(. ,'Ronaldo')]/button")).Click();
+
+            //go to shop page
+            IWebElement shopElement = driver.FindElement(By.XPath("//a[@class='nav-link text-dark' and contains(. ,'Shop')]"));
+            js.ExecuteScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'})", shopElement);
+            Thread.Sleep(2000);
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[@class='nav-link text-dark' and contains(. ,'Shop')]")));
+            driver.FindElement(By.XPath("//a[@class='nav-link text-dark' and contains(. ,'Shop')]")).Click();
+
+            //filter for the new product
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//form[@action='/Shop/Search']/input")));
+            driver.FindElement(By.XPath("//form[@action='/Shop/Search']/input")).SendKeys("Ronaldo");
+
+            driver.FindElement(By.XPath("//form[@action='/Shop/Search']/button")).Click();
+
+            //verify if product appears
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@class='display-4' and contains( . , 'Shop')]")));
+            var elementList = driver.FindElements(By.XPath("//div[@class='card mx-auto my-auto' and contains(. ,'Ronaldo best footballer')]/div/h6"));
+            if (elementList.Count == 0)
+            {
+                Assert True;
+            }
+            else
+            {
+                Assert False;
+            }
+
 
 
 
@@ -369,7 +397,7 @@ namespace SeleniumTesting
 
         }
 
-        /*        [Test]
+                [Test]
 
                 public void InitialPage()
                 {
@@ -417,10 +445,10 @@ namespace SeleniumTesting
                     var thirdShoeImage = driver.FindElement(By.XPath("//img[contains(@src, '/img/shoe-3.png')]"));
                     Assert.IsTrue(thirdShoeImage.Displayed);
 
-                }*/
+                }
 
 
-        /*        [Test]
+                [Test]
 
                 public void LogInPage()
                 {
@@ -448,7 +476,7 @@ namespace SeleniumTesting
                     Assert.IsTrue(driver.FindElement(By.XPath("//button[contains(text(), 'Log in')]")).Displayed);
                     Assert.IsTrue(driver.FindElement(By.XPath("//button[contains(text(), 'Facebook')]")).Displayed);
                     Assert.IsTrue(driver.FindElement(By.XPath("//button[contains(text(), 'Google')]")).Displayed);
-                }*/
+                }
 
 
     }
