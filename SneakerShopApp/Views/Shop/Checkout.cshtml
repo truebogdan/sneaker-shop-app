@@ -1,30 +1,29 @@
-﻿<h3>Checkout</h3>
-<br />
-
-<form id="checkout-form">
-  <div class="form-group">
-    <label for="customer-name">Full name</label>
-    <input type="text" class="form-control" id="customer-name" placeholder="Enter full name" required>
-  </div>
-  <div class="form-group">
-    <label for="customer-address">Address</label>
-    <input type="text" class="form-control" id="customer-address" placeholder="Enter address" required>
-  </div>
-  <div class="form-group">
-    <label for="customer-phone">Phone number</label>
-    <input type="text" class="form-control" id="customer-phone" placeholder="Enter phone number" required>
-  </div>
-
-<p>
-    You will be redirected to the Utrust payment widget compatible with any major crypto wallets. It will allow you to pay for your purchase in a safe and seamless way using Bitcoin, Ethereum, Tether or a number of other currencies.
-</p>
-
-<img src="https://demo.store.utrust.com/wp-content/plugins/utrust-for-woocommerce/assets/images/checkout_image.png" />
-<br />
-<button class="btn btn-danger" id="utrust-checkout" type="submit">Checkout</button>
-
-<script src="~/js/checkout.js"></script>
-
-
-</form>
-
+﻿<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<div class="container my-5">
+    <form id="checkout-form">
+        <h2 class="text-center">Checkout</h2>
+        <div class="form-group">
+            <label for="customer-name">Full name</label>
+            <input type="text" class="form-control" id="customer-name" placeholder="Enter full name" required>
+        </div>
+        <div class="form-group">
+            <label for="customer-address">Address</label>
+            <input type="text" class="form-control" id="customer-address" placeholder="Enter address" required>
+        </div>
+        <div class="form-group">
+            <label for="customer-phone">Phone number</label>
+            <input type="text" class="form-control" id="customer-phone" placeholder="Enter phone number" required>
+        </div>
+        <div class="form-group">
+            <label for="customer-email">Email</label>
+            <input type="email" class="form-control" id="customer-email" placeholder="Enter email" required>
+        </div>
+        <p class="text-center">You will be redirected to the Utrust payment widget compatible with any major crypto wallets. It will allow you to pay for your purchase in a safe and seamless way using Bitcoin, Ethereum, Tether or a number of other currencies.</p>
+        <div class="text-center">
+            <img src="https://demo.store.utrust.com/wp-content/plugins/utrust-for-woocommerce/assets/images/checkout_image.png" class="img-fluid" alt="Utrust Payment">
+            <br />
+            <button class="btn btn-danger my-3" id="utrust-checkout" type="submit">Checkout</button>
+        </div>
+    </form>
+    <script src="~/js/checkout.js"></script>
+</div>
