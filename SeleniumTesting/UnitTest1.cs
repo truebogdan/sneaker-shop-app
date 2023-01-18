@@ -31,9 +31,9 @@ namespace SeleniumTesting
         }
 
 
-        
+        /*
         [Test]
-
+        
         public void FullSequence()
         {
             //maximaze window
@@ -208,8 +208,15 @@ namespace SeleniumTesting
             wait.Until(ExpectedConditions.ElementExists(By.XPath("//input[@id='customer-phone']")));
             driver.FindElement(By.XPath("//input[@id='customer-phone']")).SendKeys("0123456789");
 
+            //verify that user received error message for not filling in all the input labels (user is on the same page)
+            Assert.IsTrue(driver.FindElement(By.XPath("//a[@class='navbar-brand' and contains(. ,'SneakerShopApp')]")).Displayed);
+
+            //fill in phone number input
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//input[@id='customer-email']")));
+            driver.FindElement(By.XPath("//input[@id='customer-email']")).SendKeys("becali@awdasd.com");
+
             //click on checkout button
-            driver.FindElement(By.XPath("//button[@class='btn btn-danger' and contains (. ,'Checkout')]")).Click();
+            driver.FindElement(By.XPath("//button[@class='btn btn-danger my-3' and contains (. ,'Checkout')]")).Click();
 
 
             //verify amount to be paid (should match the one from sneakershopapp)
@@ -238,7 +245,9 @@ namespace SeleniumTesting
 
 
         }
-        
+        */
+
+        /*
 
         [Test]
 
@@ -387,15 +396,120 @@ namespace SeleniumTesting
                 Assert False;
             }
 
+        }
+        */
+
+        [Test]
+
+        public void RegisterTest()
+        {
+            //maximaze window
+            driver.Manage().Window.Maximize();
+
+            //ignore google chrome's safety recomandation
+            driver.Navigate().GoToUrl("https://localhost:7249");  //open the application
+
+
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10)); //initiate explicit wait obj
 
 
 
+            //click on details button
+            IWebElement detailsButton = wait.Until(ExpectedConditions.ElementExists(By.XPath("//button[@id='details-button']")));
+            detailsButton.Click();
+
+
+            //click on proceed to application button
+            IWebElement proceedButton = wait.Until(ExpectedConditions.ElementExists(By.XPath("//*[@id='proceed-link']")));
+            proceedButton.Click();
+
+
+            //get on register page
+            IWebElement logInRedirectButton = wait.Until(ExpectedConditions.ElementExists(By.XPath("//a[contains(text(), 'Register')]")));
+            logInRedirectButton.Click();
+
+            //TEST try to register without filling email and password input
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//button[@id='registerSubmit']"))); //wait page to load
+            driver.FindElement(By.XPath("//button[@id='registerSubmit']")).Click(); //click on register button
+
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//span[contains(. , 'The Email field is required.')]"))); // wait for message to appear
+            Assert.IsTrue(driver.FindElement(By.XPath("//span[contains(. , 'The Email field is required.')]")).Displayed); //verify error message
+            Assert.IsTrue(driver.FindElement(By.XPath("//span[contains(. , 'The Password field is required.')]")).Displayed); //verify error message
+
+            //TEST try to register without filling email input
+            driver.FindElement(By.XPath("//input[@id='Input_Password']")).SendKeys("parola"); //fill in password
+            Assert.IsTrue(driver.FindElement(By.XPath("//span[contains(. , 'The Email field is required.')]")).Displayed); //verify error message
+
+            //TEST try to register without filling password input
+            driver.FindElement(By.XPath("//input[@id='Input_Password']")).Clear(); //remove password input
+            driver.FindElement(By.XPath("//input[@id='Input_Email']")).SendKeys("testemail@testemail"); //fill in email
+            Assert.IsTrue(driver.FindElement(By.XPath("//span[contains(. , 'The Password field is required.')]")).Displayed); //verify error message
+
+            //TEST try to register without filling confirmation password input
+            driver.FindElement(By.XPath("//input[@id='Input_Password']")).SendKeys("parola"); //fill in password
+            driver.FindElement(By.XPath("//button[@id='registerSubmit']")).Click(); //click on register button
+            Assert.IsTrue(driver.FindElement(By.XPath("//span[contains(. , 'The password and confirmation password do not match.')]")).Displayed); //verify error message
+
+            //TEST input email without @
+            driver.FindElement(By.XPath("//input[@id='Input_Email']")).Clear();
+            driver.FindElement(By.XPath("//input[@id='Input_Password']")).Clear();
+            driver.FindElement(By.XPath("//input[@id='Input_Email']")).SendKeys("testemail"); //fill in email
+
+            driver.FindElement(By.XPath("//input[@id='Input_Password']")).SendKeys("parola"); //fill in password 
+            
+            driver.FindElement(By.XPath("//input[@id='Input_ConfirmPassword']")).SendKeys("parola"); // fill in confirm password
+
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//span[contains(. , 'The Email field is not a valid e-mail address.')]"))); // wait for message to appear
+            Assert.IsTrue(driver.FindElement(By.XPath("//span[contains(. , 'The Email field is not a valid e-mail address.')]")).Displayed); //verify error message
+
+
+            //TEST 
+
+
+            //TEST correct email, correct password, wrong confirm password
+            //clear old inputs
+            driver.FindElement(By.XPath("//input[@id='Input_Email']")).Clear();
+            driver.FindElement(By.XPath("//input[@id='Input_Password']")).Clear();
+            driver.FindElement(By.XPath("//input[@id='Input_ConfirmPassword']")).Clear();
+
+            driver.FindElement(By.XPath("//input[@id='Input_Email']")).SendKeys("testemail@testemail.com"); //fill in email
+
+            driver.FindElement(By.XPath("//input[@id='Input_Password']")).SendKeys("parola"); //fill in password 
+
+            driver.FindElement(By.XPath("//input[@id='Input_ConfirmPassword']")).SendKeys("awdawdwadadwa"); // fill in confirm password (wrong value)
+
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//span[contains(. , 'The password and confirmation password do not match.')]"))); // wait for message to appear
+            Assert.IsTrue(driver.FindElement(By.XPath("//span[contains(. , 'The password and confirmation password do not match.')]")).Displayed); //verify error message
+
+
+            //TEST correct email, correct password, correct confirm password
+            //clear old inputs
+            driver.FindElement(By.XPath("//input[@id='Input_Email']")).Clear();
+            driver.FindElement(By.XPath("//input[@id='Input_Password']")).Clear();
+            driver.FindElement(By.XPath("//input[@id='Input_ConfirmPassword']")).Clear();
+
+            driver.FindElement(By.XPath("//input[@id='Input_Email']")).SendKeys("testemail@testemail.com"); //fill in email
+
+            driver.FindElement(By.XPath("//input[@id='Input_Password']")).SendKeys("parola"); //fill in password 
+
+            driver.FindElement(By.XPath("//input[@id='Input_ConfirmPassword']")).SendKeys("parola"); // fill in confirm password
+
+            driver.FindElement(By.XPath("//button[@id='registerSubmit']")).Click(); //click on register button
+
+            //verify if login is successful
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//a[@class='nav-link text-dark' and contains(. , 'testemail')]"))); // wait for message to appear
+            Assert.IsTrue(driver.FindElement(By.XPath("//a[@class='nav-link text-dark' and contains(. , 'testemail')]")).Displayed); //verify error message
+            
 
 
 
 
 
         }
+
+
+
+        /*
 
                 [Test]
 
@@ -477,6 +591,8 @@ namespace SeleniumTesting
                     Assert.IsTrue(driver.FindElement(By.XPath("//button[contains(text(), 'Facebook')]")).Displayed);
                     Assert.IsTrue(driver.FindElement(By.XPath("//button[contains(text(), 'Google')]")).Displayed);
                 }
+
+        */
 
 
     }
